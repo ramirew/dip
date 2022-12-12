@@ -1,0 +1,5 @@
+/home/usuario/DPI/build/CMakeFiles/rebuild_cache.dir
+/home/usuario/DPI/build/CMakeFiles/edit_cache.dir
+/home/usuario/DPI/build/CMakeFiles/DPIPreprocesamiento.dir
+/home/usuario/DPI/build/CMakeFiles/DPIMetrics.dir
+/home/usuario/DPI/build/CMakeFiles/DPI.dir
