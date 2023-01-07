@@ -130,745 +130,705 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named DPIPreprocesamiento
+# Target rules for targets named classificationMetrics
 
 # Build rule for target.
-DPIPreprocesamiento: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 DPIPreprocesamiento
-.PHONY : DPIPreprocesamiento
+classificationMetrics: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 classificationMetrics
+.PHONY : classificationMetrics
 
 # fast build rule for target.
-DPIPreprocesamiento/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPIPreprocesamiento.dir/build.make CMakeFiles/DPIPreprocesamiento.dir/build
-.PHONY : DPIPreprocesamiento/fast
+classificationMetrics/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classificationMetrics.dir/build.make CMakeFiles/classificationMetrics.dir/build
+.PHONY : classificationMetrics/fast
 
 #=============================================================================
-# Target rules for targets named DPIMetrics
+# Target rules for targets named classification
 
 # Build rule for target.
-DPIMetrics: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 DPIMetrics
-.PHONY : DPIMetrics
+classification: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 classification
+.PHONY : classification
 
 # fast build rule for target.
-DPIMetrics/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPIMetrics.dir/build.make CMakeFiles/DPIMetrics.dir/build
-.PHONY : DPIMetrics/fast
+classification/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/build
+.PHONY : classification/fast
 
-#=============================================================================
-# Target rules for targets named DPI
+classification/dicom_read/DicomReader.o: classification/dicom_read/DicomReader.cpp.o
 
-# Build rule for target.
-DPI: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 DPI
-.PHONY : DPI
-
-# fast build rule for target.
-DPI/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/build
-.PHONY : DPI/fast
-
-DPI/dicom/DicomReader.o: DPI/dicom/DicomReader.cpp.o
-
-.PHONY : DPI/dicom/DicomReader.o
+.PHONY : classification/dicom_read/DicomReader.o
 
 # target to build an object file
-DPI/dicom/DicomReader.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/dicom/DicomReader.cpp.o
-.PHONY : DPI/dicom/DicomReader.cpp.o
+classification/dicom_read/DicomReader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/dicom_read/DicomReader.cpp.o
+.PHONY : classification/dicom_read/DicomReader.cpp.o
 
-DPI/dicom/DicomReader.i: DPI/dicom/DicomReader.cpp.i
+classification/dicom_read/DicomReader.i: classification/dicom_read/DicomReader.cpp.i
 
-.PHONY : DPI/dicom/DicomReader.i
+.PHONY : classification/dicom_read/DicomReader.i
 
 # target to preprocess a source file
-DPI/dicom/DicomReader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/dicom/DicomReader.cpp.i
-.PHONY : DPI/dicom/DicomReader.cpp.i
+classification/dicom_read/DicomReader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/dicom_read/DicomReader.cpp.i
+.PHONY : classification/dicom_read/DicomReader.cpp.i
 
-DPI/dicom/DicomReader.s: DPI/dicom/DicomReader.cpp.s
+classification/dicom_read/DicomReader.s: classification/dicom_read/DicomReader.cpp.s
 
-.PHONY : DPI/dicom/DicomReader.s
+.PHONY : classification/dicom_read/DicomReader.s
 
 # target to generate assembly for a file
-DPI/dicom/DicomReader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/dicom/DicomReader.cpp.s
-.PHONY : DPI/dicom/DicomReader.cpp.s
+classification/dicom_read/DicomReader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/dicom_read/DicomReader.cpp.s
+.PHONY : classification/dicom_read/DicomReader.cpp.s
 
-DPI/dicom/dicomutils.o: DPI/dicom/dicomutils.cpp.o
+classification/dicom_read/dicomutils.o: classification/dicom_read/dicomutils.cpp.o
 
-.PHONY : DPI/dicom/dicomutils.o
+.PHONY : classification/dicom_read/dicomutils.o
 
 # target to build an object file
-DPI/dicom/dicomutils.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/dicom/dicomutils.cpp.o
-.PHONY : DPI/dicom/dicomutils.cpp.o
+classification/dicom_read/dicomutils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/dicom_read/dicomutils.cpp.o
+.PHONY : classification/dicom_read/dicomutils.cpp.o
 
-DPI/dicom/dicomutils.i: DPI/dicom/dicomutils.cpp.i
+classification/dicom_read/dicomutils.i: classification/dicom_read/dicomutils.cpp.i
 
-.PHONY : DPI/dicom/dicomutils.i
+.PHONY : classification/dicom_read/dicomutils.i
 
 # target to preprocess a source file
-DPI/dicom/dicomutils.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/dicom/dicomutils.cpp.i
-.PHONY : DPI/dicom/dicomutils.cpp.i
+classification/dicom_read/dicomutils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/dicom_read/dicomutils.cpp.i
+.PHONY : classification/dicom_read/dicomutils.cpp.i
 
-DPI/dicom/dicomutils.s: DPI/dicom/dicomutils.cpp.s
+classification/dicom_read/dicomutils.s: classification/dicom_read/dicomutils.cpp.s
 
-.PHONY : DPI/dicom/dicomutils.s
+.PHONY : classification/dicom_read/dicomutils.s
 
 # target to generate assembly for a file
-DPI/dicom/dicomutils.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/dicom/dicomutils.cpp.s
-.PHONY : DPI/dicom/dicomutils.cpp.s
+classification/dicom_read/dicomutils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/dicom_read/dicomutils.cpp.s
+.PHONY : classification/dicom_read/dicomutils.cpp.s
 
-DPI/fcm/fcm.o: DPI/fcm/fcm.cpp.o
+classification/fcm/fcm.o: classification/fcm/fcm.cpp.o
 
-.PHONY : DPI/fcm/fcm.o
+.PHONY : classification/fcm/fcm.o
 
 # target to build an object file
-DPI/fcm/fcm.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/fcm/fcm.cpp.o
-.PHONY : DPI/fcm/fcm.cpp.o
+classification/fcm/fcm.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/fcm/fcm.cpp.o
+.PHONY : classification/fcm/fcm.cpp.o
 
-DPI/fcm/fcm.i: DPI/fcm/fcm.cpp.i
+classification/fcm/fcm.i: classification/fcm/fcm.cpp.i
 
-.PHONY : DPI/fcm/fcm.i
+.PHONY : classification/fcm/fcm.i
 
 # target to preprocess a source file
-DPI/fcm/fcm.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/fcm/fcm.cpp.i
-.PHONY : DPI/fcm/fcm.cpp.i
+classification/fcm/fcm.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/fcm/fcm.cpp.i
+.PHONY : classification/fcm/fcm.cpp.i
 
-DPI/fcm/fcm.s: DPI/fcm/fcm.cpp.s
+classification/fcm/fcm.s: classification/fcm/fcm.cpp.s
 
-.PHONY : DPI/fcm/fcm.s
+.PHONY : classification/fcm/fcm.s
 
 # target to generate assembly for a file
-DPI/fcm/fcm.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/fcm/fcm.cpp.s
-.PHONY : DPI/fcm/fcm.cpp.s
+classification/fcm/fcm.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/fcm/fcm.cpp.s
+.PHONY : classification/fcm/fcm.cpp.s
 
-DPI/knn/Preprocessing.o: DPI/knn/Preprocessing.cpp.o
+classification/knn/Preprocessing.o: classification/knn/Preprocessing.cpp.o
 
-.PHONY : DPI/knn/Preprocessing.o
+.PHONY : classification/knn/Preprocessing.o
 
 # target to build an object file
-DPI/knn/Preprocessing.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/knn/Preprocessing.cpp.o
-.PHONY : DPI/knn/Preprocessing.cpp.o
+classification/knn/Preprocessing.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/knn/Preprocessing.cpp.o
+.PHONY : classification/knn/Preprocessing.cpp.o
 
-DPI/knn/Preprocessing.i: DPI/knn/Preprocessing.cpp.i
+classification/knn/Preprocessing.i: classification/knn/Preprocessing.cpp.i
 
-.PHONY : DPI/knn/Preprocessing.i
+.PHONY : classification/knn/Preprocessing.i
 
 # target to preprocess a source file
-DPI/knn/Preprocessing.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/knn/Preprocessing.cpp.i
-.PHONY : DPI/knn/Preprocessing.cpp.i
+classification/knn/Preprocessing.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/knn/Preprocessing.cpp.i
+.PHONY : classification/knn/Preprocessing.cpp.i
 
-DPI/knn/Preprocessing.s: DPI/knn/Preprocessing.cpp.s
+classification/knn/Preprocessing.s: classification/knn/Preprocessing.cpp.s
 
-.PHONY : DPI/knn/Preprocessing.s
+.PHONY : classification/knn/Preprocessing.s
 
 # target to generate assembly for a file
-DPI/knn/Preprocessing.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/knn/Preprocessing.cpp.s
-.PHONY : DPI/knn/Preprocessing.cpp.s
+classification/knn/Preprocessing.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/knn/Preprocessing.cpp.s
+.PHONY : classification/knn/Preprocessing.cpp.s
 
-DPI/knn/ReadDataset.o: DPI/knn/ReadDataset.cpp.o
+classification/knn/ReadDataset.o: classification/knn/ReadDataset.cpp.o
 
-.PHONY : DPI/knn/ReadDataset.o
+.PHONY : classification/knn/ReadDataset.o
 
 # target to build an object file
-DPI/knn/ReadDataset.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/knn/ReadDataset.cpp.o
-.PHONY : DPI/knn/ReadDataset.cpp.o
+classification/knn/ReadDataset.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/knn/ReadDataset.cpp.o
+.PHONY : classification/knn/ReadDataset.cpp.o
 
-DPI/knn/ReadDataset.i: DPI/knn/ReadDataset.cpp.i
+classification/knn/ReadDataset.i: classification/knn/ReadDataset.cpp.i
 
-.PHONY : DPI/knn/ReadDataset.i
+.PHONY : classification/knn/ReadDataset.i
 
 # target to preprocess a source file
-DPI/knn/ReadDataset.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/knn/ReadDataset.cpp.i
-.PHONY : DPI/knn/ReadDataset.cpp.i
+classification/knn/ReadDataset.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/knn/ReadDataset.cpp.i
+.PHONY : classification/knn/ReadDataset.cpp.i
 
-DPI/knn/ReadDataset.s: DPI/knn/ReadDataset.cpp.s
+classification/knn/ReadDataset.s: classification/knn/ReadDataset.cpp.s
 
-.PHONY : DPI/knn/ReadDataset.s
+.PHONY : classification/knn/ReadDataset.s
 
 # target to generate assembly for a file
-DPI/knn/ReadDataset.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/knn/ReadDataset.cpp.s
-.PHONY : DPI/knn/ReadDataset.cpp.s
+classification/knn/ReadDataset.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/knn/ReadDataset.cpp.s
+.PHONY : classification/knn/ReadDataset.cpp.s
 
-DPI/knn/dataset.o: DPI/knn/dataset.cpp.o
+classification/knn/dataset.o: classification/knn/dataset.cpp.o
 
-.PHONY : DPI/knn/dataset.o
+.PHONY : classification/knn/dataset.o
 
 # target to build an object file
-DPI/knn/dataset.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/knn/dataset.cpp.o
-.PHONY : DPI/knn/dataset.cpp.o
+classification/knn/dataset.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/knn/dataset.cpp.o
+.PHONY : classification/knn/dataset.cpp.o
 
-DPI/knn/dataset.i: DPI/knn/dataset.cpp.i
+classification/knn/dataset.i: classification/knn/dataset.cpp.i
 
-.PHONY : DPI/knn/dataset.i
+.PHONY : classification/knn/dataset.i
 
 # target to preprocess a source file
-DPI/knn/dataset.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/knn/dataset.cpp.i
-.PHONY : DPI/knn/dataset.cpp.i
+classification/knn/dataset.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/knn/dataset.cpp.i
+.PHONY : classification/knn/dataset.cpp.i
 
-DPI/knn/dataset.s: DPI/knn/dataset.cpp.s
+classification/knn/dataset.s: classification/knn/dataset.cpp.s
 
-.PHONY : DPI/knn/dataset.s
+.PHONY : classification/knn/dataset.s
 
 # target to generate assembly for a file
-DPI/knn/dataset.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/knn/dataset.cpp.s
-.PHONY : DPI/knn/dataset.cpp.s
+classification/knn/dataset.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/knn/dataset.cpp.s
+.PHONY : classification/knn/dataset.cpp.s
 
-DPI/knn/knn.o: DPI/knn/knn.cpp.o
+classification/knn/knn.o: classification/knn/knn.cpp.o
 
-.PHONY : DPI/knn/knn.o
+.PHONY : classification/knn/knn.o
 
 # target to build an object file
-DPI/knn/knn.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/knn/knn.cpp.o
-.PHONY : DPI/knn/knn.cpp.o
+classification/knn/knn.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/knn/knn.cpp.o
+.PHONY : classification/knn/knn.cpp.o
 
-DPI/knn/knn.i: DPI/knn/knn.cpp.i
+classification/knn/knn.i: classification/knn/knn.cpp.i
 
-.PHONY : DPI/knn/knn.i
+.PHONY : classification/knn/knn.i
 
 # target to preprocess a source file
-DPI/knn/knn.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/knn/knn.cpp.i
-.PHONY : DPI/knn/knn.cpp.i
+classification/knn/knn.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/knn/knn.cpp.i
+.PHONY : classification/knn/knn.cpp.i
 
-DPI/knn/knn.s: DPI/knn/knn.cpp.s
+classification/knn/knn.s: classification/knn/knn.cpp.s
 
-.PHONY : DPI/knn/knn.s
+.PHONY : classification/knn/knn.s
 
 # target to generate assembly for a file
-DPI/knn/knn.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/knn/knn.cpp.s
-.PHONY : DPI/knn/knn.cpp.s
+classification/knn/knn.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/knn/knn.cpp.s
+.PHONY : classification/knn/knn.cpp.s
 
-DPI/knn/knnresults.o: DPI/knn/knnresults.cpp.o
+classification/knn/knnresults.o: classification/knn/knnresults.cpp.o
 
-.PHONY : DPI/knn/knnresults.o
+.PHONY : classification/knn/knnresults.o
 
 # target to build an object file
-DPI/knn/knnresults.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/knn/knnresults.cpp.o
-.PHONY : DPI/knn/knnresults.cpp.o
+classification/knn/knnresults.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/knn/knnresults.cpp.o
+.PHONY : classification/knn/knnresults.cpp.o
 
-DPI/knn/knnresults.i: DPI/knn/knnresults.cpp.i
+classification/knn/knnresults.i: classification/knn/knnresults.cpp.i
 
-.PHONY : DPI/knn/knnresults.i
+.PHONY : classification/knn/knnresults.i
 
 # target to preprocess a source file
-DPI/knn/knnresults.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/knn/knnresults.cpp.i
-.PHONY : DPI/knn/knnresults.cpp.i
+classification/knn/knnresults.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/knn/knnresults.cpp.i
+.PHONY : classification/knn/knnresults.cpp.i
 
-DPI/knn/knnresults.s: DPI/knn/knnresults.cpp.s
+classification/knn/knnresults.s: classification/knn/knnresults.cpp.s
 
-.PHONY : DPI/knn/knnresults.s
+.PHONY : classification/knn/knnresults.s
 
 # target to generate assembly for a file
-DPI/knn/knnresults.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/knn/knnresults.cpp.s
-.PHONY : DPI/knn/knnresults.cpp.s
+classification/knn/knnresults.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/knn/knnresults.cpp.s
+.PHONY : classification/knn/knnresults.cpp.s
 
-DPI/knn/matrix.o: DPI/knn/matrix.cpp.o
+classification/knn/matrix.o: classification/knn/matrix.cpp.o
 
-.PHONY : DPI/knn/matrix.o
+.PHONY : classification/knn/matrix.o
 
 # target to build an object file
-DPI/knn/matrix.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/knn/matrix.cpp.o
-.PHONY : DPI/knn/matrix.cpp.o
+classification/knn/matrix.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/knn/matrix.cpp.o
+.PHONY : classification/knn/matrix.cpp.o
 
-DPI/knn/matrix.i: DPI/knn/matrix.cpp.i
+classification/knn/matrix.i: classification/knn/matrix.cpp.i
 
-.PHONY : DPI/knn/matrix.i
+.PHONY : classification/knn/matrix.i
 
 # target to preprocess a source file
-DPI/knn/matrix.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/knn/matrix.cpp.i
-.PHONY : DPI/knn/matrix.cpp.i
+classification/knn/matrix.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/knn/matrix.cpp.i
+.PHONY : classification/knn/matrix.cpp.i
 
-DPI/knn/matrix.s: DPI/knn/matrix.cpp.s
+classification/knn/matrix.s: classification/knn/matrix.cpp.s
 
-.PHONY : DPI/knn/matrix.s
+.PHONY : classification/knn/matrix.s
 
 # target to generate assembly for a file
-DPI/knn/matrix.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/knn/matrix.cpp.s
-.PHONY : DPI/knn/matrix.cpp.s
+classification/knn/matrix.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/knn/matrix.cpp.s
+.PHONY : classification/knn/matrix.cpp.s
 
-DPI/random_forest/ArgumentHandler.o: DPI/random_forest/ArgumentHandler.cpp.o
+classification/random_forest/ArgumentHandler.o: classification/random_forest/ArgumentHandler.cpp.o
 
-.PHONY : DPI/random_forest/ArgumentHandler.o
+.PHONY : classification/random_forest/ArgumentHandler.o
 
 # target to build an object file
-DPI/random_forest/ArgumentHandler.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/ArgumentHandler.cpp.o
-.PHONY : DPI/random_forest/ArgumentHandler.cpp.o
+classification/random_forest/ArgumentHandler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/ArgumentHandler.cpp.o
+.PHONY : classification/random_forest/ArgumentHandler.cpp.o
 
-DPI/random_forest/ArgumentHandler.i: DPI/random_forest/ArgumentHandler.cpp.i
+classification/random_forest/ArgumentHandler.i: classification/random_forest/ArgumentHandler.cpp.i
 
-.PHONY : DPI/random_forest/ArgumentHandler.i
+.PHONY : classification/random_forest/ArgumentHandler.i
 
 # target to preprocess a source file
-DPI/random_forest/ArgumentHandler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/ArgumentHandler.cpp.i
-.PHONY : DPI/random_forest/ArgumentHandler.cpp.i
+classification/random_forest/ArgumentHandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/ArgumentHandler.cpp.i
+.PHONY : classification/random_forest/ArgumentHandler.cpp.i
 
-DPI/random_forest/ArgumentHandler.s: DPI/random_forest/ArgumentHandler.cpp.s
+classification/random_forest/ArgumentHandler.s: classification/random_forest/ArgumentHandler.cpp.s
 
-.PHONY : DPI/random_forest/ArgumentHandler.s
+.PHONY : classification/random_forest/ArgumentHandler.s
 
 # target to generate assembly for a file
-DPI/random_forest/ArgumentHandler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/ArgumentHandler.cpp.s
-.PHONY : DPI/random_forest/ArgumentHandler.cpp.s
+classification/random_forest/ArgumentHandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/ArgumentHandler.cpp.s
+.PHONY : classification/random_forest/ArgumentHandler.cpp.s
 
-DPI/random_forest/Data.o: DPI/random_forest/Data.cpp.o
+classification/random_forest/Data.o: classification/random_forest/Data.cpp.o
 
-.PHONY : DPI/random_forest/Data.o
+.PHONY : classification/random_forest/Data.o
 
 # target to build an object file
-DPI/random_forest/Data.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/Data.cpp.o
-.PHONY : DPI/random_forest/Data.cpp.o
+classification/random_forest/Data.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/Data.cpp.o
+.PHONY : classification/random_forest/Data.cpp.o
 
-DPI/random_forest/Data.i: DPI/random_forest/Data.cpp.i
+classification/random_forest/Data.i: classification/random_forest/Data.cpp.i
 
-.PHONY : DPI/random_forest/Data.i
+.PHONY : classification/random_forest/Data.i
 
 # target to preprocess a source file
-DPI/random_forest/Data.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/Data.cpp.i
-.PHONY : DPI/random_forest/Data.cpp.i
+classification/random_forest/Data.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/Data.cpp.i
+.PHONY : classification/random_forest/Data.cpp.i
 
-DPI/random_forest/Data.s: DPI/random_forest/Data.cpp.s
+classification/random_forest/Data.s: classification/random_forest/Data.cpp.s
 
-.PHONY : DPI/random_forest/Data.s
+.PHONY : classification/random_forest/Data.s
 
 # target to generate assembly for a file
-DPI/random_forest/Data.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/Data.cpp.s
-.PHONY : DPI/random_forest/Data.cpp.s
+classification/random_forest/Data.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/Data.cpp.s
+.PHONY : classification/random_forest/Data.cpp.s
 
-DPI/random_forest/Forest.o: DPI/random_forest/Forest.cpp.o
+classification/random_forest/Forest.o: classification/random_forest/Forest.cpp.o
 
-.PHONY : DPI/random_forest/Forest.o
+.PHONY : classification/random_forest/Forest.o
 
 # target to build an object file
-DPI/random_forest/Forest.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/Forest.cpp.o
-.PHONY : DPI/random_forest/Forest.cpp.o
+classification/random_forest/Forest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/Forest.cpp.o
+.PHONY : classification/random_forest/Forest.cpp.o
 
-DPI/random_forest/Forest.i: DPI/random_forest/Forest.cpp.i
+classification/random_forest/Forest.i: classification/random_forest/Forest.cpp.i
 
-.PHONY : DPI/random_forest/Forest.i
+.PHONY : classification/random_forest/Forest.i
 
 # target to preprocess a source file
-DPI/random_forest/Forest.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/Forest.cpp.i
-.PHONY : DPI/random_forest/Forest.cpp.i
+classification/random_forest/Forest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/Forest.cpp.i
+.PHONY : classification/random_forest/Forest.cpp.i
 
-DPI/random_forest/Forest.s: DPI/random_forest/Forest.cpp.s
+classification/random_forest/Forest.s: classification/random_forest/Forest.cpp.s
 
-.PHONY : DPI/random_forest/Forest.s
+.PHONY : classification/random_forest/Forest.s
 
 # target to generate assembly for a file
-DPI/random_forest/Forest.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/Forest.cpp.s
-.PHONY : DPI/random_forest/Forest.cpp.s
+classification/random_forest/Forest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/Forest.cpp.s
+.PHONY : classification/random_forest/Forest.cpp.s
 
-DPI/random_forest/ForestClassification.o: DPI/random_forest/ForestClassification.cpp.o
+classification/random_forest/ForestClassification.o: classification/random_forest/ForestClassification.cpp.o
 
-.PHONY : DPI/random_forest/ForestClassification.o
+.PHONY : classification/random_forest/ForestClassification.o
 
 # target to build an object file
-DPI/random_forest/ForestClassification.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/ForestClassification.cpp.o
-.PHONY : DPI/random_forest/ForestClassification.cpp.o
+classification/random_forest/ForestClassification.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/ForestClassification.cpp.o
+.PHONY : classification/random_forest/ForestClassification.cpp.o
 
-DPI/random_forest/ForestClassification.i: DPI/random_forest/ForestClassification.cpp.i
+classification/random_forest/ForestClassification.i: classification/random_forest/ForestClassification.cpp.i
 
-.PHONY : DPI/random_forest/ForestClassification.i
+.PHONY : classification/random_forest/ForestClassification.i
 
 # target to preprocess a source file
-DPI/random_forest/ForestClassification.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/ForestClassification.cpp.i
-.PHONY : DPI/random_forest/ForestClassification.cpp.i
+classification/random_forest/ForestClassification.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/ForestClassification.cpp.i
+.PHONY : classification/random_forest/ForestClassification.cpp.i
 
-DPI/random_forest/ForestClassification.s: DPI/random_forest/ForestClassification.cpp.s
+classification/random_forest/ForestClassification.s: classification/random_forest/ForestClassification.cpp.s
 
-.PHONY : DPI/random_forest/ForestClassification.s
+.PHONY : classification/random_forest/ForestClassification.s
 
 # target to generate assembly for a file
-DPI/random_forest/ForestClassification.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/ForestClassification.cpp.s
-.PHONY : DPI/random_forest/ForestClassification.cpp.s
+classification/random_forest/ForestClassification.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/ForestClassification.cpp.s
+.PHONY : classification/random_forest/ForestClassification.cpp.s
 
-DPI/random_forest/ForestProbability.o: DPI/random_forest/ForestProbability.cpp.o
+classification/random_forest/ForestProbability.o: classification/random_forest/ForestProbability.cpp.o
 
-.PHONY : DPI/random_forest/ForestProbability.o
+.PHONY : classification/random_forest/ForestProbability.o
 
 # target to build an object file
-DPI/random_forest/ForestProbability.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/ForestProbability.cpp.o
-.PHONY : DPI/random_forest/ForestProbability.cpp.o
+classification/random_forest/ForestProbability.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/ForestProbability.cpp.o
+.PHONY : classification/random_forest/ForestProbability.cpp.o
 
-DPI/random_forest/ForestProbability.i: DPI/random_forest/ForestProbability.cpp.i
+classification/random_forest/ForestProbability.i: classification/random_forest/ForestProbability.cpp.i
 
-.PHONY : DPI/random_forest/ForestProbability.i
+.PHONY : classification/random_forest/ForestProbability.i
 
 # target to preprocess a source file
-DPI/random_forest/ForestProbability.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/ForestProbability.cpp.i
-.PHONY : DPI/random_forest/ForestProbability.cpp.i
+classification/random_forest/ForestProbability.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/ForestProbability.cpp.i
+.PHONY : classification/random_forest/ForestProbability.cpp.i
 
-DPI/random_forest/ForestProbability.s: DPI/random_forest/ForestProbability.cpp.s
+classification/random_forest/ForestProbability.s: classification/random_forest/ForestProbability.cpp.s
 
-.PHONY : DPI/random_forest/ForestProbability.s
+.PHONY : classification/random_forest/ForestProbability.s
 
 # target to generate assembly for a file
-DPI/random_forest/ForestProbability.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/ForestProbability.cpp.s
-.PHONY : DPI/random_forest/ForestProbability.cpp.s
+classification/random_forest/ForestProbability.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/ForestProbability.cpp.s
+.PHONY : classification/random_forest/ForestProbability.cpp.s
 
-DPI/random_forest/ForestRegression.o: DPI/random_forest/ForestRegression.cpp.o
+classification/random_forest/ForestRegression.o: classification/random_forest/ForestRegression.cpp.o
 
-.PHONY : DPI/random_forest/ForestRegression.o
+.PHONY : classification/random_forest/ForestRegression.o
 
 # target to build an object file
-DPI/random_forest/ForestRegression.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/ForestRegression.cpp.o
-.PHONY : DPI/random_forest/ForestRegression.cpp.o
+classification/random_forest/ForestRegression.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/ForestRegression.cpp.o
+.PHONY : classification/random_forest/ForestRegression.cpp.o
 
-DPI/random_forest/ForestRegression.i: DPI/random_forest/ForestRegression.cpp.i
+classification/random_forest/ForestRegression.i: classification/random_forest/ForestRegression.cpp.i
 
-.PHONY : DPI/random_forest/ForestRegression.i
+.PHONY : classification/random_forest/ForestRegression.i
 
 # target to preprocess a source file
-DPI/random_forest/ForestRegression.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/ForestRegression.cpp.i
-.PHONY : DPI/random_forest/ForestRegression.cpp.i
+classification/random_forest/ForestRegression.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/ForestRegression.cpp.i
+.PHONY : classification/random_forest/ForestRegression.cpp.i
 
-DPI/random_forest/ForestRegression.s: DPI/random_forest/ForestRegression.cpp.s
+classification/random_forest/ForestRegression.s: classification/random_forest/ForestRegression.cpp.s
 
-.PHONY : DPI/random_forest/ForestRegression.s
+.PHONY : classification/random_forest/ForestRegression.s
 
 # target to generate assembly for a file
-DPI/random_forest/ForestRegression.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/ForestRegression.cpp.s
-.PHONY : DPI/random_forest/ForestRegression.cpp.s
+classification/random_forest/ForestRegression.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/ForestRegression.cpp.s
+.PHONY : classification/random_forest/ForestRegression.cpp.s
 
-DPI/random_forest/ForestSurvival.o: DPI/random_forest/ForestSurvival.cpp.o
+classification/random_forest/ForestSurvival.o: classification/random_forest/ForestSurvival.cpp.o
 
-.PHONY : DPI/random_forest/ForestSurvival.o
+.PHONY : classification/random_forest/ForestSurvival.o
 
 # target to build an object file
-DPI/random_forest/ForestSurvival.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/ForestSurvival.cpp.o
-.PHONY : DPI/random_forest/ForestSurvival.cpp.o
+classification/random_forest/ForestSurvival.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/ForestSurvival.cpp.o
+.PHONY : classification/random_forest/ForestSurvival.cpp.o
 
-DPI/random_forest/ForestSurvival.i: DPI/random_forest/ForestSurvival.cpp.i
+classification/random_forest/ForestSurvival.i: classification/random_forest/ForestSurvival.cpp.i
 
-.PHONY : DPI/random_forest/ForestSurvival.i
+.PHONY : classification/random_forest/ForestSurvival.i
 
 # target to preprocess a source file
-DPI/random_forest/ForestSurvival.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/ForestSurvival.cpp.i
-.PHONY : DPI/random_forest/ForestSurvival.cpp.i
+classification/random_forest/ForestSurvival.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/ForestSurvival.cpp.i
+.PHONY : classification/random_forest/ForestSurvival.cpp.i
 
-DPI/random_forest/ForestSurvival.s: DPI/random_forest/ForestSurvival.cpp.s
+classification/random_forest/ForestSurvival.s: classification/random_forest/ForestSurvival.cpp.s
 
-.PHONY : DPI/random_forest/ForestSurvival.s
+.PHONY : classification/random_forest/ForestSurvival.s
 
 # target to generate assembly for a file
-DPI/random_forest/ForestSurvival.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/ForestSurvival.cpp.s
-.PHONY : DPI/random_forest/ForestSurvival.cpp.s
+classification/random_forest/ForestSurvival.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/ForestSurvival.cpp.s
+.PHONY : classification/random_forest/ForestSurvival.cpp.s
 
-DPI/random_forest/Tree.o: DPI/random_forest/Tree.cpp.o
+classification/random_forest/Tree.o: classification/random_forest/Tree.cpp.o
 
-.PHONY : DPI/random_forest/Tree.o
+.PHONY : classification/random_forest/Tree.o
 
 # target to build an object file
-DPI/random_forest/Tree.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/Tree.cpp.o
-.PHONY : DPI/random_forest/Tree.cpp.o
+classification/random_forest/Tree.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/Tree.cpp.o
+.PHONY : classification/random_forest/Tree.cpp.o
 
-DPI/random_forest/Tree.i: DPI/random_forest/Tree.cpp.i
+classification/random_forest/Tree.i: classification/random_forest/Tree.cpp.i
 
-.PHONY : DPI/random_forest/Tree.i
+.PHONY : classification/random_forest/Tree.i
 
 # target to preprocess a source file
-DPI/random_forest/Tree.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/Tree.cpp.i
-.PHONY : DPI/random_forest/Tree.cpp.i
+classification/random_forest/Tree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/Tree.cpp.i
+.PHONY : classification/random_forest/Tree.cpp.i
 
-DPI/random_forest/Tree.s: DPI/random_forest/Tree.cpp.s
+classification/random_forest/Tree.s: classification/random_forest/Tree.cpp.s
 
-.PHONY : DPI/random_forest/Tree.s
+.PHONY : classification/random_forest/Tree.s
 
 # target to generate assembly for a file
-DPI/random_forest/Tree.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/Tree.cpp.s
-.PHONY : DPI/random_forest/Tree.cpp.s
+classification/random_forest/Tree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/Tree.cpp.s
+.PHONY : classification/random_forest/Tree.cpp.s
 
-DPI/random_forest/TreeClassification.o: DPI/random_forest/TreeClassification.cpp.o
+classification/random_forest/TreeClassification.o: classification/random_forest/TreeClassification.cpp.o
 
-.PHONY : DPI/random_forest/TreeClassification.o
+.PHONY : classification/random_forest/TreeClassification.o
 
 # target to build an object file
-DPI/random_forest/TreeClassification.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/TreeClassification.cpp.o
-.PHONY : DPI/random_forest/TreeClassification.cpp.o
+classification/random_forest/TreeClassification.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/TreeClassification.cpp.o
+.PHONY : classification/random_forest/TreeClassification.cpp.o
 
-DPI/random_forest/TreeClassification.i: DPI/random_forest/TreeClassification.cpp.i
+classification/random_forest/TreeClassification.i: classification/random_forest/TreeClassification.cpp.i
 
-.PHONY : DPI/random_forest/TreeClassification.i
+.PHONY : classification/random_forest/TreeClassification.i
 
 # target to preprocess a source file
-DPI/random_forest/TreeClassification.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/TreeClassification.cpp.i
-.PHONY : DPI/random_forest/TreeClassification.cpp.i
+classification/random_forest/TreeClassification.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/TreeClassification.cpp.i
+.PHONY : classification/random_forest/TreeClassification.cpp.i
 
-DPI/random_forest/TreeClassification.s: DPI/random_forest/TreeClassification.cpp.s
+classification/random_forest/TreeClassification.s: classification/random_forest/TreeClassification.cpp.s
 
-.PHONY : DPI/random_forest/TreeClassification.s
+.PHONY : classification/random_forest/TreeClassification.s
 
 # target to generate assembly for a file
-DPI/random_forest/TreeClassification.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/TreeClassification.cpp.s
-.PHONY : DPI/random_forest/TreeClassification.cpp.s
+classification/random_forest/TreeClassification.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/TreeClassification.cpp.s
+.PHONY : classification/random_forest/TreeClassification.cpp.s
 
-DPI/random_forest/TreeProbability.o: DPI/random_forest/TreeProbability.cpp.o
+classification/random_forest/TreeProbability.o: classification/random_forest/TreeProbability.cpp.o
 
-.PHONY : DPI/random_forest/TreeProbability.o
+.PHONY : classification/random_forest/TreeProbability.o
 
 # target to build an object file
-DPI/random_forest/TreeProbability.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/TreeProbability.cpp.o
-.PHONY : DPI/random_forest/TreeProbability.cpp.o
+classification/random_forest/TreeProbability.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/TreeProbability.cpp.o
+.PHONY : classification/random_forest/TreeProbability.cpp.o
 
-DPI/random_forest/TreeProbability.i: DPI/random_forest/TreeProbability.cpp.i
+classification/random_forest/TreeProbability.i: classification/random_forest/TreeProbability.cpp.i
 
-.PHONY : DPI/random_forest/TreeProbability.i
+.PHONY : classification/random_forest/TreeProbability.i
 
 # target to preprocess a source file
-DPI/random_forest/TreeProbability.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/TreeProbability.cpp.i
-.PHONY : DPI/random_forest/TreeProbability.cpp.i
+classification/random_forest/TreeProbability.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/TreeProbability.cpp.i
+.PHONY : classification/random_forest/TreeProbability.cpp.i
 
-DPI/random_forest/TreeProbability.s: DPI/random_forest/TreeProbability.cpp.s
+classification/random_forest/TreeProbability.s: classification/random_forest/TreeProbability.cpp.s
 
-.PHONY : DPI/random_forest/TreeProbability.s
+.PHONY : classification/random_forest/TreeProbability.s
 
 # target to generate assembly for a file
-DPI/random_forest/TreeProbability.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/TreeProbability.cpp.s
-.PHONY : DPI/random_forest/TreeProbability.cpp.s
+classification/random_forest/TreeProbability.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/TreeProbability.cpp.s
+.PHONY : classification/random_forest/TreeProbability.cpp.s
 
-DPI/random_forest/TreeRegression.o: DPI/random_forest/TreeRegression.cpp.o
+classification/random_forest/TreeRegression.o: classification/random_forest/TreeRegression.cpp.o
 
-.PHONY : DPI/random_forest/TreeRegression.o
+.PHONY : classification/random_forest/TreeRegression.o
 
 # target to build an object file
-DPI/random_forest/TreeRegression.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/TreeRegression.cpp.o
-.PHONY : DPI/random_forest/TreeRegression.cpp.o
+classification/random_forest/TreeRegression.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/TreeRegression.cpp.o
+.PHONY : classification/random_forest/TreeRegression.cpp.o
 
-DPI/random_forest/TreeRegression.i: DPI/random_forest/TreeRegression.cpp.i
+classification/random_forest/TreeRegression.i: classification/random_forest/TreeRegression.cpp.i
 
-.PHONY : DPI/random_forest/TreeRegression.i
+.PHONY : classification/random_forest/TreeRegression.i
 
 # target to preprocess a source file
-DPI/random_forest/TreeRegression.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/TreeRegression.cpp.i
-.PHONY : DPI/random_forest/TreeRegression.cpp.i
+classification/random_forest/TreeRegression.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/TreeRegression.cpp.i
+.PHONY : classification/random_forest/TreeRegression.cpp.i
 
-DPI/random_forest/TreeRegression.s: DPI/random_forest/TreeRegression.cpp.s
+classification/random_forest/TreeRegression.s: classification/random_forest/TreeRegression.cpp.s
 
-.PHONY : DPI/random_forest/TreeRegression.s
+.PHONY : classification/random_forest/TreeRegression.s
 
 # target to generate assembly for a file
-DPI/random_forest/TreeRegression.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/TreeRegression.cpp.s
-.PHONY : DPI/random_forest/TreeRegression.cpp.s
+classification/random_forest/TreeRegression.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/TreeRegression.cpp.s
+.PHONY : classification/random_forest/TreeRegression.cpp.s
 
-DPI/random_forest/TreeSurvival.o: DPI/random_forest/TreeSurvival.cpp.o
+classification/random_forest/TreeSurvival.o: classification/random_forest/TreeSurvival.cpp.o
 
-.PHONY : DPI/random_forest/TreeSurvival.o
+.PHONY : classification/random_forest/TreeSurvival.o
 
 # target to build an object file
-DPI/random_forest/TreeSurvival.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/TreeSurvival.cpp.o
-.PHONY : DPI/random_forest/TreeSurvival.cpp.o
+classification/random_forest/TreeSurvival.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/TreeSurvival.cpp.o
+.PHONY : classification/random_forest/TreeSurvival.cpp.o
 
-DPI/random_forest/TreeSurvival.i: DPI/random_forest/TreeSurvival.cpp.i
+classification/random_forest/TreeSurvival.i: classification/random_forest/TreeSurvival.cpp.i
 
-.PHONY : DPI/random_forest/TreeSurvival.i
+.PHONY : classification/random_forest/TreeSurvival.i
 
 # target to preprocess a source file
-DPI/random_forest/TreeSurvival.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/TreeSurvival.cpp.i
-.PHONY : DPI/random_forest/TreeSurvival.cpp.i
+classification/random_forest/TreeSurvival.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/TreeSurvival.cpp.i
+.PHONY : classification/random_forest/TreeSurvival.cpp.i
 
-DPI/random_forest/TreeSurvival.s: DPI/random_forest/TreeSurvival.cpp.s
+classification/random_forest/TreeSurvival.s: classification/random_forest/TreeSurvival.cpp.s
 
-.PHONY : DPI/random_forest/TreeSurvival.s
+.PHONY : classification/random_forest/TreeSurvival.s
 
 # target to generate assembly for a file
-DPI/random_forest/TreeSurvival.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/TreeSurvival.cpp.s
-.PHONY : DPI/random_forest/TreeSurvival.cpp.s
+classification/random_forest/TreeSurvival.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/TreeSurvival.cpp.s
+.PHONY : classification/random_forest/TreeSurvival.cpp.s
 
-DPI/random_forest/rf.o: DPI/random_forest/rf.cpp.o
+classification/random_forest/rf.o: classification/random_forest/rf.cpp.o
 
-.PHONY : DPI/random_forest/rf.o
+.PHONY : classification/random_forest/rf.o
 
 # target to build an object file
-DPI/random_forest/rf.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/rf.cpp.o
-.PHONY : DPI/random_forest/rf.cpp.o
+classification/random_forest/rf.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/rf.cpp.o
+.PHONY : classification/random_forest/rf.cpp.o
 
-DPI/random_forest/rf.i: DPI/random_forest/rf.cpp.i
+classification/random_forest/rf.i: classification/random_forest/rf.cpp.i
 
-.PHONY : DPI/random_forest/rf.i
+.PHONY : classification/random_forest/rf.i
 
 # target to preprocess a source file
-DPI/random_forest/rf.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/rf.cpp.i
-.PHONY : DPI/random_forest/rf.cpp.i
+classification/random_forest/rf.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/rf.cpp.i
+.PHONY : classification/random_forest/rf.cpp.i
 
-DPI/random_forest/rf.s: DPI/random_forest/rf.cpp.s
+classification/random_forest/rf.s: classification/random_forest/rf.cpp.s
 
-.PHONY : DPI/random_forest/rf.s
+.PHONY : classification/random_forest/rf.s
 
 # target to generate assembly for a file
-DPI/random_forest/rf.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/rf.cpp.s
-.PHONY : DPI/random_forest/rf.cpp.s
+classification/random_forest/rf.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/rf.cpp.s
+.PHONY : classification/random_forest/rf.cpp.s
 
-DPI/random_forest/utility.o: DPI/random_forest/utility.cpp.o
+classification/random_forest/utility.o: classification/random_forest/utility.cpp.o
 
-.PHONY : DPI/random_forest/utility.o
+.PHONY : classification/random_forest/utility.o
 
 # target to build an object file
-DPI/random_forest/utility.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/utility.cpp.o
-.PHONY : DPI/random_forest/utility.cpp.o
+classification/random_forest/utility.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/utility.cpp.o
+.PHONY : classification/random_forest/utility.cpp.o
 
-DPI/random_forest/utility.i: DPI/random_forest/utility.cpp.i
+classification/random_forest/utility.i: classification/random_forest/utility.cpp.i
 
-.PHONY : DPI/random_forest/utility.i
+.PHONY : classification/random_forest/utility.i
 
 # target to preprocess a source file
-DPI/random_forest/utility.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/utility.cpp.i
-.PHONY : DPI/random_forest/utility.cpp.i
+classification/random_forest/utility.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/utility.cpp.i
+.PHONY : classification/random_forest/utility.cpp.i
 
-DPI/random_forest/utility.s: DPI/random_forest/utility.cpp.s
+classification/random_forest/utility.s: classification/random_forest/utility.cpp.s
 
-.PHONY : DPI/random_forest/utility.s
+.PHONY : classification/random_forest/utility.s
 
 # target to generate assembly for a file
-DPI/random_forest/utility.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/random_forest/utility.cpp.s
-.PHONY : DPI/random_forest/utility.cpp.s
+classification/random_forest/utility.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/random_forest/utility.cpp.s
+.PHONY : classification/random_forest/utility.cpp.s
 
-DPI/svm/svm.o: DPI/svm/svm.cpp.o
+classification/svm/svm.o: classification/svm/svm.cpp.o
 
-.PHONY : DPI/svm/svm.o
+.PHONY : classification/svm/svm.o
 
 # target to build an object file
-DPI/svm/svm.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/svm/svm.cpp.o
-.PHONY : DPI/svm/svm.cpp.o
+classification/svm/svm.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/svm/svm.cpp.o
+.PHONY : classification/svm/svm.cpp.o
 
-DPI/svm/svm.i: DPI/svm/svm.cpp.i
+classification/svm/svm.i: classification/svm/svm.cpp.i
 
-.PHONY : DPI/svm/svm.i
+.PHONY : classification/svm/svm.i
 
 # target to preprocess a source file
-DPI/svm/svm.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/svm/svm.cpp.i
-.PHONY : DPI/svm/svm.cpp.i
+classification/svm/svm.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/svm/svm.cpp.i
+.PHONY : classification/svm/svm.cpp.i
 
-DPI/svm/svm.s: DPI/svm/svm.cpp.s
+classification/svm/svm.s: classification/svm/svm.cpp.s
 
-.PHONY : DPI/svm/svm.s
+.PHONY : classification/svm/svm.s
 
 # target to generate assembly for a file
-DPI/svm/svm.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/svm/svm.cpp.s
-.PHONY : DPI/svm/svm.cpp.s
+classification/svm/svm.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/svm/svm.cpp.s
+.PHONY : classification/svm/svm.cpp.s
 
-DPI/svm/svm_util.o: DPI/svm/svm_util.cpp.o
+classification/svm/svm_util.o: classification/svm/svm_util.cpp.o
 
-.PHONY : DPI/svm/svm_util.o
+.PHONY : classification/svm/svm_util.o
 
 # target to build an object file
-DPI/svm/svm_util.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/svm/svm_util.cpp.o
-.PHONY : DPI/svm/svm_util.cpp.o
+classification/svm/svm_util.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/svm/svm_util.cpp.o
+.PHONY : classification/svm/svm_util.cpp.o
 
-DPI/svm/svm_util.i: DPI/svm/svm_util.cpp.i
+classification/svm/svm_util.i: classification/svm/svm_util.cpp.i
 
-.PHONY : DPI/svm/svm_util.i
-
-# target to preprocess a source file
-DPI/svm/svm_util.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/svm/svm_util.cpp.i
-.PHONY : DPI/svm/svm_util.cpp.i
-
-DPI/svm/svm_util.s: DPI/svm/svm_util.cpp.s
-
-.PHONY : DPI/svm/svm_util.s
-
-# target to generate assembly for a file
-DPI/svm/svm_util.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/DPI/svm/svm_util.cpp.s
-.PHONY : DPI/svm/svm_util.cpp.s
-
-Preprocesamiento/clahe/clahe.o: Preprocesamiento/clahe/clahe.cpp.o
-
-.PHONY : Preprocesamiento/clahe/clahe.o
-
-# target to build an object file
-Preprocesamiento/clahe/clahe.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPIPreprocesamiento.dir/build.make CMakeFiles/DPIPreprocesamiento.dir/Preprocesamiento/clahe/clahe.cpp.o
-.PHONY : Preprocesamiento/clahe/clahe.cpp.o
-
-Preprocesamiento/clahe/clahe.i: Preprocesamiento/clahe/clahe.cpp.i
-
-.PHONY : Preprocesamiento/clahe/clahe.i
+.PHONY : classification/svm/svm_util.i
 
 # target to preprocess a source file
-Preprocesamiento/clahe/clahe.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPIPreprocesamiento.dir/build.make CMakeFiles/DPIPreprocesamiento.dir/Preprocesamiento/clahe/clahe.cpp.i
-.PHONY : Preprocesamiento/clahe/clahe.cpp.i
+classification/svm/svm_util.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/svm/svm_util.cpp.i
+.PHONY : classification/svm/svm_util.cpp.i
 
-Preprocesamiento/clahe/clahe.s: Preprocesamiento/clahe/clahe.cpp.s
+classification/svm/svm_util.s: classification/svm/svm_util.cpp.s
 
-.PHONY : Preprocesamiento/clahe/clahe.s
+.PHONY : classification/svm/svm_util.s
 
 # target to generate assembly for a file
-Preprocesamiento/clahe/clahe.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPIPreprocesamiento.dir/build.make CMakeFiles/DPIPreprocesamiento.dir/Preprocesamiento/clahe/clahe.cpp.s
-.PHONY : Preprocesamiento/clahe/clahe.cpp.s
+classification/svm/svm_util.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/svm/svm_util.cpp.s
+.PHONY : classification/svm/svm_util.cpp.s
 
 metrics/performance/benchmark.o: metrics/performance/benchmark.cpp.o
 
@@ -876,7 +836,7 @@ metrics/performance/benchmark.o: metrics/performance/benchmark.cpp.o
 
 # target to build an object file
 metrics/performance/benchmark.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPIMetrics.dir/build.make CMakeFiles/DPIMetrics.dir/metrics/performance/benchmark.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classificationMetrics.dir/build.make CMakeFiles/classificationMetrics.dir/metrics/performance/benchmark.cpp.o
 .PHONY : metrics/performance/benchmark.cpp.o
 
 metrics/performance/benchmark.i: metrics/performance/benchmark.cpp.i
@@ -885,7 +845,7 @@ metrics/performance/benchmark.i: metrics/performance/benchmark.cpp.i
 
 # target to preprocess a source file
 metrics/performance/benchmark.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPIMetrics.dir/build.make CMakeFiles/DPIMetrics.dir/metrics/performance/benchmark.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classificationMetrics.dir/build.make CMakeFiles/classificationMetrics.dir/metrics/performance/benchmark.cpp.i
 .PHONY : metrics/performance/benchmark.cpp.i
 
 metrics/performance/benchmark.s: metrics/performance/benchmark.cpp.s
@@ -894,7 +854,7 @@ metrics/performance/benchmark.s: metrics/performance/benchmark.cpp.s
 
 # target to generate assembly for a file
 metrics/performance/benchmark.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPIMetrics.dir/build.make CMakeFiles/DPIMetrics.dir/metrics/performance/benchmark.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classificationMetrics.dir/build.make CMakeFiles/classificationMetrics.dir/metrics/performance/benchmark.cpp.s
 .PHONY : metrics/performance/benchmark.cpp.s
 
 # Help Target
@@ -905,87 +865,83 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... DPI"
-	@echo "... DPIMetrics"
-	@echo "... DPIPreprocesamiento"
-	@echo "... DPI/dicom/DicomReader.o"
-	@echo "... DPI/dicom/DicomReader.i"
-	@echo "... DPI/dicom/DicomReader.s"
-	@echo "... DPI/dicom/dicomutils.o"
-	@echo "... DPI/dicom/dicomutils.i"
-	@echo "... DPI/dicom/dicomutils.s"
-	@echo "... DPI/fcm/fcm.o"
-	@echo "... DPI/fcm/fcm.i"
-	@echo "... DPI/fcm/fcm.s"
-	@echo "... DPI/knn/Preprocessing.o"
-	@echo "... DPI/knn/Preprocessing.i"
-	@echo "... DPI/knn/Preprocessing.s"
-	@echo "... DPI/knn/ReadDataset.o"
-	@echo "... DPI/knn/ReadDataset.i"
-	@echo "... DPI/knn/ReadDataset.s"
-	@echo "... DPI/knn/dataset.o"
-	@echo "... DPI/knn/dataset.i"
-	@echo "... DPI/knn/dataset.s"
-	@echo "... DPI/knn/knn.o"
-	@echo "... DPI/knn/knn.i"
-	@echo "... DPI/knn/knn.s"
-	@echo "... DPI/knn/knnresults.o"
-	@echo "... DPI/knn/knnresults.i"
-	@echo "... DPI/knn/knnresults.s"
-	@echo "... DPI/knn/matrix.o"
-	@echo "... DPI/knn/matrix.i"
-	@echo "... DPI/knn/matrix.s"
-	@echo "... DPI/random_forest/ArgumentHandler.o"
-	@echo "... DPI/random_forest/ArgumentHandler.i"
-	@echo "... DPI/random_forest/ArgumentHandler.s"
-	@echo "... DPI/random_forest/Data.o"
-	@echo "... DPI/random_forest/Data.i"
-	@echo "... DPI/random_forest/Data.s"
-	@echo "... DPI/random_forest/Forest.o"
-	@echo "... DPI/random_forest/Forest.i"
-	@echo "... DPI/random_forest/Forest.s"
-	@echo "... DPI/random_forest/ForestClassification.o"
-	@echo "... DPI/random_forest/ForestClassification.i"
-	@echo "... DPI/random_forest/ForestClassification.s"
-	@echo "... DPI/random_forest/ForestProbability.o"
-	@echo "... DPI/random_forest/ForestProbability.i"
-	@echo "... DPI/random_forest/ForestProbability.s"
-	@echo "... DPI/random_forest/ForestRegression.o"
-	@echo "... DPI/random_forest/ForestRegression.i"
-	@echo "... DPI/random_forest/ForestRegression.s"
-	@echo "... DPI/random_forest/ForestSurvival.o"
-	@echo "... DPI/random_forest/ForestSurvival.i"
-	@echo "... DPI/random_forest/ForestSurvival.s"
-	@echo "... DPI/random_forest/Tree.o"
-	@echo "... DPI/random_forest/Tree.i"
-	@echo "... DPI/random_forest/Tree.s"
-	@echo "... DPI/random_forest/TreeClassification.o"
-	@echo "... DPI/random_forest/TreeClassification.i"
-	@echo "... DPI/random_forest/TreeClassification.s"
-	@echo "... DPI/random_forest/TreeProbability.o"
-	@echo "... DPI/random_forest/TreeProbability.i"
-	@echo "... DPI/random_forest/TreeProbability.s"
-	@echo "... DPI/random_forest/TreeRegression.o"
-	@echo "... DPI/random_forest/TreeRegression.i"
-	@echo "... DPI/random_forest/TreeRegression.s"
-	@echo "... DPI/random_forest/TreeSurvival.o"
-	@echo "... DPI/random_forest/TreeSurvival.i"
-	@echo "... DPI/random_forest/TreeSurvival.s"
-	@echo "... DPI/random_forest/rf.o"
-	@echo "... DPI/random_forest/rf.i"
-	@echo "... DPI/random_forest/rf.s"
-	@echo "... DPI/random_forest/utility.o"
-	@echo "... DPI/random_forest/utility.i"
-	@echo "... DPI/random_forest/utility.s"
-	@echo "... DPI/svm/svm.o"
-	@echo "... DPI/svm/svm.i"
-	@echo "... DPI/svm/svm.s"
-	@echo "... DPI/svm/svm_util.o"
-	@echo "... DPI/svm/svm_util.i"
-	@echo "... DPI/svm/svm_util.s"
-	@echo "... Preprocesamiento/clahe/clahe.o"
-	@echo "... Preprocesamiento/clahe/clahe.i"
-	@echo "... Preprocesamiento/clahe/clahe.s"
+	@echo "... classification"
+	@echo "... classificationMetrics"
+	@echo "... classification/dicom_read/DicomReader.o"
+	@echo "... classification/dicom_read/DicomReader.i"
+	@echo "... classification/dicom_read/DicomReader.s"
+	@echo "... classification/dicom_read/dicomutils.o"
+	@echo "... classification/dicom_read/dicomutils.i"
+	@echo "... classification/dicom_read/dicomutils.s"
+	@echo "... classification/fcm/fcm.o"
+	@echo "... classification/fcm/fcm.i"
+	@echo "... classification/fcm/fcm.s"
+	@echo "... classification/knn/Preprocessing.o"
+	@echo "... classification/knn/Preprocessing.i"
+	@echo "... classification/knn/Preprocessing.s"
+	@echo "... classification/knn/ReadDataset.o"
+	@echo "... classification/knn/ReadDataset.i"
+	@echo "... classification/knn/ReadDataset.s"
+	@echo "... classification/knn/dataset.o"
+	@echo "... classification/knn/dataset.i"
+	@echo "... classification/knn/dataset.s"
+	@echo "... classification/knn/knn.o"
+	@echo "... classification/knn/knn.i"
+	@echo "... classification/knn/knn.s"
+	@echo "... classification/knn/knnresults.o"
+	@echo "... classification/knn/knnresults.i"
+	@echo "... classification/knn/knnresults.s"
+	@echo "... classification/knn/matrix.o"
+	@echo "... classification/knn/matrix.i"
+	@echo "... classification/knn/matrix.s"
+	@echo "... classification/random_forest/ArgumentHandler.o"
+	@echo "... classification/random_forest/ArgumentHandler.i"
+	@echo "... classification/random_forest/ArgumentHandler.s"
+	@echo "... classification/random_forest/Data.o"
+	@echo "... classification/random_forest/Data.i"
+	@echo "... classification/random_forest/Data.s"
+	@echo "... classification/random_forest/Forest.o"
+	@echo "... classification/random_forest/Forest.i"
+	@echo "... classification/random_forest/Forest.s"
+	@echo "... classification/random_forest/ForestClassification.o"
+	@echo "... classification/random_forest/ForestClassification.i"
+	@echo "... classification/random_forest/ForestClassification.s"
+	@echo "... classification/random_forest/ForestProbability.o"
+	@echo "... classification/random_forest/ForestProbability.i"
+	@echo "... classification/random_forest/ForestProbability.s"
+	@echo "... classification/random_forest/ForestRegression.o"
+	@echo "... classification/random_forest/ForestRegression.i"
+	@echo "... classification/random_forest/ForestRegression.s"
+	@echo "... classification/random_forest/ForestSurvival.o"
+	@echo "... classification/random_forest/ForestSurvival.i"
+	@echo "... classification/random_forest/ForestSurvival.s"
+	@echo "... classification/random_forest/Tree.o"
+	@echo "... classification/random_forest/Tree.i"
+	@echo "... classification/random_forest/Tree.s"
+	@echo "... classification/random_forest/TreeClassification.o"
+	@echo "... classification/random_forest/TreeClassification.i"
+	@echo "... classification/random_forest/TreeClassification.s"
+	@echo "... classification/random_forest/TreeProbability.o"
+	@echo "... classification/random_forest/TreeProbability.i"
+	@echo "... classification/random_forest/TreeProbability.s"
+	@echo "... classification/random_forest/TreeRegression.o"
+	@echo "... classification/random_forest/TreeRegression.i"
+	@echo "... classification/random_forest/TreeRegression.s"
+	@echo "... classification/random_forest/TreeSurvival.o"
+	@echo "... classification/random_forest/TreeSurvival.i"
+	@echo "... classification/random_forest/TreeSurvival.s"
+	@echo "... classification/random_forest/rf.o"
+	@echo "... classification/random_forest/rf.i"
+	@echo "... classification/random_forest/rf.s"
+	@echo "... classification/random_forest/utility.o"
+	@echo "... classification/random_forest/utility.i"
+	@echo "... classification/random_forest/utility.s"
+	@echo "... classification/svm/svm.o"
+	@echo "... classification/svm/svm.i"
+	@echo "... classification/svm/svm.s"
+	@echo "... classification/svm/svm_util.o"
+	@echo "... classification/svm/svm_util.i"
+	@echo "... classification/svm/svm_util.s"
 	@echo "... metrics/performance/benchmark.o"
 	@echo "... metrics/performance/benchmark.i"
 	@echo "... metrics/performance/benchmark.s"

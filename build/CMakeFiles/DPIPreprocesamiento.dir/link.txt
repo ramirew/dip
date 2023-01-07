@@ -1,2 +1,0 @@
-/usr/bin/ar qc libDPIPreprocesamiento.a CMakeFiles/DPIPreprocesamiento.dir/Preprocesamiento/clahe/clahe.cpp.o
-/usr/bin/ranlib libDPIPreprocesamiento.a

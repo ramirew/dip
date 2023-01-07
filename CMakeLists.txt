@@ -9,16 +9,12 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 # Define sources
 file(GLOB_RECURSE SOURCES_FILES
-    "DPI/*.cpp"
-    "DPI/*.cxx"
+    "classification/*.cpp"
+    "classification/*.cxx"
 )
 
 file(GLOB_RECURSE METRICS_SOURCES_FILES
     "metrics/*.cpp"
-)
-
-file(GLOB_RECURSE Preprocesamiento_SOURCES_FILES
-    "Preprocesamiento/*.cpp"
 )
 
 # Define headers
@@ -28,14 +24,14 @@ file(GLOB_RECURSE HEADERS_FILES
 )
 
 # Set sources
-add_library(DPI STATIC "${SOURCES_FILES}")
-add_library(DPIMetrics STATIC "${METRICS_SOURCES_FILES}")
-add_library(DPIPreprocesamiento STATIC "${Preprocesamiento_SOURCES_FILES}")
+add_library(classification STATIC "${SOURCES_FILES}")
+add_library(classificationMetrics STATIC "${METRICS_SOURCES_FILES}")
+
 
 # Include dirs
-include_directories(DPI)
+include_directories(classification)
 include_directories(metrics)
-include_directories(DPIPreprocesamiento)
+
 
 
 # C++ flags

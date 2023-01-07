@@ -72,9 +72,8 @@ CMAKE_BINARY_DIR = /home/usuario/DPI/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/DPIPreprocesamiento.dir/all
-all: CMakeFiles/DPIMetrics.dir/all
-all: CMakeFiles/DPI.dir/all
+all: CMakeFiles/classificationMetrics.dir/all
+all: CMakeFiles/classification.dir/all
 
 .PHONY : all
 
@@ -84,92 +83,64 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/DPIPreprocesamiento.dir/clean
-clean: CMakeFiles/DPIMetrics.dir/clean
-clean: CMakeFiles/DPI.dir/clean
+clean: CMakeFiles/classificationMetrics.dir/clean
+clean: CMakeFiles/classification.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/DPIPreprocesamiento.dir
+# Target rules for target CMakeFiles/classificationMetrics.dir
 
 # All Build rule for target.
-CMakeFiles/DPIPreprocesamiento.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPIPreprocesamiento.dir/build.make CMakeFiles/DPIPreprocesamiento.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPIPreprocesamiento.dir/build.make CMakeFiles/DPIPreprocesamiento.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/usuario/DPI/build/CMakeFiles --progress-num=29,30 "Built target DPIPreprocesamiento"
-.PHONY : CMakeFiles/DPIPreprocesamiento.dir/all
+CMakeFiles/classificationMetrics.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classificationMetrics.dir/build.make CMakeFiles/classificationMetrics.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classificationMetrics.dir/build.make CMakeFiles/classificationMetrics.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/usuario/DPI/build/CMakeFiles --progress-num=27,28 "Built target classificationMetrics"
+.PHONY : CMakeFiles/classificationMetrics.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/DPIPreprocesamiento.dir/rule: cmake_check_build_system
+CMakeFiles/classificationMetrics.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/usuario/DPI/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/DPIPreprocesamiento.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/classificationMetrics.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/usuario/DPI/build/CMakeFiles 0
-.PHONY : CMakeFiles/DPIPreprocesamiento.dir/rule
+.PHONY : CMakeFiles/classificationMetrics.dir/rule
 
 # Convenience name for target.
-DPIPreprocesamiento: CMakeFiles/DPIPreprocesamiento.dir/rule
+classificationMetrics: CMakeFiles/classificationMetrics.dir/rule
 
-.PHONY : DPIPreprocesamiento
-
-# clean rule for target.
-CMakeFiles/DPIPreprocesamiento.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPIPreprocesamiento.dir/build.make CMakeFiles/DPIPreprocesamiento.dir/clean
-.PHONY : CMakeFiles/DPIPreprocesamiento.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/DPIMetrics.dir
-
-# All Build rule for target.
-CMakeFiles/DPIMetrics.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPIMetrics.dir/build.make CMakeFiles/DPIMetrics.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPIMetrics.dir/build.make CMakeFiles/DPIMetrics.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/usuario/DPI/build/CMakeFiles --progress-num=27,28 "Built target DPIMetrics"
-.PHONY : CMakeFiles/DPIMetrics.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/DPIMetrics.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/usuario/DPI/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/DPIMetrics.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/usuario/DPI/build/CMakeFiles 0
-.PHONY : CMakeFiles/DPIMetrics.dir/rule
-
-# Convenience name for target.
-DPIMetrics: CMakeFiles/DPIMetrics.dir/rule
-
-.PHONY : DPIMetrics
+.PHONY : classificationMetrics
 
 # clean rule for target.
-CMakeFiles/DPIMetrics.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPIMetrics.dir/build.make CMakeFiles/DPIMetrics.dir/clean
-.PHONY : CMakeFiles/DPIMetrics.dir/clean
+CMakeFiles/classificationMetrics.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classificationMetrics.dir/build.make CMakeFiles/classificationMetrics.dir/clean
+.PHONY : CMakeFiles/classificationMetrics.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/DPI.dir
+# Target rules for target CMakeFiles/classification.dir
 
 # All Build rule for target.
-CMakeFiles/DPI.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/usuario/DPI/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26 "Built target DPI"
-.PHONY : CMakeFiles/DPI.dir/all
+CMakeFiles/classification.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/usuario/DPI/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26 "Built target classification"
+.PHONY : CMakeFiles/classification.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/DPI.dir/rule: cmake_check_build_system
+CMakeFiles/classification.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/usuario/DPI/build/CMakeFiles 26
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/DPI.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/classification.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/usuario/DPI/build/CMakeFiles 0
-.PHONY : CMakeFiles/DPI.dir/rule
+.PHONY : CMakeFiles/classification.dir/rule
 
 # Convenience name for target.
-DPI: CMakeFiles/DPI.dir/rule
+classification: CMakeFiles/classification.dir/rule
 
-.PHONY : DPI
+.PHONY : classification
 
 # clean rule for target.
-CMakeFiles/DPI.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DPI.dir/build.make CMakeFiles/DPI.dir/clean
-.PHONY : CMakeFiles/DPI.dir/clean
+CMakeFiles/classification.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/clean
+.PHONY : CMakeFiles/classification.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -1,2 +1,0 @@
-/usr/bin/ar qc libDPIMetrics.a CMakeFiles/DPIMetrics.dir/metrics/performance/benchmark.cpp.o
-/usr/bin/ranlib libDPIMetrics.a

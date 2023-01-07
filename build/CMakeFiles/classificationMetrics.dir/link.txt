@@ -1,0 +1,2 @@
+/usr/bin/ar qc libclassificationMetrics.a CMakeFiles/classificationMetrics.dir/metrics/performance/benchmark.cpp.o
+/usr/bin/ranlib libclassificationMetrics.a

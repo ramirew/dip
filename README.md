@@ -54,10 +54,10 @@ La libreria se ha usado con los IDEs QT Creator y CodeBlocks.
 Para usarlo con QT inicialice un nuevo proyecto y asegurece que su archivo de configuracion `.pro` tenga lo siguiente:
 
 ```
-INCLUDEPATH += /DPI/DPI \ # Aqui es el path del proyecto con las cabeceras.
+INCLUDEPATH += /dip/classification \ # Aqui es el path del proyecto con las cabeceras.
 
-LIBS += -L/DPI/build \  # Directorio con los archivos compilados
-    -lDPI \
+LIBS += -L/dip/build \  # Directorio con los archivos compilados
+    -lclassification \
     -ldcmdata \
     -ldcmimgle \
     -ldcmimage \
@@ -73,7 +73,7 @@ Para usarlo en codeblocks inicie un nuevo proyecto y asegurece de ejecutar el sc
 Dirigirse a configuraciones y compilador, en la pestaña __linker settings__ agregue el archivo `libDicomClasifier.a` que se encuentra en la carpeta __build__ despues del proceso de compilacion. Tambien incluya las siguientes opciones:
 
 ```
--lDPI
+-lclassification
 -ldcmdata
 -ldcmimgle
 -ldcmimage
@@ -90,7 +90,7 @@ Ahora en la pestaña `Search directories > compiler` agregue el directorio donde
 En la pestaña `Search directories > linker` agregue el directorio donde se se encuentran los archivos compilados.
 
 ```
-/home/user/projects/DPI/build
+/home/usuario/dip/build
 ```
 
 ### CMake
@@ -105,14 +105,14 @@ project(knn_cmake LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_library(DPI STATIC IMPORTED)
-set_target_properties(DPI PROPERTIES
-    IMPORTED_LOCATION "/home/will/Projects/DPI/build/libDPI.a"
-    INTERFACE_INCLUDE_DIRECTORIES "/home/will/Projects/DPI/DPI"
+add_library(classification STATIC IMPORTED)
+set_target_properties(classification PROPERTIES
+    IMPORTED_LOCATION "/home/usuario/dip/build/libclassification.a"
+    INTERFACE_INCLUDE_DIRECTORIES "/home/usuario/dip/classification"
 )
 
 add_executable(knn_cmake main.cpp)
-target_link_libraries(knn_cmake DPI -ldcmdata -ldcmimgle -ldcmimage -ldcmjpeg -lpthread)
+target_link_libraries(knn_cmake classification -ldcmdata -ldcmimgle -ldcmimage -ldcmjpeg -lpthread)
 
 
 ```
