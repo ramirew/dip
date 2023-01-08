@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/usuario/DPI/metrics/performance/benchmark.cpp" "/home/usuario/DPI/build/CMakeFiles/classificationMetrics.dir/metrics/performance/benchmark.cpp.o"
+  "/home/alexis/Documentos/octavosemestre/libreria/dip/metrics/performance/benchmark.cpp" "/home/alexis/Documentos/octavosemestre/libreria/dip/build/CMakeFiles/classificationMetrics.dir/metrics/performance/benchmark.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -12,6 +12,7 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../classification"
   "../metrics"
+  "../feature_ext_sel"
   )
 
 # Targets to which this target links.

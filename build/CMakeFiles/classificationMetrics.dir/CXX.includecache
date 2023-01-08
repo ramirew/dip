@@ -34,7 +34,7 @@ map
 list
 -
 
-/home/usuario/DPI/metrics/performance/benchmark.cpp
+/home/alexis/Documentos/octavosemestre/libreria/dip/metrics/performance/benchmark.cpp
 stdlib.h
 -
 sys/types.h
@@ -56,5 +56,5 @@ errno.h
 fcntl.h
 -
 performance/benchmark.h
-/home/usuario/DPI/metrics/performance/performance/benchmark.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/metrics/performance/performance/benchmark.h
 

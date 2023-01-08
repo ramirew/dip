@@ -1,4 +1,5 @@
-/home/usuario/DPI/build/CMakeFiles/rebuild_cache.dir
-/home/usuario/DPI/build/CMakeFiles/edit_cache.dir
-/home/usuario/DPI/build/CMakeFiles/classificationMetrics.dir
-/home/usuario/DPI/build/CMakeFiles/classification.dir
+/home/alexis/Documentos/octavosemestre/libreria/dip/build/CMakeFiles/rebuild_cache.dir
+/home/alexis/Documentos/octavosemestre/libreria/dip/build/CMakeFiles/edit_cache.dir
+/home/alexis/Documentos/octavosemestre/libreria/dip/build/CMakeFiles/featureExtraction.dir
+/home/alexis/Documentos/octavosemestre/libreria/dip/build/CMakeFiles/classificationMetrics.dir
+/home/alexis/Documentos/octavosemestre/libreria/dip/build/CMakeFiles/classification.dir

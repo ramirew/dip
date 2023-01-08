@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfeatureExtraction.a  CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/entropy.cpp.o CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/firstorderclassifiers.cpp.o
+/usr/bin/ranlib libfeatureExtraction.a

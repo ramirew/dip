@@ -47,7 +47,9 @@ SOURCES += \
     random_forest/utility.cpp \
     svm/svm.cpp \
     fcm/fcm.cpp \
-    svm/svm_util.cpp
+    svm/svm_util.cpp \
+    ../feature_ext_sel/first_order/entropy.cpp \
+    ../feature_ext_sel/first_order/firstorderclassifiers.cpp
 
 
 HEADERS += \
@@ -64,8 +66,9 @@ HEADERS += \
     svm/svm.h \
     fcm/fcm.h \
     kmeans/kmeans.h \
-    svm/svm_util.h
-
+    svm/svm_util.h \
+    ../feature_ext_sel/first_order/entropy.h \
+    ../feature_ext_sel/first_order/firstorderclassifiers.h
 
 
 INCLUDEPATH += random_forest

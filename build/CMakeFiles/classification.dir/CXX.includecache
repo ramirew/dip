@@ -190,33 +190,33 @@ globals.h
 Data.h
 ../classification/random_forest/Data.h
 
-/home/usuario/DPI/classification/dicom_read/DicomReader.cpp
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/dicom_read/DicomReader.cpp
 DicomReader.h
-/home/usuario/DPI/classification/dicom_read/DicomReader.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/dicom_read/DicomReader.h
 iostream
 -
 fstream
 -
 dcmtk/config/osconfig.h
-/home/usuario/DPI/classification/dicom_read/dcmtk/config/osconfig.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/dicom_read/dcmtk/config/osconfig.h
 dcmtk/dcmdata/dctk.h
-/home/usuario/DPI/classification/dicom_read/dcmtk/dcmdata/dctk.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/dicom_read/dcmtk/dcmdata/dctk.h
 dcmtk/dcmimgle/dcmimage.h
-/home/usuario/DPI/classification/dicom_read/dcmtk/dcmimgle/dcmimage.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/dicom_read/dcmtk/dcmimgle/dcmimage.h
 dcmtk/dcmjpeg/djdecode.h
-/home/usuario/DPI/classification/dicom_read/dcmtk/dcmjpeg/djdecode.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/dicom_read/dcmtk/dcmjpeg/djdecode.h
 
-/home/usuario/DPI/classification/dicom_read/DicomReader.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/dicom_read/DicomReader.h
 vector
 -
 string
 -
 
-/home/usuario/DPI/classification/dicom_read/dicomutils.cpp
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/dicom_read/dicomutils.cpp
 dicomutils.h
-/home/usuario/DPI/classification/dicom_read/dicomutils.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/dicom_read/dicomutils.h
 DicomReader.h
-/home/usuario/DPI/classification/dicom_read/DicomReader.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/dicom_read/DicomReader.h
 dirent.h
 -
 fstream
@@ -224,9 +224,9 @@ fstream
 sstream
 -
 kmeans/kmeans.h
-/home/usuario/DPI/classification/dicom_read/kmeans/kmeans.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/dicom_read/kmeans/kmeans.h
 
-/home/usuario/DPI/classification/dicom_read/dicomutils.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/dicom_read/dicomutils.h
 vector
 -
 string
@@ -234,11 +234,11 @@ string
 iostream
 -
 kmeans/kmeans.h
-/home/usuario/DPI/classification/dicom_read/kmeans/kmeans.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/dicom_read/kmeans/kmeans.h
 
-/home/usuario/DPI/classification/fcm/fcm.cpp
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/fcm/fcm.cpp
 fcm.h
-/home/usuario/DPI/classification/fcm/fcm.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/fcm/fcm.h
 math.h
 -
 stdio.h
@@ -254,23 +254,23 @@ fstream
 vector
 -
 
-/home/usuario/DPI/classification/fcm/fcm.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/fcm/fcm.h
 
-/home/usuario/DPI/classification/knn/Preprocessing.cpp
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/knn/Preprocessing.cpp
 Preprocessing.h
-/home/usuario/DPI/classification/knn/Preprocessing.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/knn/Preprocessing.h
 cmath
 -
 
-/home/usuario/DPI/classification/knn/Preprocessing.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/knn/Preprocessing.h
 dataset.h
-/home/usuario/DPI/classification/knn/dataset.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/knn/dataset.h
 
-/home/usuario/DPI/classification/knn/ReadDataset.cpp
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/knn/ReadDataset.cpp
 ReadDataset.h
-/home/usuario/DPI/classification/knn/ReadDataset.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/knn/ReadDataset.h
 dataset.h
-/home/usuario/DPI/classification/knn/dataset.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/knn/dataset.h
 iostream
 -
 fstream
@@ -278,73 +278,73 @@ fstream
 stdexcept
 -
 
-/home/usuario/DPI/classification/knn/ReadDataset.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/knn/ReadDataset.h
 string
 -
 dataset.h
-/home/usuario/DPI/classification/knn/dataset.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/knn/dataset.h
 
-/home/usuario/DPI/classification/knn/dataset.cpp
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/knn/dataset.cpp
 memory
 -
 algorithm
 -
 dataset.h
-/home/usuario/DPI/classification/knn/dataset.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/knn/dataset.h
 debug.h
-/home/usuario/DPI/classification/knn/debug.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/knn/debug.h
 cstdio
 -
 
-/home/usuario/DPI/classification/knn/dataset.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/knn/dataset.h
 matrix.h
-/home/usuario/DPI/classification/knn/matrix.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/knn/matrix.h
 memory
 -
 cstdio
 -
 
-/home/usuario/DPI/classification/knn/debug.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/knn/debug.h
 
-/home/usuario/DPI/classification/knn/knn.cpp
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/knn/knn.cpp
 knn.h
-/home/usuario/DPI/classification/knn/knn.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/knn/knn.h
 cassert
 -
 algorithm
 -
 dataset.h
-/home/usuario/DPI/classification/knn/dataset.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/knn/dataset.h
 iostream
 -
 debug.h
-/home/usuario/DPI/classification/knn/debug.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/knn/debug.h
 
-/home/usuario/DPI/classification/knn/knn.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/knn/knn.h
 dataset.h
-/home/usuario/DPI/classification/knn/dataset.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/knn/dataset.h
 
-/home/usuario/DPI/classification/knn/knnresults.cpp
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/knn/knnresults.cpp
 knn.h
-/home/usuario/DPI/classification/knn/knn.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/knn/knn.h
 vector
 -
 algorithm
 -
 
-/home/usuario/DPI/classification/knn/matrix.cpp
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/knn/matrix.cpp
 matrix.h
-/home/usuario/DPI/classification/knn/matrix.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/knn/matrix.h
 debug.h
-/home/usuario/DPI/classification/knn/debug.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/knn/debug.h
 cstdio
 -
 
-/home/usuario/DPI/classification/knn/matrix.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/knn/matrix.h
 memory
 -
 
-/home/usuario/DPI/classification/random_forest/ArgumentHandler.cpp
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/ArgumentHandler.cpp
 fstream
 -
 iostream
@@ -352,11 +352,11 @@ iostream
 stdexcept
 -
 ArgumentHandler.h
-/home/usuario/DPI/classification/random_forest/ArgumentHandler.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/ArgumentHandler.h
 utility.h
-/home/usuario/DPI/classification/random_forest/utility.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/utility.h
 
-/home/usuario/DPI/classification/random_forest/ArgumentHandler.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/ArgumentHandler.h
 getopt.h
 -
 string
@@ -364,9 +364,9 @@ string
 vector
 -
 globals.h
-/home/usuario/DPI/classification/random_forest/globals.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/globals.h
 
-/home/usuario/DPI/classification/random_forest/Data.cpp
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/Data.cpp
 fstream
 -
 sstream
@@ -378,11 +378,11 @@ algorithm
 iterator
 -
 Data.h
-/home/usuario/DPI/classification/random_forest/Data.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/Data.h
 utility.h
-/home/usuario/DPI/classification/random_forest/utility.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/utility.h
 
-/home/usuario/DPI/classification/random_forest/Data.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/Data.h
 vector
 -
 iostream
@@ -394,9 +394,9 @@ random
 algorithm
 -
 globals.h
-/home/usuario/DPI/classification/random_forest/globals.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/globals.h
 
-/home/usuario/DPI/classification/random_forest/Forest.cpp
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/Forest.cpp
 math.h
 -
 algorithm
@@ -414,17 +414,17 @@ thread
 chrono
 -
 random_forest/utility.h
-/home/usuario/DPI/classification/random_forest/random_forest/utility.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/utility.h
 Forest.h
-/home/usuario/DPI/classification/random_forest/Forest.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/Forest.h
 random_forest/DataChar.h
-/home/usuario/DPI/classification/random_forest/random_forest/DataChar.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/DataChar.h
 random_forest/DataDouble.h
-/home/usuario/DPI/classification/random_forest/random_forest/DataDouble.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/DataDouble.h
 random_forest/DataFloat.h
-/home/usuario/DPI/classification/random_forest/random_forest/DataFloat.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/DataFloat.h
 
-/home/usuario/DPI/classification/random_forest/Forest.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/Forest.h
 vector
 -
 iostream
@@ -444,13 +444,13 @@ mutex
 condition_variable
 -
 globals.h
-/home/usuario/DPI/classification/random_forest/globals.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/globals.h
 random_forest/Tree.h
-/home/usuario/DPI/classification/random_forest/random_forest/Tree.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/Tree.h
 random_forest/Data.h
-/home/usuario/DPI/classification/random_forest/random_forest/Data.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/Data.h
 
-/home/usuario/DPI/classification/random_forest/ForestClassification.cpp
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/ForestClassification.cpp
 unordered_map
 -
 algorithm
@@ -466,15 +466,15 @@ cmath
 string
 -
 random_forest/utility.h
-/home/usuario/DPI/classification/random_forest/random_forest/utility.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/utility.h
 ForestClassification.h
-/home/usuario/DPI/classification/random_forest/ForestClassification.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/ForestClassification.h
 random_forest/TreeClassification.h
-/home/usuario/DPI/classification/random_forest/random_forest/TreeClassification.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/TreeClassification.h
 random_forest/Data.h
-/home/usuario/DPI/classification/random_forest/random_forest/Data.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/Data.h
 
-/home/usuario/DPI/classification/random_forest/ForestClassification.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/ForestClassification.h
 iostream
 -
 map
@@ -484,23 +484,23 @@ utility
 vector
 -
 globals.h
-/home/usuario/DPI/classification/random_forest/globals.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/globals.h
 Forest.h
-/home/usuario/DPI/classification/random_forest/Forest.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/Forest.h
 
-/home/usuario/DPI/classification/random_forest/ForestProbability.cpp
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/ForestProbability.cpp
 stdexcept
 -
 random_forest/utility.h
-/home/usuario/DPI/classification/random_forest/random_forest/utility.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/utility.h
 ForestProbability.h
-/home/usuario/DPI/classification/random_forest/ForestProbability.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/ForestProbability.h
 random_forest/TreeProbability.h
-/home/usuario/DPI/classification/random_forest/random_forest/TreeProbability.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/TreeProbability.h
 random_forest/Data.h
-/home/usuario/DPI/classification/random_forest/random_forest/Data.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/Data.h
 
-/home/usuario/DPI/classification/random_forest/ForestProbability.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/ForestProbability.h
 map
 -
 utility
@@ -508,13 +508,13 @@ utility
 vector
 -
 globals.h
-/home/usuario/DPI/classification/random_forest/globals.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/globals.h
 Forest.h
-/home/usuario/DPI/classification/random_forest/Forest.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/Forest.h
 random_forest/TreeProbability.h
-/home/usuario/DPI/classification/random_forest/random_forest/TreeProbability.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/TreeProbability.h
 
-/home/usuario/DPI/classification/random_forest/ForestRegression.cpp
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/ForestRegression.cpp
 algorithm
 -
 stdexcept
@@ -522,25 +522,25 @@ stdexcept
 string
 -
 random_forest/utility.h
-/home/usuario/DPI/classification/random_forest/random_forest/utility.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/utility.h
 ForestRegression.h
-/home/usuario/DPI/classification/random_forest/ForestRegression.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/ForestRegression.h
 random_forest/TreeRegression.h
-/home/usuario/DPI/classification/random_forest/random_forest/TreeRegression.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/TreeRegression.h
 random_forest/Data.h
-/home/usuario/DPI/classification/random_forest/random_forest/Data.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/Data.h
 
-/home/usuario/DPI/classification/random_forest/ForestRegression.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/ForestRegression.h
 iostream
 -
 vector
 -
 globals.h
-/home/usuario/DPI/classification/random_forest/globals.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/globals.h
 Forest.h
-/home/usuario/DPI/classification/random_forest/Forest.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/Forest.h
 
-/home/usuario/DPI/classification/random_forest/ForestSurvival.cpp
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/ForestSurvival.cpp
 set
 -
 algorithm
@@ -552,33 +552,33 @@ stdexcept
 string
 -
 random_forest/utility.h
-/home/usuario/DPI/classification/random_forest/random_forest/utility.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/utility.h
 ForestSurvival.h
-/home/usuario/DPI/classification/random_forest/ForestSurvival.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/ForestSurvival.h
 random_forest/Data.h
-/home/usuario/DPI/classification/random_forest/random_forest/Data.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/Data.h
 
-/home/usuario/DPI/classification/random_forest/ForestSurvival.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/ForestSurvival.h
 iostream
 -
 vector
 -
 globals.h
-/home/usuario/DPI/classification/random_forest/globals.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/globals.h
 Forest.h
-/home/usuario/DPI/classification/random_forest/Forest.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/Forest.h
 random_forest/TreeSurvival.h
-/home/usuario/DPI/classification/random_forest/random_forest/TreeSurvival.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/TreeSurvival.h
 
-/home/usuario/DPI/classification/random_forest/Tree.cpp
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/Tree.cpp
 iterator
 -
 Tree.h
-/home/usuario/DPI/classification/random_forest/Tree.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/Tree.h
 random_forest/utility.h
-/home/usuario/DPI/classification/random_forest/random_forest/utility.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/utility.h
 
-/home/usuario/DPI/classification/random_forest/Tree.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/Tree.h
 vector
 -
 random
@@ -588,11 +588,11 @@ iostream
 stdexcept
 -
 globals.h
-/home/usuario/DPI/classification/random_forest/globals.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/globals.h
 random_forest/Data.h
-/home/usuario/DPI/classification/random_forest/random_forest/Data.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/Data.h
 
-/home/usuario/DPI/classification/random_forest/TreeClassification.cpp
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/TreeClassification.cpp
 unordered_map
 -
 random
@@ -604,39 +604,39 @@ iostream
 iterator
 -
 TreeClassification.h
-/home/usuario/DPI/classification/random_forest/TreeClassification.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/TreeClassification.h
 random_forest/utility.h
-/home/usuario/DPI/classification/random_forest/random_forest/utility.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/utility.h
 random_forest/Data.h
-/home/usuario/DPI/classification/random_forest/random_forest/Data.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/Data.h
 
-/home/usuario/DPI/classification/random_forest/TreeClassification.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/TreeClassification.h
 vector
 -
 globals.h
-/home/usuario/DPI/classification/random_forest/globals.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/globals.h
 Tree.h
-/home/usuario/DPI/classification/random_forest/Tree.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/Tree.h
 
-/home/usuario/DPI/classification/random_forest/TreeProbability.cpp
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/TreeProbability.cpp
 TreeProbability.h
-/home/usuario/DPI/classification/random_forest/TreeProbability.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/TreeProbability.h
 random_forest/utility.h
-/home/usuario/DPI/classification/random_forest/random_forest/utility.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/utility.h
 random_forest/Data.h
-/home/usuario/DPI/classification/random_forest/random_forest/Data.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/Data.h
 
-/home/usuario/DPI/classification/random_forest/TreeProbability.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/TreeProbability.h
 map
 -
 vector
 -
 globals.h
-/home/usuario/DPI/classification/random_forest/globals.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/globals.h
 Tree.h
-/home/usuario/DPI/classification/random_forest/Tree.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/Tree.h
 
-/home/usuario/DPI/classification/random_forest/TreeRegression.cpp
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/TreeRegression.cpp
 algorithm
 -
 iostream
@@ -646,21 +646,21 @@ iterator
 ctime
 -
 random_forest/utility.h
-/home/usuario/DPI/classification/random_forest/random_forest/utility.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/utility.h
 TreeRegression.h
-/home/usuario/DPI/classification/random_forest/TreeRegression.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/TreeRegression.h
 random_forest/Data.h
-/home/usuario/DPI/classification/random_forest/random_forest/Data.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/Data.h
 
-/home/usuario/DPI/classification/random_forest/TreeRegression.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/TreeRegression.h
 vector
 -
 globals.h
-/home/usuario/DPI/classification/random_forest/globals.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/globals.h
 Tree.h
-/home/usuario/DPI/classification/random_forest/Tree.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/Tree.h
 
-/home/usuario/DPI/classification/random_forest/TreeSurvival.cpp
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/TreeSurvival.cpp
 algorithm
 -
 cmath
@@ -672,51 +672,51 @@ iterator
 numeric
 -
 random_forest/utility.h
-/home/usuario/DPI/classification/random_forest/random_forest/utility.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/utility.h
 TreeSurvival.h
-/home/usuario/DPI/classification/random_forest/TreeSurvival.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/TreeSurvival.h
 random_forest/Data.h
-/home/usuario/DPI/classification/random_forest/random_forest/Data.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/Data.h
 
-/home/usuario/DPI/classification/random_forest/TreeSurvival.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/TreeSurvival.h
 vector
 -
 globals.h
-/home/usuario/DPI/classification/random_forest/globals.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/globals.h
 Tree.h
-/home/usuario/DPI/classification/random_forest/Tree.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/Tree.h
 
-/home/usuario/DPI/classification/random_forest/globals.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/globals.h
 
-/home/usuario/DPI/classification/random_forest/rf.cpp
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/rf.cpp
 rf.h
-/home/usuario/DPI/classification/random_forest/rf.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/rf.h
 stdexcept
 -
 random_forest/globals.h
-/home/usuario/DPI/classification/random_forest/random_forest/globals.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/globals.h
 random_forest/ForestClassification.h
-/home/usuario/DPI/classification/random_forest/random_forest/ForestClassification.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/ForestClassification.h
 random_forest/utility.h
-/home/usuario/DPI/classification/random_forest/random_forest/utility.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/utility.h
 random_forest/Data.h
-/home/usuario/DPI/classification/random_forest/random_forest/Data.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/Data.h
 
-/home/usuario/DPI/classification/random_forest/rf.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/rf.h
 vector
 -
 string
 -
 random_forest/globals.h
-/home/usuario/DPI/classification/random_forest/random_forest/globals.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/globals.h
 random_forest/ForestClassification.h
-/home/usuario/DPI/classification/random_forest/random_forest/ForestClassification.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/ForestClassification.h
 random_forest/utility.h
-/home/usuario/DPI/classification/random_forest/random_forest/utility.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/utility.h
 random_forest/Data.h
-/home/usuario/DPI/classification/random_forest/random_forest/Data.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/random_forest/Data.h
 
-/home/usuario/DPI/classification/random_forest/utility.cpp
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/utility.cpp
 math.h
 -
 iostream
@@ -740,13 +740,13 @@ utility
 vector
 -
 utility.h
-/home/usuario/DPI/classification/random_forest/utility.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/utility.h
 globals.h
-/home/usuario/DPI/classification/random_forest/globals.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/globals.h
 Data.h
-/home/usuario/DPI/classification/random_forest/Data.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/Data.h
 
-/home/usuario/DPI/classification/random_forest/utility.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/utility.h
 vector
 -
 iostream
@@ -772,11 +772,11 @@ utility
 Rinternals.h
 -
 globals.h
-/home/usuario/DPI/classification/random_forest/globals.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/globals.h
 Data.h
-/home/usuario/DPI/classification/random_forest/Data.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/random_forest/Data.h
 
-/home/usuario/DPI/classification/svm/svm.cpp
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/svm/svm.cpp
 math.h
 -
 stdio.h
@@ -796,19 +796,19 @@ limits.h
 locale.h
 -
 svm.h
-/home/usuario/DPI/classification/svm/svm.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/svm/svm.h
 
-/home/usuario/DPI/classification/svm/svm.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/svm/svm.h
 
-/home/usuario/DPI/classification/svm/svm_util.cpp
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/svm/svm_util.cpp
 svm_util.h
-/home/usuario/DPI/classification/svm/svm_util.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/svm/svm_util.h
 
-/home/usuario/DPI/classification/svm/svm_util.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/svm/svm_util.h
 vector
 -
 iostream
 -
 svm.h
-/home/usuario/DPI/classification/svm/svm.h
+/home/alexis/Documentos/octavosemestre/libreria/dip/classification/svm/svm.h
 

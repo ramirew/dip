@@ -17,6 +17,11 @@ file(GLOB_RECURSE METRICS_SOURCES_FILES
     "metrics/*.cpp"
 )
 
+file(GLOB_RECURSE FEATURE_EXTRACTION_SOURCES_FILES
+    "feature_ext_sel/*.cpp"
+    "feature_ext_sel/*.cxx"
+)
+
 # Define headers
 file(GLOB_RECURSE HEADERS_FILES
     "*.h"
@@ -26,12 +31,13 @@ file(GLOB_RECURSE HEADERS_FILES
 # Set sources
 add_library(classification STATIC "${SOURCES_FILES}")
 add_library(classificationMetrics STATIC "${METRICS_SOURCES_FILES}")
+add_library(featureExtraction STATIC "${FEATURE_EXTRACTION_SOURCES_FILES}")
 
 
 # Include dirs
 include_directories(classification)
 include_directories(metrics)
-
+include_directories(feature_ext_sel)
 
 
 # C++ flags
