@@ -58,6 +58,7 @@ INCLUDEPATH += /dip/classification \ # Aqui es el path del proyecto con las cabe
 
 LIBS += -L/dip/build \  # Directorio con los archivos compilados
     -lclassification \
+    -lfeatureExtraction \
     -ldcmdata \
     -ldcmimgle \
     -ldcmimage \
