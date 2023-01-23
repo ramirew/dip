@@ -50,6 +50,7 @@ SOURCES += \
     svm/svm_util.cpp \
     ../feature_ext_sel/first_order/entropy.cpp \
     ../feature_ext_sel/first_order/firstorderclassifiers.cpp
+    ../feature_ext_sel/second_order/secondorder.cpp
 
 
 HEADERS += \
@@ -69,6 +70,7 @@ HEADERS += \
     svm/svm_util.h \
     ../feature_ext_sel/first_order/entropy.h \
     ../feature_ext_sel/first_order/firstorderclassifiers.h
+    ../feature_ext_sel/second_order/secondorder.h
 
 
 INCLUDEPATH += random_forest
