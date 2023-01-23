@@ -8,9 +8,8 @@
 #include <cmath>
 #include <math.h>
 
-// #include "SegundoOrden.h"
-#include "dicom/DicomReader.h"
-#include "SegundoOrden.h"
+#include "dicom_read/DicomReader.h"
+#include "second_order/secondorder.h"
 
 using namespace std;
 
@@ -74,7 +73,8 @@ int main(int argc, char *argv[])
 
     vector<vector<int>> image = parseData(dicomObj.getImageArray(12), size, elements);
 
-    SegundoOrden s;
+    
+    SecondOrder s;
 
     double idn = s.IDN(image);
     cout << "IDN: " << idn << endl;
