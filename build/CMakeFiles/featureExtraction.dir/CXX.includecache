@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/alexis/Documentos/octavosemestre/libreria/dip/feature_ext_sel/first_order/entropy.cpp
+/home/evils/ups/paralela/dip/feature_ext_sel/first_order/entropy.cpp
 entropy.h
-/home/alexis/Documentos/octavosemestre/libreria/dip/feature_ext_sel/first_order/entropy.h
+/home/evils/ups/paralela/dip/feature_ext_sel/first_order/entropy.h
 fstream
 -
 string.h
@@ -28,7 +28,7 @@ cmath
 math.h
 -
 
-/home/alexis/Documentos/octavosemestre/libreria/dip/feature_ext_sel/first_order/entropy.h
+/home/evils/ups/paralela/dip/feature_ext_sel/first_order/entropy.h
 string
 -
 stdio.h
@@ -36,9 +36,9 @@ stdio.h
 vector
 -
 
-/home/alexis/Documentos/octavosemestre/libreria/dip/feature_ext_sel/first_order/firstorderclassifiers.cpp
+/home/evils/ups/paralela/dip/feature_ext_sel/first_order/firstorderclassifiers.cpp
 firstorderclassifiers.h
-/home/alexis/Documentos/octavosemestre/libreria/dip/feature_ext_sel/first_order/firstorderclassifiers.h
+/home/evils/ups/paralela/dip/feature_ext_sel/first_order/firstorderclassifiers.h
 fstream
 -
 string.h
@@ -58,9 +58,41 @@ cmath
 math.h
 -
 
-/home/alexis/Documentos/octavosemestre/libreria/dip/feature_ext_sel/first_order/firstorderclassifiers.h
+/home/evils/ups/paralela/dip/feature_ext_sel/first_order/firstorderclassifiers.h
 string
 -
+stdio.h
+-
+vector
+-
+
+/home/evils/ups/paralela/dip/feature_ext_sel/second_order/secondorder.cpp
+secondorder.h
+/home/evils/ups/paralela/dip/feature_ext_sel/second_order/secondorder.h
+fstream
+-
+string.h
+-
+cstdlib
+-
+climits
+-
+string
+-
+stdio.h
+-
+vector
+-
+iostream
+-
+cmath
+-
+omp.h
+-
+math.h
+-
+
+/home/evils/ups/paralela/dip/feature_ext_sel/second_order/secondorder.h
 stdio.h
 -
 vector

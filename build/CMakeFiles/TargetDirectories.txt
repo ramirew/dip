@@ -1,5 +1,5 @@
-/home/alexis/Documentos/octavosemestre/libreria/dip/build/CMakeFiles/rebuild_cache.dir
-/home/alexis/Documentos/octavosemestre/libreria/dip/build/CMakeFiles/edit_cache.dir
-/home/alexis/Documentos/octavosemestre/libreria/dip/build/CMakeFiles/featureExtraction.dir
-/home/alexis/Documentos/octavosemestre/libreria/dip/build/CMakeFiles/classificationMetrics.dir
-/home/alexis/Documentos/octavosemestre/libreria/dip/build/CMakeFiles/classification.dir
+/home/evils/ups/paralela/dip/build/CMakeFiles/rebuild_cache.dir
+/home/evils/ups/paralela/dip/build/CMakeFiles/edit_cache.dir
+/home/evils/ups/paralela/dip/build/CMakeFiles/featureExtraction.dir
+/home/evils/ups/paralela/dip/build/CMakeFiles/classificationMetrics.dir
+/home/evils/ups/paralela/dip/build/CMakeFiles/classification.dir

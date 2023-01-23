@@ -8,6 +8,7 @@
 #include <cmath>
 #include <math.h>
 
+
 #include "dicom_read/DicomReader.h"
 #include "second_order/secondorder.h"
 
@@ -30,68 +31,58 @@ vector<vector<int>> parseData(int **img, int size, int feat)
     return data;
 }
 
-vector<int> generateLabels(int labelsSize)
-{
-    std::vector<int> labels;
-    for (int i = 0; i < labelsSize; ++i)
-    {
-        int lbl = i % 4;
-        labels.push_back(lbl);
-    }
-    return labels;
-}
-
-void saveData(vector<vector<int>> data, const char *filename)
-{
-    std::ofstream output_file(filename);
-
-    for (const auto &row : data)
-    {
-        for (const auto &val : row)
-        {
-            output_file << val << ",";
-        }
-        output_file << "\n";
-    }
-}
-
-void saveLabels(vector<int> labels)
-{
-    std::ofstream output_file("labels.csv");
-
-    for (const auto &v : labels)
-    {
-        output_file << v << ",";
-    }
-}
-
 int main(int argc, char *argv[])
 {
-    DicomReader dicomObj("/home/mpi-test/MasaMicro1.dcm");
+    DicomReader dicomObj("/home/evils/ups/paralela/test-opencv/images/MasaMicro1.dcm");
     int size = dicomObj.getHeight();
     int elements = dicomObj.getWidth();
 
     vector<vector<int>> image = parseData(dicomObj.getImageArray(12), size, elements);
 
-    
     SecondOrder s;
 
+    double idnP = s.IDN_OPM(image);
+    cout << "IDN using OPM: " << idnP << endl;
     double idn = s.IDN(image);
     cout << "IDN: " << idn << endl;
+
+    double ido_c4P = s.IDOC4_OPM(image);
+    cout << "IDOC4 using OPM: " << ido_c4P << endl;
     double ido_c4 = s.IDOC4(image);
     cout << "IDOC4: " << ido_c4 << endl;
+
+    double inverse_varianceP = s.InverseVariance_OPM(image);
+    cout << "InverseVariance using OPM: " << inverse_varianceP << endl;
     double inverse_variance = s.InverseVariance(image);
     cout << "InverseVariance: " << inverse_variance << endl;
+
+    double local_homogeneityP = s.LocalHomogeneity_OPM(image);
+    cout << "LocalHomogeneity using OPM: " << local_homogeneityP << endl;
     double local_homogeneity = s.LocalHomogeneity(image);
     cout << "LocalHomogeneity: " << local_homogeneity << endl;
-    double lre = s.LRE(image);
-    cout << "LRE: " << lre << endl;
+
+    double max_probabilityP = s.MaxProbability_OPM(image);
+    cout << "MaxProbability using OPM: " << max_probabilityP << endl;
     double max_probability = s.MaxProbability(image);
     cout << "MaxProbability: " << max_probability << endl;
+
+    double max_intensityroiP = s.MaxIntensityROI_OPM(image, 1000, 1000, 2000, 2000);
+    cout << "MaxIntensityROI using OPM: " << max_intensityroiP << endl;
     double max_intensityroi = s.MaxIntensityROI(image, 1000, 1000, 2000, 2000);
     cout << "MaxIntensityROI: " << max_intensityroi << endl;
+
+    double mean_intensityroiP = s.MeanIntensityROI_OPM(image, 1000, 1000, 2000, 2000);
+    cout << "MeanIntensityROI using OPM: " << mean_intensityroiP << endl;
     double mean_intensityroi = s.MeanIntensityROI(image, 1000, 1000, 2000, 2000);
     cout << "MeanIntensityROI: " << mean_intensityroi << endl;
+
+    double lreP = s.LRE_ORM(image);
+    cout << "LRE using OPM: " << lreP << endl;
+    double lre = s.LRE(image);
+    cout << "LRE: " << lre << endl;
+
+    double mean_varianceP = s.MeanVariance_OPM(image);
+    cout << "MeanVariance using OPM: " << mean_varianceP << endl;
     double mean_variance = s.MeanVariance(image);
     cout << "MeanVariance: " << mean_variance << endl;
 
