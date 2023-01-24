@@ -17,13 +17,6 @@ SecondOrder::SecondOrder()
 {
 }
 
-void SecondOrder::muestra_vector(const vector<int> &v)
-{
-    for (auto x : v)
-        cout << x << " ";
-    cout << endl;
-}
-
 /**
  * Método para calcular Inverse Difference Normalized utilizando Second-Order Statistical
  * @param img vector de vectores de tipo int que representa la imagen DICOM
@@ -31,31 +24,19 @@ void SecondOrder::muestra_vector(const vector<int> &v)
  */
 double SecondOrder::IDN(vector<vector<int>> image)
 {
-    double IDN = 0;
-    int intensityRange = 4096; // rango de intensidad de la imagen
-
-    // Crear la matriz de probabilidad conjunta
-    vector<vector<double>> joint_prob_hist(intensityRange, vector<double>(intensityRange, 0));
     int rows = image.size();
     int cols = image[0].size();
+
+    double IDN = 0;
 
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < cols; j++)
         {
-            joint_prob_hist[image[i][j]][image[i][j]]++;
-        }
-    }
-
-    // normalizar la matriz de probabilidad conjunta
-    for (int i = 0; i < intensityRange; i++)
-    {
-        for (int j = 0; j < intensityRange; j++)
-        {
             if (i + j != 0)
             {
-                joint_prob_hist[i][j] /= (rows * cols);
-                IDN += (1 / ((1 + ((i - j) * (i - j)) / (i + j)))) * joint_prob_hist[i][j];
+                double p = (double)(image[i][j]) / (rows * cols);
+                IDN += (1 / ((1 + ((i - j) * (i - j)) / (i + j)))) * p;
             }
         }
     }
@@ -63,39 +44,32 @@ double SecondOrder::IDN(vector<vector<int>> image)
     return IDN;
 }
 
+/**
+ * Método para calcular Inverse Difference Normalized utilizando Second-Order Statistical
+ * @param img vector de vectores de tipo int que representa la imagen DICOM
+ * @return Inverse Difference Normalized
+ */
 double SecondOrder::IDN_OPM(vector<vector<int>> image)
 {
-    double IDN = 0;
-    int pixelCount = image.size() * image[0].size(); // total de pixeles de la imagen
-    int intensityRange = 4096;                       // rango de intensidad de la imagen
-
-    vector<vector<double>> joint_prob_hist(intensityRange, vector<double>(intensityRange, 0));
     int rows = image.size();
     int cols = image[0].size();
-#pragma omp parallel for
+
+    double IDN = 0;
+
+#pragma omp parallel for num_threads(2) reduction(+ \
+                                                  : IDN)
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < cols; j++)
         {
-
-#pragma omp atomic
-            joint_prob_hist[image[i][j]][image[i][j]]++;
-        }
-    }
-
-#pragma omp parallel for reduction(+ \
-                                   : IDN)
-    for (int i = 0; i < intensityRange; i++)
-    {
-        for (int j = 0; j < intensityRange; j++)
-        {
             if (i + j != 0)
             {
-                joint_prob_hist[i][j] /= (rows * cols);
-                IDN += (1 / ((1 + ((i - j) * (i - j)) / (i + j)))) * joint_prob_hist[i][j];
+                double p = (double)image[i][j] / (rows * cols);
+                IDN += (1 / ((1 + ((i - j) * (i - j)) / (i + j)))) * p;
             }
         }
     }
+
     return IDN;
 }
 /**
@@ -105,65 +79,44 @@ double SecondOrder::IDN_OPM(vector<vector<int>> image)
  */
 double SecondOrder::IDOC4(vector<vector<int>> image)
 {
-    int intensityRange = 4096; // rango de intensidad de la imagen
-
-    // Crear la matriz de probabilidad conjunta
-    vector<vector<double>> joint_prob_hist(intensityRange, vector<double>(intensityRange, 0));
     int rows = image.size();
     int cols = image[0].size();
+
+    double IDOC4 = 0;
 
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < cols; j++)
         {
-            joint_prob_hist[image[i][j]][image[i][j]]++;
-        }
-    }
-    // Calcular Inverse Difference OC4 utilizando la matriz de probabilidad conjunta
-    double IDOC4 = 0;
-    for (int i = 0; i < intensityRange; i++)
-    {
-        for (int j = 0; j < intensityRange; j++)
-        {
             if (i + j != 0)
             {
-                joint_prob_hist[i][j] /= (rows * cols);
-                IDOC4 += pow((i - j) / (i + j), 4) * joint_prob_hist[i][j];
+                IDOC4 += (1 / ((1 + ((i - j) * (i - j)) / (i + j)))) * (double)image[i][j];
             }
         }
     }
     return IDOC4;
 }
-
+/**
+ * Método para calcular Inverse Difference OC4 utilizando Second-Order Statistical
+ * @param img vector de vectores de tipo int que representa la imagen DICOM
+ * @return Inverse Difference OC4
+ */
 double SecondOrder::IDOC4_OPM(vector<vector<int>> image)
 {
-    int intensityRange = 4096; // rango de intensidad de la imagen
-
-    // Crear la matriz de probabilidad conjunta
-    vector<vector<double>> joint_prob_hist(intensityRange, vector<double>(intensityRange, 0));
     int rows = image.size();
     int cols = image[0].size();
-#pragma omp parallel for
+
+    double IDOC4 = 0;
+
+#pragma omp parallel for num_threads(2) reduction(+ \
+                                                  : IDOC4)
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < cols; j++)
         {
-#pragma omp atomic
-            joint_prob_hist[image[i][j]][image[i][j]]++;
-        }
-    }
-    // Calcular Inverse Difference OC4 utilizando la matriz de probabilidad conjunta
-    double IDOC4 = 0;
-#pragma omp parallel for reduction(+ \
-                                   : IDOC4)
-    for (int i = 0; i < intensityRange; i++)
-    {
-        for (int j = 0; j < intensityRange; j++)
-        {
             if (i + j != 0)
             {
-                joint_prob_hist[i][j] /= (rows * cols);
-                IDOC4 += pow((i - j) / (i + j), 4) * joint_prob_hist[i][j];
+                IDOC4 += (1 / ((1 + ((i - j) * (i - j)) / (i + j)))) * (double)image[i][j];
             }
         }
     }
@@ -177,9 +130,8 @@ double SecondOrder::IDOC4_OPM(vector<vector<int>> image)
  */
 double SecondOrder::InverseVariance(vector<vector<int>> image)
 {
-    int intensityRange = 4096; // rango de intensidad de la imagen
-    // Crear la matriz de probabilidad conjunta
-    vector<vector<double>> joint_prob_hist(intensityRange, vector<double>(intensityRange, 0));
+    double IV = 0;
+
     int rows = image.size();
     int cols = image[0].size();
 
@@ -187,58 +139,35 @@ double SecondOrder::InverseVariance(vector<vector<int>> image)
     {
         for (int j = 0; j < cols; j++)
         {
-            joint_prob_hist[image[i][j]][image[i][j]]++;
+            double p = (double)image[i][j] / (rows * cols);
+            IV += p / (1 + pow((i - j), 2));
         }
     }
-    // Calcular Inverse Variance utilizando la matriz de probabilidad conjunta
-    double mean = 0;
-    double variance = 0;
-    for (int i = 0; i < intensityRange; i++)
-    {
-        for (int j = 0; j < intensityRange; j++)
-        {
-            joint_prob_hist[i][j] /= (rows * cols);
-            mean += i * joint_prob_hist[i][j];
-            variance += (i - mean) * (i - mean) * joint_prob_hist[i][j];
-        }
-    }
-    return 1 / variance;
+    return IV;
 }
+/**
+ * Método para calcular Inverse Variance utilizando Second-Order Statistical
+ * @param img vector de vectores de tipo int que representa la imagen DICOM
+ * @return Inverse Variance
+ */
 double SecondOrder::InverseVariance_OPM(vector<vector<int>> image)
 {
-    int intensityRange = 4096; // rango de intensidad de la imagen
-    // Crear la matriz de probabilidad conjunta
-    vector<vector<double>> joint_prob_hist(intensityRange, vector<double>(intensityRange, 0));
-
     int rows = image.size();
     int cols = image[0].size();
+    double IV = 0;
 
-#pragma omp parallel for
+    // Calcular la probabilidad conjunta p(i,j)
+#pragma omp parallel for num_threads(2) reduction(+ \
+                                                  : IV)
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < cols; j++)
         {
-
-#pragma omp atomic
-            joint_prob_hist[image[i][j]][image[i][j]]++;
+            double p = (double)image[i][j] / (rows * cols);
+            IV += p / (1 + pow((i - j), 2));
         }
     }
-
-    // Calcular Inverse Variance utilizando la matriz de probabilidad conjunta
-    double mean = 0;
-    double variance = 0;
-#pragma omp parallel for reduction(+ \
-                                   : variance)
-    for (int i = 0; i < intensityRange; i++)
-    {
-        for (int j = 0; j < intensityRange; j++)
-        {
-            joint_prob_hist[i][j] /= (rows * cols);
-            mean += i * joint_prob_hist[i][j];
-            variance += (i - mean) * (i - mean) * joint_prob_hist[i][j];
-        }
-    }
-    return 1 / variance;
+    return IV;
 }
 
 /**
@@ -249,9 +178,7 @@ double SecondOrder::InverseVariance_OPM(vector<vector<int>> image)
 double SecondOrder::LocalHomogeneity(vector<vector<int>> image)
 {
     double LH = 0;
-    int intensityRange = 4096; // rango de intensidad de la imagen
-    // Crear la matriz de probabilidad conjunta
-    vector<vector<double>> joint_prob_hist(intensityRange, vector<double>(intensityRange, 0));
+
     int rows = image.size();
     int cols = image[0].size();
 
@@ -259,57 +186,33 @@ double SecondOrder::LocalHomogeneity(vector<vector<int>> image)
     {
         for (int j = 0; j < cols; j++)
         {
-            joint_prob_hist[image[i][j]][image[i][j]]++;
-        }
-    }
-
-    // Calcular Local Homogeneity utilizando la matriz de probabilidad conjunta
-
-    for (int i = 0; i < intensityRange; i++)
-    {
-        for (int j = 0; j < intensityRange; j++)
-        {
-            joint_prob_hist[i][j] /= (rows * cols);
-            LH += joint_prob_hist[i][j] / (1 + (i - j) * (i - j));
+            double p = (double)image[i][j] / (rows * cols);
+            LH += p / (1 + ((i - j) * (i - j)) / (2));
         }
     }
     return LH;
 }
+
+/**
+ * Método para calcular Local Homogeneity utilizando Second-Order Statistical
+ * @param img vector de vectores de tipo int que representa la imagen DICOM
+ * @return Local Homogeneity
+ */
 double SecondOrder::LocalHomogeneity_OPM(vector<vector<int>> image)
 {
     double LH = 0;
-    int intensityRange = 4096; // rango de intensidad de la imagen
-    // Crear la matriz de probabilidad conjunta
-    vector<vector<double>> joint_prob_hist(intensityRange, vector<double>(intensityRange, 0));
+
     int rows = image.size();
     int cols = image[0].size();
-#pragma omp parallel for
+
+#pragma omp parallel for num_threads(2) reduction(+ \
+                                                  : LH)
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < cols; j++)
         {
-#pragma omp atomic
-            joint_prob_hist[image[i][j]][image[i][j]]++;
-        }
-    }
-    // normalizar la matriz de probabilidad conjunta
-    for (int i = 0; i < intensityRange; i++)
-    {
-        for (int j = 0; j < intensityRange; j++)
-        {
-            joint_prob_hist[i][j] /= (rows * cols);
-        }
-    }
-    // Calcular Local Homogeneity utilizando la matriz de probabilidad conjunta
-
-#pragma omp parallel for reduction(+ \
-                                   : LH)
-    for (int i = 0; i < intensityRange; i++)
-    {
-        for (int j = 0; j < intensityRange; j++)
-        {
-
-            LH += joint_prob_hist[i][j] / (1 + (i - j) * (i - j));
+            double p = (double)image[i][j] / (rows * cols);
+            LH += p / (1 + ((i - j) * (i - j)) / (2));
         }
     }
     return LH;
@@ -322,68 +225,37 @@ double SecondOrder::LocalHomogeneity_OPM(vector<vector<int>> image)
  */
 double SecondOrder::MaxProbability(vector<vector<int>> image)
 {
-
-    int intensityRange = 4096; // rango de intensidad de la imagen
-    // Crear la matriz de probabilidad conjunta
-    vector<vector<double>> joint_prob_hist(intensityRange, vector<double>(intensityRange, 0));
     int rows = image.size();
     int cols = image[0].size();
-
+    double maxProb = 0;
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < cols; j++)
         {
-            joint_prob_hist[image[i][j]][image[i][j]]++;
-        }
-    }
-    // Calcular Maximum Probability utilizando la matriz de probabilidad conjunta
-    double maxProb = 0;
-    for (int i = 0; i < intensityRange; i++)
-    {
-        for (int j = 0; j < intensityRange; j++)
-        {
-            joint_prob_hist[i][j] /= (rows * cols);
-            if (joint_prob_hist[i][j] > maxProb)
-            {
-                maxProb = joint_prob_hist[i][j];
-            }
+            double p = (double)image[i][j] / (rows * cols);
+            maxProb = max(maxProb, p);
         }
     }
     return maxProb;
 }
+
+/**
+ * Método para calcular la Maximum Probability utilizando Second-Order Statistical
+ * @param img vector de vectores de tipo int que representa la imagen DICOM
+ * @return Maximum Probability
+ */
 double SecondOrder::MaxProbability_OPM(vector<vector<int>> image)
 {
-
-    int intensityRange = 4096; // rango de intensidad de la imagen
-    // Crear la matriz de probabilidad conjunta
-    vector<vector<double>> joint_prob_hist(intensityRange, vector<double>(intensityRange, 0));
-
     int rows = image.size();
     int cols = image[0].size();
-
-#pragma omp parallel for
+    double maxProb = 0;
+#pragma omp parallel for schedule(static) num_threads(2)
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < cols; j++)
         {
-
-#pragma omp atomic
-            joint_prob_hist[image[i][j]][image[i][j]]++;
-        }
-    }
-    // Calcular Maximum Probability utilizando la matriz de probabilidad conjunta
-    double maxProb = 0;
-#pragma omp parallel for reduction(= \
-                                       : maxProb)
-    for (int i = 0; i < intensityRange; i++)
-    {
-        for (int j = 0; j < intensityRange; j++)
-        {
-            joint_prob_hist[i][j] /= (rows * cols);
-            if (joint_prob_hist[i][j] > maxProb)
-            {
-                maxProb = joint_prob_hist[i][j];
-            }
+            double p = (double)image[i][j] / (rows * cols);
+            maxProb = max(maxProb, p);
         }
     }
     return maxProb;
@@ -396,70 +268,50 @@ double SecondOrder::MaxProbability_OPM(vector<vector<int>> image)
  * @param x2,y2 coordenadas x,y del punto final del ROI
  * @return Maximum Value of Intensity en el ROI
  */
-double SecondOrder::MaxIntensityROI(vector<vector<int>> image, int x1, int y1, int x2, int y2)
+int SecondOrder::MaxIntensityROI(vector<vector<int>> image, int x1, int y1, int x2, int y2)
 {
-    int intensityRange = 4096; // rango de intensidad de la imagen
-    // Crear la matriz de probabilidad conjunta
-    vector<vector<double>> joint_prob_hist(intensityRange, vector<double>(intensityRange, 0));
-    int rows = image.size();
-    int cols = image[0].size();
-
-    for (int i = y1; i <= y2; i++)
+    int maxValue = INT_MIN;
+    for (int i = x1; i <= x2; i++)
     {
-        for (int j = x1; j <= x2; j++)
+        for (int j = y1; j <= y2; j++)
         {
-            joint_prob_hist[image[i][j]][image[i][j]]++;
-        }
-    }
-
-    // Calcular Maximum Value of Intensity en el ROI utilizando la matriz de probabilidad conjunta
-    double Max = 0;
-    for (int i = 0; i < intensityRange; i++)
-    {
-        for (int j = 0; j < intensityRange; j++)
-        {
-            joint_prob_hist[i][j] /= (rows * cols);
-            if (joint_prob_hist[i][j] > Max)
             {
-                Max = joint_prob_hist[i][j];
+                if (image[i][j] > maxValue)
+                {
+                    maxValue = image[i][j];
+                }
             }
         }
     }
-    return Max;
+    return maxValue;
 }
-double SecondOrder::MaxIntensityROI_OPM(vector<vector<int>> image, int x1, int y1, int x2, int y2)
-{
-    int intensityRange = 4096; // rango de intensidad de la imagen
-    // Crear la matriz de probabilidad conjunta
-    vector<vector<double>> joint_prob_hist(intensityRange, vector<double>(intensityRange, 0));
-    int rows = image.size();
-    int cols = image[0].size();
-#pragma omp parallel for
-    for (int i = y1; i <= y2; i++)
-    {
-        for (int j = x1; j <= x2; j++)
-        {
-#pragma omp atomic
-            joint_prob_hist[image[i][j]][image[i][j]]++;
-        }
-    }
 
-    // Calcular Maximum Value of Intensity en el ROI utilizando la matriz de probabilidad conjunta
-    double Max = 0;
-#pragma omp parallel for reduction(= \
-                                       : Max)
-    for (int i = 0; i < intensityRange; i++)
+/**
+ * Método para calcular el Maximum Value of Intensity en un área específica (ROI) utilizando Second-Order Statistical
+ * @param img vector de vectores de tipo int que representa la imagen DICOM
+ * @param x1,y1 coordenadas x,y del punto inicial del ROI
+ * @param x2,y2 coordenadas x,y del punto final del ROI
+ * @return Maximum Value of Intensity en el ROI
+ */
+
+int SecondOrder::MaxIntensityROI_OPM(vector<vector<int>> image, int x1, int y1, int x2, int y2)
+{
+    int maxValue = INT_MIN;
+#pragma omp parallel for num_threads(numThreads)
+    for (int i = x1; i <= x2; i++)
     {
-        for (int j = 0; j < intensityRange; j++)
+        for (int j = y1; j <= y2; j++)
         {
-            joint_prob_hist[i][j] /= (rows * cols);
-            if (joint_prob_hist[i][j] > Max)
+#pragma omp critical
             {
-                Max = joint_prob_hist[i][j];
+                if (image[i][j] > maxValue)
+                {
+                    maxValue = image[i][j];
+                }
             }
         }
     }
-    return Max;
+    return maxValue;
 }
 
 double SecondOrder::Mean(vector<vector<int>> image)
@@ -475,6 +327,7 @@ double SecondOrder::Mean(vector<vector<int>> image)
     }
     return (double)sum / total_pixels;
 }
+
 /**
  * Método para calcular el Mean Value of Intensity en un área específica (ROI) utilizando Second-Order Statistical
  * @param img vector de vectores de tipo int que representa la imagen DICOM
@@ -484,87 +337,42 @@ double SecondOrder::Mean(vector<vector<int>> image)
  */
 double SecondOrder::MeanIntensityROI(vector<vector<int>> image, int x1, int y1, int x2, int y2)
 {
-    int intensityRange = 4096; // rango de intensidad de la imagen
-    // Crear la matriz de probabilidad conjunta
-    vector<vector<double>> joint_prob_hist(intensityRange, vector<double>(intensityRange, 0));
-    int rows = image.size();
-    int cols = image[0].size();
+    double mean = 0;
+    int count = 0;
 
-    for (int i = y1; i <= y2; i++)
+    for (int i = x1; i <= x2; i++)
     {
-        for (int j = x1; j <= x2; j++)
+        for (int j = y1; j <= y2; j++)
         {
-            joint_prob_hist[image[i][j]][image[i][j]]++;
+            mean += image[i][j];
+            count++;
         }
     }
-
-    // Calcular Mean Value of Intensity en el ROI utilizando la matriz de probabilidad conjunta
-    double Mean = 0;
-    for (int i = 0; i < intensityRange; i++)
-    {
-        for (int j = 0; j < intensityRange; j++)
-        {
-            joint_prob_hist[i][j] /= (rows * cols);
-            Mean += (i + j) * joint_prob_hist[i][j];
-        }
-    }
-    return Mean;
-}
-
-double SecondOrder::MeanIntensityROI_OPM(vector<vector<int>> image, int x1, int y1, int x2, int y2)
-{
-    int intensityRange = 4096; // rango de intensidad de la imagen
-    // Crear la matriz de probabilidad conjunta
-    vector<vector<double>> joint_prob_hist(intensityRange, vector<double>(intensityRange, 0));
-    int rows = image.size();
-    int cols = image[0].size();
-#pragma omp parallel for
-    for (int i = y1; i <= y2; i++)
-    {
-        for (int j = x1; j <= x2; j++)
-        {
-#pragma omp atomic
-            joint_prob_hist[image[i][j]][image[i][j]]++;
-        }
-    }
-    // Calcular Mean Value of Intensity en el ROI utilizando la matriz de probabilidad conjunta
-    double Mean = 0;
-#pragma omp parallel for reduction(+ \
-                                   : Mean)
-    for (int i = 0; i < intensityRange; i++)
-    {
-        for (int j = 0; j < intensityRange; j++)
-        {
-            joint_prob_hist[i][j] /= (rows * cols);
-            Mean += (i + j) * joint_prob_hist[i][j];
-        }
-    }
-    return Mean;
+    return mean / count;
 }
 
 /**
- * Método para extraer la región de interés (ROI) en una imagen representada en un vector de vectores de tipo int
- * @param image vector de vectores de tipo int que representa la imagen
- * @param x1 coordenada x1 de la ROI
- * @param y1 coordenada y1 de la ROI
- * @param x2 coordenada x2 de la ROI
- * @param y2 coordenada y2 de la ROI
- * @return vector de vectores de tipo int con los valores de los píxeles dentro de la ROI
+ * Método para calcular el Mean Value of Intensity en un área específica (ROI) utilizando Second-Order Statistical
+ * @param img vector de vectores de tipo int que representa la imagen DICOM
+ * @param x1,y1 coordenadas x,y del punto inicial del ROI
+ * @param x2,y2 coordenadas x,y del punto final del ROI
+ * @return Mean Value of Intensity en el ROI
  */
-
-vector<vector<int>> SecondOrder::ROI(vector<vector<int>> image, int x1, int y1, int x2, int y2)
+double SecondOrder::MeanIntensityROI_OPM(vector<vector<int>> image, int x1, int y1, int x2, int y2)
 {
-    vector<vector<int>> roi_image;
+    double mean = 0;
+    int count = 0;
+#pragma omp parallel for num_threads(2) reduction(+ \
+                                                  : mean, count)
     for (int i = x1; i <= x2; i++)
     {
-        vector<int> row;
         for (int j = y1; j <= y2; j++)
         {
-            row.push_back(image[i][j]);
+            mean += image[i][j];
+            count++;
         }
-        roi_image.push_back(row);
     }
-    return roi_image;
+    return mean / count;
 }
 
 /**
@@ -574,9 +382,7 @@ vector<vector<int>> SecondOrder::ROI(vector<vector<int>> image, int x1, int y1, 
  */
 double SecondOrder::LRE(vector<vector<int>> image)
 {
-    int intensityRange = 4096; // rango de intensidad de la imagen
-    // Crear la matriz de probabilidad conjunta
-    vector<vector<double>> joint_prob_hist(intensityRange, vector<double>(intensityRange, 0));
+    double LRE = 0;
     int rows = image.size();
     int cols = image[0].size();
 
@@ -584,48 +390,33 @@ double SecondOrder::LRE(vector<vector<int>> image)
     {
         for (int j = 0; j < cols; j++)
         {
-            joint_prob_hist[image[i][j]][image[i][j]]++;
-        }
-    }
-    // Calcular Long Run Emphasis (LRE) utilizando la matriz de probabilidad conjunta
-    double LRE = 0;
-    for (int i = 0; i < intensityRange; i++)
-    {
-        for (int j = 0; j < intensityRange; j++)
-        {
-            joint_prob_hist[i][j] /= (rows * cols);
-            LRE += pow(i - j, 2) * joint_prob_hist[i][j];
+            double p = (double)image[i][j] / (rows * cols); // probabilidad conjunta
+            LRE += p * pow((i - j), 2);
         }
     }
     return LRE;
 }
-double SecondOrder::LRE_ORM(vector<vector<int>> image)
+
+/**
+ * Método para calcular Long Run Emphasis (LRE) utilizando Second-Order Statistical
+ * @param img vector de vectores de tipo int que representa la imagen DICOM
+ * @return Long Run Emphasis (LRE)
+ */
+double SecondOrder::LRE_OPM(vector<vector<int>> image)
 {
-    int intensityRange = 4096; // rango de intensidad de la imagen
-    // Crear la matriz de probabilidad conjunta
-    vector<vector<double>> joint_prob_hist(intensityRange, vector<double>(intensityRange, 0));
+    double LRE = 0;
+
     int rows = image.size();
     int cols = image[0].size();
-#pragma omp parallel for
+
+#pragma omp parallel for num_threads(2) reduction(+ \
+                                                  : LRE)
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < cols; j++)
         {
-
-#pragma omp atomic
-            joint_prob_hist[image[i][j]][image[i][j]]++;
-        }
-    }
-    // Calcular Long Run Emphasis (LRE) utilizando la matriz de probabilidad conjunta
-    double LRE = 0;
-#pragma omp parallel for reduction(+ \
-                                   : LRE)
-    for (int i = 0; i < intensityRange; i++)
-    {
-        for (int j = 0; j < intensityRange; j++)
-        {
-            joint_prob_hist[i][j] /= (rows * cols);
-            LRE += pow(i - j, 2) * joint_prob_hist[i][j];
+            double p = (double)image[i][j] / (rows * cols); // probabilidad conjunta
+            LRE += p * pow((i - j), 2);
         }
     }
     return LRE;
@@ -638,103 +429,53 @@ double SecondOrder::LRE_ORM(vector<vector<int>> image)
  */
 double SecondOrder::MeanVariance(vector<vector<int>> image)
 {
-    int intensityRange = 4096; // rango de intensidad de la imagen
-    // Crear la matriz de probabilidad conjunta
-    vector<vector<double>> joint_prob_hist(intensityRange, vector<double>(intensityRange, 0));
-
     int rows = image.size();
     int cols = image[0].size();
+    double mean = 0;
+    double variance = 0;
+    double sum = 0;
+    double sum2 = 0;
 
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < cols; j++)
         {
-            joint_prob_hist[image[i][j]][image[i][j]]++;
+            mean += (double)image[i][j];
+            sum += (i * (double)image[i][j]);
+            sum2 += (i * i * (double)image[i][j]);
         }
     }
-
-    for (int i = 0; i < rows; i++)
-    {
-        for (int j = 0; j < cols; j++)
-        {
-            joint_prob_hist[i][j] /= (rows * cols);
-        }
-    }
-    // Calcular Mean utilizando la matriz de probabilidad conjunta
-    double Mean = 0;
-    for (int i = 0; i < intensityRange; i++)
-    {
-        for (int j = 0; j < intensityRange; j++)
-        {
-
-            Mean += i * j * joint_prob_hist[i][j];
-        }
-    }
-    // Calcular Variance utilizando la matriz de probabilidad conjunta y el Mean
-    double Variance = 0;
-    for (int i = 0; i < intensityRange; i++)
-    {
-        for (int j = 0; j < intensityRange; j++)
-        {
-
-            Variance += (i - Mean) * (i - Mean) * joint_prob_hist[i][j];
-        }
-    }
-    // Calcular Mean Variance utilizando Mean y Variance
-    double MeanVariance = Mean - Variance;
-    return MeanVariance;
+    mean = mean / (rows * cols);
+    variance = sum2 / (rows * cols) - (sum / (rows * cols)) * (sum / (rows * cols));
+    return variance;
 }
+
+/**
+ * Método para calcular el Mean Variance utilizando Second-Order Statistical
+ * @param image vector de vectores de tipo int que representa la imagen DICOM
+ * @return Mean Variance de la imagen
+ */
 double SecondOrder::MeanVariance_OPM(vector<vector<int>> image)
 {
-    int intensityRange = 4096; // rango de intensidad de la imagen
-    // Crear la matriz de probabilidad conjunta
-    vector<vector<double>> joint_prob_hist(intensityRange, vector<double>(intensityRange, 0));
-
     int rows = image.size();
     int cols = image[0].size();
+    double mean = 0;
+    double variance = 0;
+    double sum = 0;
+    double sum2 = 0;
 
-#pragma omp parallel for
+#pragma omp parallel for num_threads(2) reduction(+ \
+                                                  : mean, sum, sum2)
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < cols; j++)
         {
-#pragma omp atomic
-            joint_prob_hist[image[i][j]][image[i][j]]++;
+            mean += (double)image[i][j];
+            sum += (i * (double)image[i][j]);
+            sum2 += (i * i * (double)image[i][j]);
         }
     }
-
-    for (int i = 0; i < rows; i++)
-    {
-        for (int j = 0; j < cols; j++)
-        {
-            joint_prob_hist[i][j] /= (rows * cols);
-        }
-    }
-    // Calcular Mean utilizando la matriz de probabilidad conjunta
-    double Mean = 0;
-#pragma omp parallel for reduction(+ \
-                                   : Mean)
-    for (int i = 0; i < intensityRange; i++)
-    {
-        for (int j = 0; j < intensityRange; j++)
-        {
-
-            Mean += i * j * joint_prob_hist[i][j];
-        }
-    }
-    // Calcular Variance utilizando la matriz de probabilidad conjunta y el Mean
-    double Variance = 0;
-#pragma omp parallel for reduction(+ \
-                                   : Variance)
-    for (int i = 0; i < intensityRange; i++)
-    {
-        for (int j = 0; j < intensityRange; j++)
-        {
-
-            Variance += (i - Mean) * (i - Mean) * joint_prob_hist[i][j];
-        }
-    }
-    // Calcular Mean Variance utilizando Mean y Variance
-    double MeanVariance = Mean - Variance;
-    return MeanVariance;
+    mean = mean / (rows * cols);
+    variance = sum2 / (rows * cols) - (sum / (rows * cols)) * (sum / (rows * cols));
+    return variance;
 }

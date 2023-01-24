@@ -79,15 +79,15 @@ include CMakeFiles/classificationMetrics.dir/flags.make
 CMakeFiles/classificationMetrics.dir/metrics/performance/benchmark.cpp.o: CMakeFiles/classificationMetrics.dir/flags.make
 CMakeFiles/classificationMetrics.dir/metrics/performance/benchmark.cpp.o: ../metrics/performance/benchmark.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/evils/ups/paralela/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/classificationMetrics.dir/metrics/performance/benchmark.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/classificationMetrics.dir/metrics/performance/benchmark.cpp.o -c /home/evils/ups/paralela/dip/metrics/performance/benchmark.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/classificationMetrics.dir/metrics/performance/benchmark.cpp.o -c /home/evils/ups/paralela/dip/metrics/performance/benchmark.cpp
 
 CMakeFiles/classificationMetrics.dir/metrics/performance/benchmark.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/classificationMetrics.dir/metrics/performance/benchmark.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/evils/ups/paralela/dip/metrics/performance/benchmark.cpp > CMakeFiles/classificationMetrics.dir/metrics/performance/benchmark.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/evils/ups/paralela/dip/metrics/performance/benchmark.cpp > CMakeFiles/classificationMetrics.dir/metrics/performance/benchmark.cpp.i
 
 CMakeFiles/classificationMetrics.dir/metrics/performance/benchmark.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/classificationMetrics.dir/metrics/performance/benchmark.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/evils/ups/paralela/dip/metrics/performance/benchmark.cpp -o CMakeFiles/classificationMetrics.dir/metrics/performance/benchmark.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/evils/ups/paralela/dip/metrics/performance/benchmark.cpp -o CMakeFiles/classificationMetrics.dir/metrics/performance/benchmark.cpp.s
 
 # Object files for target classificationMetrics
 classificationMetrics_OBJECTS = \

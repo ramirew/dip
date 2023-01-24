@@ -15,6 +15,7 @@ file(GLOB_RECURSE SOURCES_FILES
 
 file(GLOB_RECURSE METRICS_SOURCES_FILES
     "metrics/*.cpp"
+    "metrics/*.cxx"
 )
 
 file(GLOB_RECURSE FEATURE_EXTRACTION_SOURCES_FILES
@@ -43,9 +44,3 @@ include_directories(feature_ext_sel)
 # C++ flags
 set(USE_PTHREAD ON)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
-
-
-
-
-
-

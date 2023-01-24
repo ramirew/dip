@@ -112,8 +112,15 @@ set_target_properties(classification PROPERTIES
     INTERFACE_INCLUDE_DIRECTORIES "/home/usuario/dip/classification"
 )
 
+add_library(featureExtraction STATIC IMPORTED)
+set_target_properties(featureExtraction PROPERTIES
+    IMPORTED_LOCATION "/home/usuario/dip/build/libfeatureExtraction.a"
+    INTERFACE_INCLUDE_DIRECTORIES "/home/usuario/dip/feature_ext_sel"
+)
+
+
 add_executable(knn_cmake main.cpp)
-target_link_libraries(knn_cmake classification -ldcmdata -ldcmimgle -ldcmimage -ldcmjpeg -lpthread)
+target_link_libraries(knn_cmake classification featureExtraction -ldcmdata -ldcmimgle -ldcmimage -ldcmjpeg -lpthread)
 
 
 ```

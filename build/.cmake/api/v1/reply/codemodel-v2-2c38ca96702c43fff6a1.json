@@ -1,0 +1,77 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "DPI",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "classification::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-classification-bf3aa674556384750841.json",
+					"name" : "classification",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "classificationMetrics::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-classificationMetrics-ce06555134356e387333.json",
+					"name" : "classificationMetrics",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "featureExtraction::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-featureExtraction-11d43f19d05f9179ab5a.json",
+					"name" : "featureExtraction",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/evils/ups/paralela/dip/build",
+		"source" : "/home/evils/ups/paralela/dip"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 1
+	}
+}

@@ -11,7 +11,7 @@
 
 #include "dicom_read/DicomReader.h"
 #include "second_order/secondorder.h"
-
+#include "metrics/performance/benchmark.h"
 using namespace std;
 
 vector<vector<int>> parseData(int **img, int size, int feat)

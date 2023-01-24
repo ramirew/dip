@@ -79,41 +79,41 @@ include CMakeFiles/featureExtraction.dir/flags.make
 CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/entropy.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
 CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/entropy.cpp.o: ../feature_ext_sel/first_order/entropy.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/evils/ups/paralela/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/entropy.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/entropy.cpp.o -c /home/evils/ups/paralela/dip/feature_ext_sel/first_order/entropy.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/entropy.cpp.o -c /home/evils/ups/paralela/dip/feature_ext_sel/first_order/entropy.cpp
 
 CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/entropy.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/entropy.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/evils/ups/paralela/dip/feature_ext_sel/first_order/entropy.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/entropy.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/evils/ups/paralela/dip/feature_ext_sel/first_order/entropy.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/entropy.cpp.i
 
 CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/entropy.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/entropy.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/evils/ups/paralela/dip/feature_ext_sel/first_order/entropy.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/entropy.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/evils/ups/paralela/dip/feature_ext_sel/first_order/entropy.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/entropy.cpp.s
 
 CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/firstorderclassifiers.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
 CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/firstorderclassifiers.cpp.o: ../feature_ext_sel/first_order/firstorderclassifiers.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/evils/ups/paralela/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/firstorderclassifiers.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/firstorderclassifiers.cpp.o -c /home/evils/ups/paralela/dip/feature_ext_sel/first_order/firstorderclassifiers.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/firstorderclassifiers.cpp.o -c /home/evils/ups/paralela/dip/feature_ext_sel/first_order/firstorderclassifiers.cpp
 
 CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/firstorderclassifiers.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/firstorderclassifiers.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/evils/ups/paralela/dip/feature_ext_sel/first_order/firstorderclassifiers.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/firstorderclassifiers.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/evils/ups/paralela/dip/feature_ext_sel/first_order/firstorderclassifiers.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/firstorderclassifiers.cpp.i
 
 CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/firstorderclassifiers.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/firstorderclassifiers.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/evils/ups/paralela/dip/feature_ext_sel/first_order/firstorderclassifiers.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/firstorderclassifiers.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/evils/ups/paralela/dip/feature_ext_sel/first_order/firstorderclassifiers.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/firstorderclassifiers.cpp.s
 
 CMakeFiles/featureExtraction.dir/feature_ext_sel/second_order/secondorder.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
 CMakeFiles/featureExtraction.dir/feature_ext_sel/second_order/secondorder.cpp.o: ../feature_ext_sel/second_order/secondorder.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/evils/ups/paralela/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/second_order/secondorder.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/second_order/secondorder.cpp.o -c /home/evils/ups/paralela/dip/feature_ext_sel/second_order/secondorder.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/second_order/secondorder.cpp.o -c /home/evils/ups/paralela/dip/feature_ext_sel/second_order/secondorder.cpp
 
 CMakeFiles/featureExtraction.dir/feature_ext_sel/second_order/secondorder.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/second_order/secondorder.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/evils/ups/paralela/dip/feature_ext_sel/second_order/secondorder.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/second_order/secondorder.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/evils/ups/paralela/dip/feature_ext_sel/second_order/secondorder.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/second_order/secondorder.cpp.i
 
 CMakeFiles/featureExtraction.dir/feature_ext_sel/second_order/secondorder.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/second_order/secondorder.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/evils/ups/paralela/dip/feature_ext_sel/second_order/secondorder.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/second_order/secondorder.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/evils/ups/paralela/dip/feature_ext_sel/second_order/secondorder.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/second_order/secondorder.cpp.s
 
 # Object files for target featureExtraction
 featureExtraction_OBJECTS = \
