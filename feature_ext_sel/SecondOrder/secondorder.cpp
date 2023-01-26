@@ -53,11 +53,12 @@ double SecondOrder::IDN_OPM(vector<vector<int>> image)
 {
     int rows = image.size();
     int cols = image[0].size();
-
     double IDN = 0;
+    int num_threads = omp_get_num_procs();
+    omp_set_num_threads(num_threads);
 
-#pragma omp parallel for num_threads(2) reduction(+ \
-                                                  : IDN)
+#pragma omp parallel for reduction(+ \
+                                   : IDN)
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < cols; j++)
@@ -105,11 +106,11 @@ double SecondOrder::IDOC4_OPM(vector<vector<int>> image)
 {
     int rows = image.size();
     int cols = image[0].size();
-
     double IDOC4 = 0;
-
-#pragma omp parallel for num_threads(2) reduction(+ \
-                                                  : IDOC4)
+    int num_threads = omp_get_num_procs();
+    omp_set_num_threads(num_threads);
+#pragma omp parallel for reduction(+ \
+                                   : IDOC4)
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < cols; j++)
@@ -120,6 +121,7 @@ double SecondOrder::IDOC4_OPM(vector<vector<int>> image)
             }
         }
     }
+
     return IDOC4;
 }
 
@@ -155,10 +157,10 @@ double SecondOrder::InverseVariance_OPM(vector<vector<int>> image)
     int rows = image.size();
     int cols = image[0].size();
     double IV = 0;
-
-    // Calcular la probabilidad conjunta p(i,j)
-#pragma omp parallel for num_threads(2) reduction(+ \
-                                                  : IV)
+    int num_threads = omp_get_num_procs();
+    omp_set_num_threads(num_threads);
+#pragma omp parallel for reduction(+ \
+                                   : IV)
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < cols; j++)
@@ -167,6 +169,7 @@ double SecondOrder::InverseVariance_OPM(vector<vector<int>> image)
             IV += p / (1 + pow((i - j), 2));
         }
     }
+
     return IV;
 }
 
@@ -204,9 +207,10 @@ double SecondOrder::LocalHomogeneity_OPM(vector<vector<int>> image)
 
     int rows = image.size();
     int cols = image[0].size();
-
-#pragma omp parallel for num_threads(2) reduction(+ \
-                                                  : LH)
+    int num_threads = omp_get_num_procs();
+    omp_set_num_threads(num_threads);
+#pragma omp parallel for reduction(+ \
+                                   : LH)
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < cols; j++)
@@ -249,7 +253,10 @@ double SecondOrder::MaxProbability_OPM(vector<vector<int>> image)
     int rows = image.size();
     int cols = image[0].size();
     double maxProb = 0;
-#pragma omp parallel for schedule(static) num_threads(2)
+    int num_threads = omp_get_num_procs();
+    omp_set_num_threads(num_threads);
+#pragma omp parallel for schedule(dynamic) reduction(max \
+                                                     : maxProb)
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < cols; j++)
@@ -297,23 +304,19 @@ int SecondOrder::MaxIntensityROI(vector<vector<int>> image, int x1, int y1, int 
 int SecondOrder::MaxIntensityROI_OPM(vector<vector<int>> image, int x1, int y1, int x2, int y2)
 {
     int maxValue = INT_MIN;
-#pragma omp parallel for num_threads(numThreads)
+    int num_threads = omp_get_num_procs();
+    omp_set_num_threads(num_threads);
+#pragma omp parallel for reduction(max \
+                                   : maxValue)
     for (int i = x1; i <= x2; i++)
     {
         for (int j = y1; j <= y2; j++)
         {
-#pragma omp critical
-            {
-                if (image[i][j] > maxValue)
-                {
-                    maxValue = image[i][j];
-                }
-            }
+            maxValue = max(maxValue, image[i][j]);
         }
     }
     return maxValue;
 }
-
 double SecondOrder::Mean(vector<vector<int>> image)
 {
     int total_pixels = image.size() * image[0].size();
@@ -362,8 +365,10 @@ double SecondOrder::MeanIntensityROI_OPM(vector<vector<int>> image, int x1, int 
 {
     double mean = 0;
     int count = 0;
-#pragma omp parallel for num_threads(2) reduction(+ \
-                                                  : mean, count)
+    int num_threads = omp_get_num_procs();
+    omp_set_num_threads(num_threads);
+#pragma omp parallel for reduction(+ \
+                                   : mean, count)
     for (int i = x1; i <= x2; i++)
     {
         for (int j = y1; j <= y2; j++)
@@ -372,6 +377,7 @@ double SecondOrder::MeanIntensityROI_OPM(vector<vector<int>> image, int x1, int 
             count++;
         }
     }
+
     return mean / count;
 }
 
@@ -409,8 +415,10 @@ double SecondOrder::LRE_OPM(vector<vector<int>> image)
     int rows = image.size();
     int cols = image[0].size();
 
-#pragma omp parallel for num_threads(2) reduction(+ \
-                                                  : LRE)
+    int num_threads = omp_get_num_procs();
+    omp_set_num_threads(num_threads);
+#pragma omp parallel for reduction(+ \
+                                   : LRE)
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < cols; j++)
@@ -419,6 +427,7 @@ double SecondOrder::LRE_OPM(vector<vector<int>> image)
             LRE += p * pow((i - j), 2);
         }
     }
+
     return LRE;
 }
 
@@ -464,8 +473,10 @@ double SecondOrder::MeanVariance_OPM(vector<vector<int>> image)
     double sum = 0;
     double sum2 = 0;
 
-#pragma omp parallel for num_threads(2) reduction(+ \
-                                                  : mean, sum, sum2)
+    int num_threads = omp_get_num_procs();
+    omp_set_num_threads(num_threads);
+#pragma omp parallel for reduction(+ \
+                                   : mean, sum, sum2)
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < cols; j++)
@@ -475,6 +486,7 @@ double SecondOrder::MeanVariance_OPM(vector<vector<int>> image)
             sum2 += (i * i * (double)image[i][j]);
         }
     }
+
     mean = mean / (rows * cols);
     variance = sum2 / (rows * cols) - (sum / (rows * cols)) * (sum / (rows * cols));
     return variance;

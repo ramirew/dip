@@ -843,6 +843,33 @@ classification/svm/svm_util.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/classification/svm/svm_util.cpp.s
 .PHONY : classification/svm/svm_util.cpp.s
 
+feature_ext_sel/SecondOrder/secondorder.o: feature_ext_sel/SecondOrder/secondorder.cpp.o
+
+.PHONY : feature_ext_sel/SecondOrder/secondorder.o
+
+# target to build an object file
+feature_ext_sel/SecondOrder/secondorder.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/secondorder.cpp.o
+.PHONY : feature_ext_sel/SecondOrder/secondorder.cpp.o
+
+feature_ext_sel/SecondOrder/secondorder.i: feature_ext_sel/SecondOrder/secondorder.cpp.i
+
+.PHONY : feature_ext_sel/SecondOrder/secondorder.i
+
+# target to preprocess a source file
+feature_ext_sel/SecondOrder/secondorder.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/secondorder.cpp.i
+.PHONY : feature_ext_sel/SecondOrder/secondorder.cpp.i
+
+feature_ext_sel/SecondOrder/secondorder.s: feature_ext_sel/SecondOrder/secondorder.cpp.s
+
+.PHONY : feature_ext_sel/SecondOrder/secondorder.s
+
+# target to generate assembly for a file
+feature_ext_sel/SecondOrder/secondorder.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/secondorder.cpp.s
+.PHONY : feature_ext_sel/SecondOrder/secondorder.cpp.s
+
 feature_ext_sel/first_order/entropy.o: feature_ext_sel/first_order/entropy.cpp.o
 
 .PHONY : feature_ext_sel/first_order/entropy.o
@@ -896,33 +923,6 @@ feature_ext_sel/first_order/firstorderclassifiers.s: feature_ext_sel/first_order
 feature_ext_sel/first_order/firstorderclassifiers.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/firstorderclassifiers.cpp.s
 .PHONY : feature_ext_sel/first_order/firstorderclassifiers.cpp.s
-
-feature_ext_sel/second_order/secondorder.o: feature_ext_sel/second_order/secondorder.cpp.o
-
-.PHONY : feature_ext_sel/second_order/secondorder.o
-
-# target to build an object file
-feature_ext_sel/second_order/secondorder.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/second_order/secondorder.cpp.o
-.PHONY : feature_ext_sel/second_order/secondorder.cpp.o
-
-feature_ext_sel/second_order/secondorder.i: feature_ext_sel/second_order/secondorder.cpp.i
-
-.PHONY : feature_ext_sel/second_order/secondorder.i
-
-# target to preprocess a source file
-feature_ext_sel/second_order/secondorder.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/second_order/secondorder.cpp.i
-.PHONY : feature_ext_sel/second_order/secondorder.cpp.i
-
-feature_ext_sel/second_order/secondorder.s: feature_ext_sel/second_order/secondorder.cpp.s
-
-.PHONY : feature_ext_sel/second_order/secondorder.s
-
-# target to generate assembly for a file
-feature_ext_sel/second_order/secondorder.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/second_order/secondorder.cpp.s
-.PHONY : feature_ext_sel/second_order/secondorder.cpp.s
 
 metrics/performance/benchmark.o: metrics/performance/benchmark.cpp.o
 
@@ -1037,15 +1037,15 @@ help:
 	@echo "... classification/svm/svm_util.o"
 	@echo "... classification/svm/svm_util.i"
 	@echo "... classification/svm/svm_util.s"
+	@echo "... feature_ext_sel/SecondOrder/secondorder.o"
+	@echo "... feature_ext_sel/SecondOrder/secondorder.i"
+	@echo "... feature_ext_sel/SecondOrder/secondorder.s"
 	@echo "... feature_ext_sel/first_order/entropy.o"
 	@echo "... feature_ext_sel/first_order/entropy.i"
 	@echo "... feature_ext_sel/first_order/entropy.s"
 	@echo "... feature_ext_sel/first_order/firstorderclassifiers.o"
 	@echo "... feature_ext_sel/first_order/firstorderclassifiers.i"
 	@echo "... feature_ext_sel/first_order/firstorderclassifiers.s"
-	@echo "... feature_ext_sel/second_order/secondorder.o"
-	@echo "... feature_ext_sel/second_order/secondorder.i"
-	@echo "... feature_ext_sel/second_order/secondorder.s"
 	@echo "... metrics/performance/benchmark.o"
 	@echo "... metrics/performance/benchmark.i"
 	@echo "... metrics/performance/benchmark.s"

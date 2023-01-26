@@ -218,8 +218,9 @@ void systemMetrics::printMetrics() {
 	}else{
 		printf("\nMemoria Resultante %s: %ld B", metricName.c_str(), difMemory);
 	}
-	//printf("\nMemoria Pico %s: %ld B", metricName.c_str(), peakDifMemory);
-	printf("\nCPU %s: %f %%", metricName.c_str(), cpuPercent);
+	printf("\nMemoria Pico %s: %ld B", metricName.c_str(), peakDifMemory);
+	// printf("\numProcessors %s: %f %%", metricName.c_str(), numProcessors);  
+	printf("\nCPU %s: %f %%", metricName.c_str(), cpuPercent);  
     printf("\nmallocsGlobal = %d freesGlobal = %d. Dif = %d\n", systemMetrics::cantMallocs, systemMetrics::cantFree,
 			systemMetrics::cantMallocs - systemMetrics::cantFree);
 }
