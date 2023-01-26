@@ -1,4 +1,4 @@
-## Si no funcina siga los siguente
+## Si no funciona siga los siguente
 
 ```
 git clone https://github.com/evilsmoon/dev-env-docker-parallel-computing.git
