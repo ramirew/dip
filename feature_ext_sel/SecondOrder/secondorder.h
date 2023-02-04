@@ -34,12 +34,9 @@ public:
 
   double MeanVariance(vector<vector<int>> image);
   double MeanVariance_OPM(vector<vector<int>> image);
-  /*
-    ?MEAN
-    ?ROI
-   */
+
   double Mean(vector<vector<int>> image);
-  // vector<vector<int>> ROI(vector<vector<int>> image, int x1, int y1, int x2, int y2);
+
 };
 
 #endif
