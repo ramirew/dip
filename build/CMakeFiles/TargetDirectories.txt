@@ -1,5 +1,5 @@
-/home/evils/ups/paralela/dip/build/CMakeFiles/rebuild_cache.dir
-/home/evils/ups/paralela/dip/build/CMakeFiles/edit_cache.dir
-/home/evils/ups/paralela/dip/build/CMakeFiles/featureExtraction.dir
-/home/evils/ups/paralela/dip/build/CMakeFiles/classificationMetrics.dir
-/home/evils/ups/paralela/dip/build/CMakeFiles/classification.dir
+/home/alexis/Documentos/octavosemestre/libreriaParalelo/dip-subido/build/CMakeFiles/rebuild_cache.dir
+/home/alexis/Documentos/octavosemestre/libreriaParalelo/dip-subido/build/CMakeFiles/edit_cache.dir
+/home/alexis/Documentos/octavosemestre/libreriaParalelo/dip-subido/build/CMakeFiles/featureExtraction.dir
+/home/alexis/Documentos/octavosemestre/libreriaParalelo/dip-subido/build/CMakeFiles/classificationMetrics.dir
+/home/alexis/Documentos/octavosemestre/libreriaParalelo/dip-subido/build/CMakeFiles/classification.dir

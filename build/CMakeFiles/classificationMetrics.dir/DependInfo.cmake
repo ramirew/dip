@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/evils/ups/paralela/dip/metrics/performance/benchmark.cpp" "/home/evils/ups/paralela/dip/build/CMakeFiles/classificationMetrics.dir/metrics/performance/benchmark.cpp.o"
+  "/home/alexis/Documentos/octavosemestre/libreriaParalelo/dip-subido/metrics/performance/benchmark.cpp" "/home/alexis/Documentos/octavosemestre/libreriaParalelo/dip-subido/build/CMakeFiles/classificationMetrics.dir/metrics/performance/benchmark.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -13,6 +13,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../classification"
   "../metrics"
   "../feature_ext_sel"
+  "/usr/lib/gcc/x86_64-linux-gnu/9/libgomp.so"
+  "/usr/lib/x86_64-linux-gnu/libpthread.so"
   )
 
 # Targets to which this target links.
