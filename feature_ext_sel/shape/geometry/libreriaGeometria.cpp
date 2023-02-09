@@ -2,12 +2,14 @@
 #include <iostream>
 #include <cmath>
 
-using namespace std;
+Circle::Circle(double r) {
+    radius = r;
+}
 
-double media(double arr[], int n) {
-    double sum = 0;
-    for (int i = 0; i < n; i++) {
-        sum += arr[i];
-    }
-    return sum / n;
+double Circle::getArea() {
+    return PI * pow(radius, 2);
+}
+
+double Circle::getPerimeter() {
+    return 2 * PI * radius;
 }
