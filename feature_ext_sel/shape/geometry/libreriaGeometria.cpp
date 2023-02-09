@@ -1,6 +1,8 @@
 #include "libreriaGeometria.h"
 #include <algorithm>
 #include <cmath>
+#include <iostream>
+using namespace std;
 
 // Constructor
 ConvexHull::ConvexHull() {}
@@ -26,4 +28,26 @@ std::vector<Point> ConvexHull::find(const std::vector<Point>& points) {
     std::sort(sortedPoints.begin() + 1, sortedPoints.end(), [base](Point a, Point b) {
         return compare(a, b, base);
     });
+}
+
+
+double asimetrica(int filas, int columnas, double matriz[][columnas]){
+
+for(int i=0; i<filas; i++){
+for(int j=0; j<columnas; j++){
+suma += matriz[i][j];
+}
+}
+media = suma/(filascolumnas);
+for(int i=0; i<filas; i++){
+for(int j=0; j<columnas; j++){
+varianza += pow(matriz[i][j]-media,2);
+}
+}
+varianza = varianza/(filascolumnas);
+desviacion = sqrt(varianza);
+for(int i=0; i<filas; i++){
+for(int j=0; j<columnas; j++){
+asimetria += pow(matriz[i][j]-media,3);
+}
 }

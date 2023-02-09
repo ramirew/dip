@@ -25,5 +25,13 @@ private:
     static bool compare(Point a, Point b, Point base);
 };
 
+double suma = 0;
+double media = 0;
+double varianza = 0;
+double desviacion = 0;
+double asimetria = 0;
+
+double asimetrica(int filas, int columnas, double matriz);
+
 #endif // LIBRERIAGEOMETRIA_H_INCLUDED
 
