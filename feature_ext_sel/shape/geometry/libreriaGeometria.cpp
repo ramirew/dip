@@ -6,8 +6,6 @@
 #include <algorithm>
 #include <omp.h>
 
-#define NUM_THREADS 4
-omp_set_num_threads(NUM_THREADS);
 //1.-CONVEX --------------------
 // Constructor 
 ConvexHull::ConvexHull() {}
@@ -15,11 +13,9 @@ ConvexHull::ConvexHull() {}
 // Método para encontrar el borde convexo de un conjunto de puntos
 std::vector<Point> ConvexHull::find(const std::vector<Point>& points) {
     if (points.size() <= 1) return points;
-	#pragma omp master
-    nThreads = omp_get_num_threads();
     // Encontrar el punto más bajo y hacerlo el punto base
     int minY = points[0].y, minIndex = 0;
-	#pragma omp for
+	#pragma omp parallel for
     for (int i = 1; i < points.size(); i++) {
         int y = points[i].y;
         if ((y < minY) || (y == minY && points[i].x < points[minIndex].x)) {
