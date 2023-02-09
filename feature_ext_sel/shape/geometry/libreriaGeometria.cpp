@@ -92,6 +92,7 @@ double ImageCircularity::find(const std::vector<Point>& contour) {
 
     // Calcular el area del contorno
     double area = 0;
+	#pragma omp parallel for
     for (int i = 0; i < contour.size() - 1; i++) {
         area += contour[i].x * contour[i + 1].y - contour[i].y * contour[i + 1].x;
     }
@@ -114,6 +115,7 @@ double ImageCompactness::find(const std::vector<Point>& contour) {
     // Calcular los puntos de los extremos del rectángulo mínimo que envuelve el contorno
     int minX = contour[0].x, minY = contour[0].y;
     int maxX = contour[0].x, maxY = contour[0].y;
+	#pragma omp parallel for
     for (const Point& p : contour) {
         minX = std::min(minX, p.x);
         minY = std::min(minY, p.y);
@@ -123,6 +125,7 @@ double ImageCompactness::find(const std::vector<Point>& contour) {
 
     // Calcular el área del contorno
     double area = 0;
+	#pragma omp parallel for
     for (int i = 0; i < contour.size() - 1; i++) {
         area += contour[i].x * contour[i + 1].y - contour[i].y * contour[i + 1].x;
     }
@@ -145,6 +148,7 @@ double ImageElongation::find(const std::vector<Point>& contour) {
 
     // Calcular el centro de masa de la imagen
     double xMean = 0, yMean = 0;
+	#pragma omp parallel for
     for (const Point& p : contour) {
         xMean += p.x;
         yMean += p.y;
@@ -154,13 +158,16 @@ double ImageElongation::find(const std::vector<Point>& contour) {
 
     // Calcular el diámetro máximo de la imagen
     double maxDiameter = 0;
+	#pragma omp parallel for
     for (const Point& p : contour) {
         maxDiameter = std::max(maxDiameter, std::sqrt(std::pow(p.x - xMean, 2) + std::pow(p.y - yMean, 2)));
     }
 
     // Calcular el diámetro mínimo de la imagen
     double minDiameter = std::numeric_limits<double>::max();
+	#pragma omp parallel for
     for (const Point& p1 : contour) {
+		#pragma omp parallel for
         for (const Point& p2 : contour) {
             minDiameter = std::min(minDiameter, std::sqrt(std::pow(p1.x - p2.x, 2) + std::pow(p1.y - p2.y, 2)));
         }
@@ -184,8 +191,10 @@ std::vector<std::complex<double>> ImageFourierFeatures::find(const std::vector<P
     // Calcular la transformada de Fourier de la imagen
     const int N = contour.size();
     std::vector<std::complex<double>> X(N);
+	#pragma omp parallel for
     for (int k = 0; k < N; k++) {
         X[k] = {0, 0};
+		#pragma omp parallel for
         for (int n = 0; n < N; n++) {
             double theta = 2 * M_PI * k * n / N;
             X[k].real(X[k].real() + contour[n].x * std::cos(theta) - contour[n].y * std::sin(theta));
@@ -210,6 +219,7 @@ std::vector<double> ImageNormalizedDistanceMoments::find(const std::vector<Point
     double m00 = 0;
     double m10 = 0;
     double m01 = 0;
+	#pragma omp parallel for
     for (int i = 0; i < N; i++) {
         double dx = contour[i].x - cx;
         double dy = contour[i].y - cy;
@@ -232,8 +242,9 @@ std::vector<double> NormalizedRadialLength::calculate(const std::vector<std::vec
     int centerX = width / 2;
     int centerY = height / 2;
     double maxRadius = std::sqrt(centerX * centerX + centerY * centerY);
-
+#	pragma omp parallel for
     for (int i = 0; i < height; i++) {
+		#pragma omp parallel for
         for (int j = 0; j < width; j++) {
             int index = i * width + j;
             double dx = j - centerX;
@@ -254,7 +265,9 @@ double calculateRadius(const std::vector<std::vector<int>>& image) {
     int center_y = col_num / 2;
 
     double sum = 0;
+	#pragma omp parallel for
     for (int i = 0; i < row_num; i++) {
+		#pragma omp parallel for
         for (int j = 0; j < col_num; j++) {
             if (image[i][j] > 0) {
                 sum += std::sqrt((i - center_x) * (i - center_x) + (j - center_y) * (j - center_y));
@@ -263,7 +276,9 @@ double calculateRadius(const std::vector<std::vector<int>>& image) {
     }
 
     int count = 0;
+	#pragma omp parallel for
     for (int i = 0; i < row_num; i++) {
+		#pragma omp parallel for
         for (int j = 0; j < col_num; j++) {
             if (image[i][j] > 0) {
                 count++;
@@ -309,7 +324,9 @@ double orientationRelativeGradient(const std::vector<std::vector<double>> &image
 //Función para calcular el perímetro de una imagen
 int calcPerimeter(const int *image, int width, int height) {
     int perimeter = 0;
+	#pragma omp parallel for
     for (int i = 0; i < height; i++) {
+		#pragma omp parallel for
         for (int j = 0; j < width; j++) {
             if (image[i * width + j] > 0) {
                 // Si el píxel es blanco, comprobar si alguno de sus vecinos es negro
@@ -334,7 +351,9 @@ int calcPerimeter(const int *image, int width, int height) {
 // Función para calcular el área de una imagen
 int calcArea(const int *image, int width, int height) {
     int area = 0;
+	#pragma omp parallel for
     for (int i = 0; i < height; i++) {
+		#pragma omp parallel for
         for (int j = 0; j < width; j++) {
             if (image[i * width + j] > 0) {
                 area++;
