@@ -43,7 +43,7 @@ public:
 
 //CIRCULARY ---------
 // Estructura para almacenar un punto en 2D
-struct Point {
+struct PointC {
     int x, y;
 };
 
@@ -54,7 +54,7 @@ public:
     ImageCircularity();
 
     // Método para encontrar la circularidad de una imagen
-    double find(const std::vector<Point>& contour);
+    double find(const std::vector<PointC>& contour);
 };
 
 
