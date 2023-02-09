@@ -72,13 +72,19 @@ public:
 class GradientXClass {
 public:
     // Constructor
-    gradientX();
+    GradientXClass();
+
+    // Método para encontrar la asimetría de una imagen
+    double gradientX(const std::vector<Pixel>& pixels, int x, int y);
 
 };
 class GradientYClass {
 public:
     // Constructor
-    gradientY();
+    GradientYClass();
+
+    // Método para encontrar la asimetría de una imagen
+    double gradientY(const std::vector<Pixel>& pixels, int x, int y);
 
 };
 class Orientation {
