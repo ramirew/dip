@@ -9,11 +9,15 @@ int main() {
 	std::vector<Pixel> pixels = dicomObj.getIntImageMatrix(prof);
     int width = dicomObj.getHeight();
     int height = dicomObj.getWidth();
+	
     ImageAsymmetry imageAsymmetry;
 	imageAsymmetry.find(pixels, width, height);
 	
 	ConvexHull convexHull;
 	convexHull.find(pixels);
+	
+	ImageCircularity imageCircularity;
+	imageCircularity.find(pixels);
 
 
 }
