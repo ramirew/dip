@@ -62,7 +62,6 @@ double ImageAsymmetry::find(const std::vector<Pixel>& pixels, int width, int hei
                 rightSum += pixels[index].intensity;
             }
         }
-    }
 	}
 
     // Devolver la asimetría como la diferencia entre las dos sumas
