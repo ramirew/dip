@@ -220,26 +220,26 @@ std::vector<double> ImageNormalizedDistanceMoments::find(const std::vector<Point
     return {m00, m10, m01};
 }
 //9.la longitud radial normalizada------------------------
- NormalizedRadialLength(int height, int width) : height(height), width(width) {}
+NormalizedRadialLength::NormalizedRadialLength(int height, int width) : height(height), width(width) {}
 
-    std::vector<double> calculate(const std::vector<std::vector<double>> &image) {
-        std::vector<double> result(height * width, 0);
-        int centerX = width / 2;
-        int centerY = height / 2;
-        double maxRadius = std::sqrt(centerX * centerX + centerY * centerY);
+std::vector<double> NormalizedRadialLength::calculate(const std::vector<std::vector<double>> &image) {
+    std::vector<double> result(height * width, 0);
+    int centerX = width / 2;
+    int centerY = height / 2;
+    double maxRadius = std::sqrt(centerX * centerX + centerY * centerY);
 
-        for (int i = 0; i < height; i++) {
-            for (int j = 0; j < width; j++) {
-                int index = i * width + j;
-                double dx = j - centerX;
-                double dy = i - centerY;
-                double radialLength = std::sqrt(dx * dx + dy * dy) / maxRadius;
-                result[index] = radialLength;
-            }
+    for (int i = 0; i < height; i++) {
+        for (int j = 0; j < width; j++) {
+            int index = i * width + j;
+            double dx = j - centerX;
+            double dy = i - centerY;
+            double radialLength = std::sqrt(dx * dx + dy * dy) / maxRadius;
+            result[index] = radialLength;
         }
-
-        return result;
     }
+
+    return result;
+}
 //10.-radius -------------------------------
 double calculateRadius(const std::vector<std::vector<int>>& image) {
     int row_num = image.size();

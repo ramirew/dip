@@ -141,7 +141,11 @@ class Solidity {
 //9
 class NormalizedRadialLength {
 public:
-    NormalizedRadialLength(int height, int width) 
+    NormalizedRadialLength(int height, int width);
+    std::vector<double> calculate(const std::vector<std::vector<double>> &image);
+
+private:
+    int height, width;
 };
 
 
