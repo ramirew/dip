@@ -80,6 +80,10 @@ public:
 };
 
 //form ------------------------
+class Shape {
+	public:
+	double calculateshape();
+};
 //FOURIER FEATURES ----------------------
 // Clase ImageFourierFeatures para encontrar las características de Fourier de una imagen
 class ImageFourierFeatures {

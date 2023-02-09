@@ -165,6 +165,9 @@ double ImageElongation::find(const std::vector<Point>& contour) {
     return maxDiameter / minDiameter;
 }
 //6.-form ------------------------
+double calculateshape(double area, double perimeter) {
+  return (4 * M_PI * area) / (perimeter * perimeter);
+}
 //7.-FOURIER FEATURES ----------------------
 // Constructor
 ImageFourierFeatures::ImageFourierFeatures() {}
