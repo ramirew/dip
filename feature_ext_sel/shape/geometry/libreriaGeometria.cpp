@@ -6,6 +6,11 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+struct Point
+{
+    int x, y;
+};
+
 // Prints convex hull of a set of n points.
 void geometry(Point points[], int n)
 {
