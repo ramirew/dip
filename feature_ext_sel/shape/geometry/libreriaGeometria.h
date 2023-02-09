@@ -138,6 +138,11 @@ class Solidity {
  public:
   double calculateSolidity();
 };
+//9
+class NormalizedRadialLength {
+public:
+    NormalizedRadialLength(int height, int width) 
+};
 
 
 #endif // LIBRERIAGEOMETRIA_H_INCLUDED
