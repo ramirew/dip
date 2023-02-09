@@ -2,8 +2,8 @@
 #define LIBRERIAGEOMETRIA_H_INCLUDED
 
 
-float resolverEcuacion(float valor);
-float resolverDerivada(float valor);
+void gauss_jordan(double M,int n);
+ingresar_coeficientes(double M,int n);
 
 #include  "libreriaGeometria.cpp"
 
