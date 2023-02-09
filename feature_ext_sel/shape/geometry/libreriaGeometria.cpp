@@ -49,7 +49,11 @@ double ImageAsymmetry::find(const std::vector<Pixel>& pixels, int width, int hei
 
     // Calcular la suma de los pixels a la izquierda y a la derecha de la media
     double leftSum = 0, rightSum = 0;
+	#pragma omp parallel default(shared)
+	{
+	#pragma omp for
     for (int y = 0; y < height; y++) {
+		#pragma omp for
         for (int x = 0; x < width; x++) {
             int index = y * width + x;
             if (pixels[index].intensity < mean) {
@@ -59,6 +63,7 @@ double ImageAsymmetry::find(const std::vector<Pixel>& pixels, int width, int hei
             }
         }
     }
+	}
 
     // Devolver la asimetría como la diferencia entre las dos sumas
     return rightSum - leftSum;

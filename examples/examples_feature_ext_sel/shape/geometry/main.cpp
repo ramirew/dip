@@ -1,13 +1,14 @@
-#include "libreria.h"
-#include "dicom/DicomReader.h"
-void main(){
-    DicomReader dicomObj("20586908_6c613a14b80a8591_MG_R_CC_ANON.dcm");
-    int width = dicomObj.getHeight();
-    int height = dicomObj.getWidth();
+#include "libreriaGeometria.h"
+#include <iostream>
+#include <vector>
 
-    vector<vector<double>> imageData = dicomObj.getDoubleImageMatrix(12);
-    vec_t flatImg = flatImage(imageData);
-    int n = sizeof(vect_t)/sizeof(vect_t[0]);
-    printf("Resultado: %d\n",geometry(points, n));
-    return 0;
+int main() {
+    // Ejemplo de imagen con intensidades de pixels [10, 20, 30, 40, 50]
+    std::vector<Pixel> pixels = {{10}, {20}, {30}, {40}, {50}};
+    int width = 1, height = 5;
+
+    ImageAsymmetry imageAsymmetry;
+    double asymmetry = imageAsymmetry.find(pixels, width, height);
+
+    std::cout << "Asimetría: "
 }
