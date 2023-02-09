@@ -10,17 +10,20 @@ int main() {
     int width = dicomObj.getHeight();
     int height = dicomObj.getWidth();
 	
-    ImageAsymmetry imageAsymmetry;
-	imageAsymmetry.find(pixels, width, height);
 	
 	ConvexHull convexHull;
 	cout<< "Casco convexo es:" << convexHull.find(pixels)<<endl;
 	
+	ImageAsymmetry imageAsymmetry;
+	cout<< "La asimetria es:" << imageAsymmetry.find(pixels, width, height);<<endl;
+	
 	ImageCircularity imageCircularity;
-	imageCircularity.find(pixels);
+	cout<< "La circularidad es:" << imageCircularity.find(pixels)<<endl;
 	
 	ImageCompactness imageCompactness;
-	imageCompactness.find(pixels);
+	cout<< "El compactness es:" << imageCompactness.find(pixels)<<endl;
 
+	ImageElongation imageElongation;
+	cout<< "La alargacion es:" <<  imageElongation.find(pixels)<<endl;
 
 }
