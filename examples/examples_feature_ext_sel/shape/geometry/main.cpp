@@ -33,5 +33,8 @@ int main() {
 	cout<< "La Foueries Features es:" << imageFourierFeatures.find(pixels, width, height);<<endl;
 	
 	ImageNormalizedDistanceMoments imageNormalizedDistanceMoments; 
-    cout<< "Los momentos normalizados son:" << imageNormalizedDistanceMoments.find(pixels, width, height);<<endl;
+    cout<< "Los momentos normalizados son:" << imageNormalizedDistanceMoments.find(pixels);<<endl;
+	
+	NormalizedRadialLength normalizedRadialLength;
+	cout<< "La longitud radial normalizada es:" << normalizedRadialLength.calculate(pixels);<<endl;
 }
