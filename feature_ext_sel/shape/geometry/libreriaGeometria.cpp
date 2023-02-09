@@ -5,7 +5,7 @@
 #include <numeric>
 #include <algorithm>
 
-//CONVEX --------------------
+//1.-CONVEX --------------------
 // Constructor 
 ConvexHull::ConvexHull() {}
 
@@ -33,7 +33,7 @@ std::vector<Point> ConvexHull::find(const std::vector<Point>& points) {
 }
 
 
-//ASYMETRY ----------------
+//2.-ASYMETRY ----------------
 // Constructor
 ImageAsymmetry::ImageAsymmetry() {}
 
@@ -63,7 +63,7 @@ double ImageAsymmetry::find(const std::vector<Pixel>& pixels, int width, int hei
     return rightSum - leftSum;
 }
 
-//CIRCULARY ---------
+//3.-CIRCULARY ---------
 // Constructor
 ImageCircularity::ImageCircularity() {}
 
@@ -98,7 +98,7 @@ double ImageCircularity::find(const std::vector<Point>& contour) {
     // Devolver la circularidad como la relación entre el area del contorno y el area de la circunferencia
     return area / circleArea;
 }
-//compactness or shape ---------
+//c4.-ompactness or shape ---------
 // Constructor
 ImageCompactness::ImageCompactness() {}
 
@@ -130,7 +130,7 @@ double ImageCompactness::find(const std::vector<Point>& contour) {
     return area / rectArea;
 }
 
-//ellongation ------------------------
+//5.-ellongation ------------------------
 // Constructor
 ImageElongation::ImageElongation() {}
 
@@ -164,8 +164,8 @@ double ImageElongation::find(const std::vector<Point>& contour) {
     // Devolver el alargamiento como la relación entre el diámetro máximo y el diámetro mínimo
     return maxDiameter / minDiameter;
 }
-//form ------------------------
-//FOURIER FEATURES ----------------------
+//6.-form ------------------------
+//7.-FOURIER FEATURES ----------------------
 // Constructor
 ImageFourierFeatures::ImageFourierFeatures() {}
 
@@ -187,7 +187,7 @@ std::vector<std::complex<double>> ImageFourierFeatures::find(const std::vector<P
 
     return X;
 }
-//MONETOS DE DISTANCIA NORMALIZADOS  ----------------------
+//8.-MONETOS DE DISTANCIA NORMALIZADOS  ----------------------
 // Constructor
 ImageNormalizedDistanceMoments::ImageNormalizedDistanceMoments() {}
 
@@ -216,7 +216,8 @@ std::vector<double> ImageNormalizedDistanceMoments::find(const std::vector<Point
 
     return {m00, m10, m01};
 }
-//radius -------------------------------
+//9.la longitud radial normalizada------------------------
+//10.-radius -------------------------------
 double calculateRadius(const std::vector<std::vector<int>>& image) {
     int row_num = image.size();
     int col_num = image[0].size();
@@ -244,3 +245,57 @@ double calculateRadius(const std::vector<std::vector<int>>& image) {
 
     return sum / count;
 }
+
+//11.-Orientacion relativa del gradiante ----------------------------
+//12.-REDONDEZ------------------------------------------
+//Función para calcular el perímetro de una imagen
+int calcPerimeter(const int *image, int width, int height) {
+    int perimeter = 0;
+    for (int i = 0; i < height; i++) {
+        for (int j = 0; j < width; j++) {
+            if (image[i * width + j] > 0) {
+                // Si el píxel es blanco, comprobar si alguno de sus vecinos es negro
+                if (i > 0 && image[(i - 1) * width + j] == 0) {
+                    perimeter++;
+                }
+                if (i < height - 1 && image[(i + 1) * width + j] == 0) {
+                    perimeter++;
+                }
+                if (j > 0 && image[i * width + j - 1] == 0) {
+                    perimeter++;
+                }
+                if (j < width - 1 && image[i * width + j + 1] == 0) {
+                    perimeter++;
+                }
+            }
+        }
+    }
+    return perimeter;
+}
+
+// Función para calcular el área de una imagen
+int calcArea(const int *image, int width, int height) {
+    int area = 0;
+    for (int i = 0; i < height; i++) {
+        for (int j = 0; j < width; j++) {
+            if (image[i * width + j] > 0) {
+                area++;
+            }
+        }
+    }
+    return area;
+}
+
+// Función para calcular la redondez de una imagen
+double calcRoundness(const int *image, int width, int height) {
+    int perimeter = calcPerimeter(image, width, height);
+    int area = calcArea(image, width, height);
+    return (4.0 * M_PI * area) / (perimeter * perimeter);
+}
+//13.-solidity
+
+  double calculateSolidity(double contourArea, double enclosingCircleRadius) {
+    double enclosingCircleArea = M_PI * pow(enclosingCircleRadius, 2);
+    return contourArea / enclosingCircleArea;
+  }
+

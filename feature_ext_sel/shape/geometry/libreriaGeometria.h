@@ -108,3 +108,10 @@ double calculateRadius(const std::vector<std::vector<int>>& image);
 
 #endif // LIBRERIAGEOMETRIA_H_INCLUDED
 
+//Orientacion relativa del gradiante ----------------------------
+
+//13.-solidity
+class Solidity {
+ public:
+  double calculateSolidity();
+};
