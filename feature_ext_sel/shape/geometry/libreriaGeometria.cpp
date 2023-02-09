@@ -26,3 +26,4 @@ std::vector<Point> ConvexHull::find(const std::vector<Point>& points) {
     std::sort(sortedPoints.begin() + 1, sortedPoints.end(), [base](Point a, Point b) {
         return compare(a, b, base);
     });
+}
