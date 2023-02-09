@@ -1,8 +1,6 @@
 #include "libreriaGeometria.h"
 #include <algorithm>
 #include <cmath>
-#include <iostream>
-using namespace std;
 
 // Constructor
 ConvexHull::ConvexHull() {}
@@ -30,24 +28,16 @@ std::vector<Point> ConvexHull::find(const std::vector<Point>& points) {
     });
 }
 
+struct Pixel {
+    unsigned char intensity;
+};
 
-double asimetrica(int filas, int columnas, double matriz[][columnas]){
+// Clase ImageAsymmetry para encontrar la asimetría de una imagen
+class ImageAsymmetry {
+public:
+    // Constructor
+    ImageAsymmetry();
 
-for(int i=0; i<filas; i++){
-for(int j=0; j<columnas; j++){
-suma += matriz[i][j];
-}
-}
-media = suma/(filascolumnas);
-for(int i=0; i<filas; i++){
-for(int j=0; j<columnas; j++){
-varianza += pow(matriz[i][j]-media,2);
-}
-}
-varianza = varianza/(filascolumnas);
-desviacion = sqrt(varianza);
-for(int i=0; i<filas; i++){
-for(int j=0; j<columnas; j++){
-asimetria += pow(matriz[i][j]-media,3);
-}
-}
+    // Método para encontrar la asimetría de una imagen
+    double find(const std::vector<Pixel>& pixels, int width, int height);
+};
