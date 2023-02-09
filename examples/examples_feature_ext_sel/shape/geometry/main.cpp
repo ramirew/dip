@@ -11,6 +11,9 @@ int main() {
     int height = dicomObj.getWidth();
     ImageAsymmetry imageAsymmetry;
 	imageAsymmetry.find(pixels, width, height);
+	
+	ConvexHull convexHull;
+	convexHull.find(pixels);
 
 
 }
