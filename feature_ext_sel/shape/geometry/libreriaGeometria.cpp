@@ -1,7 +1,9 @@
 #include "libreriaGeometria.h"
 #include <algorithm>
 #include <cmath>
+#include <math.h>
 #include <numeric>
+#include <algorithm>
 
 //CONVEX --------------------
 // Constructor 
@@ -95,4 +97,35 @@ double ImageCircularity::find(const std::vector<Point>& contour) {
 
     // Devolver la circularidad como la relación entre el area del contorno y el area de la circunferencia
     return area / circleArea;
+}
+//compactness or shape ---------
+// Constructor
+ImageCompactness::ImageCompactness() {}
+
+// Método para encontrar la compacidad o forma de una imagen
+double ImageCompactness::find(const std::vector<Point>& contour) {
+    if (contour.empty()) return 0;
+
+    // Calcular los puntos de los extremos del rectángulo mínimo que envuelve el contorno
+    int minX = contour[0].x, minY = contour[0].y;
+    int maxX = contour[0].x, maxY = contour[0].y;
+    for (const Point& p : contour) {
+        minX = std::min(minX, p.x);
+        minY = std::min(minY, p.y);
+        maxX = std::max(maxX, p.x);
+        maxY = std::max(maxY, p.y);
+    }
+
+    // Calcular el área del contorno
+    double area = 0;
+    for (int i = 0; i < contour.size() - 1; i++) {
+        area += contour[i].x * contour[i + 1].y - contour[i].y * contour[i + 1].x;
+    }
+    area = fabs(area) / 2.0;
+
+    // Calcular el área del rectángulo mínimo que envuelve el contorno
+    double rectArea = (maxX - minX) * (maxY - minY);
+
+    // Devolver la compacidad o forma como la relación entre el área del contorno y el área del rectángulo mínimo
+    return area / rectArea;
 }

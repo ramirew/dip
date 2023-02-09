@@ -57,6 +57,21 @@ public:
     double find(const std::vector<PointC>& contour);
 };
 
+//compactness or shape ---------
+// Estructura para almacenar un punto en 2D
+struct PointS {
+    int x, y;
+};
+
+// Clase ImageCompactness para encontrar la compacidad o forma de una imagen
+class ImageCompactness {
+public:
+    // Constructor
+    ImageCompactness();
+
+    // Método para encontrar la compacidad o forma de una imagen
+    double find(const std::vector<PointS>& contour);
+};
 
 #endif // LIBRERIAGEOMETRIA_H_INCLUDED
 
