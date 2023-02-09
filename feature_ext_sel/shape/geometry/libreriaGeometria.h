@@ -6,6 +6,8 @@
 #include <vector>
 #include <complex>
 const double PI = 3.14159265;
+
+#define NUM_THREADS 8
 //CONVEX ------------------
 // Estructura para almacenar un punto en 2D
 struct Point {
