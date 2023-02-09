@@ -5,7 +5,7 @@
 
 #include <vector>
 
-
+//CONVEX ------------------
 // Estructura para almacenar un punto en 2D
 struct Point {
     int x, y;
@@ -26,6 +26,7 @@ private:
     static bool compare(Point a, Point b, Point base);
 };
 
+//ASYMETRY ------------
 struct Pixel {
     unsigned char intensity;
 };
@@ -40,7 +41,21 @@ public:
     double find(const std::vector<Pixel>& pixels, int width, int height);
 };
 
+//CIRCULARY ---------
+// Estructura para almacenar un punto en 2D
+struct Point {
+    int x, y;
+};
 
+// Clase ImageCircularity para encontrar la circularidad de una imagen
+class ImageCircularity {
+public:
+    // Constructor
+    ImageCircularity();
+
+    // Método para encontrar la circularidad de una imagen
+    double find(const std::vector<Point>& contour);
+};
 
 
 #endif // LIBRERIAGEOMETRIA_H_INCLUDED

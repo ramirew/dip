@@ -2,7 +2,9 @@
 #include <algorithm>
 #include <cmath>
 #include <numeric>
-// Constructor
+
+//CONVEX --------------------
+// Constructor 
 ConvexHull::ConvexHull() {}
 
 // Método para encontrar el borde convexo de un conjunto de puntos
@@ -29,7 +31,7 @@ std::vector<Point> ConvexHull::find(const std::vector<Point>& points) {
 }
 
 
-
+//ASYMETRY ----------------
 // Constructor
 ImageAsymmetry::ImageAsymmetry() {}
 
@@ -57,4 +59,40 @@ double ImageAsymmetry::find(const std::vector<Pixel>& pixels, int width, int hei
 
     // Devolver la asimetría como la diferencia entre las dos sumas
     return rightSum - leftSum;
+}
+
+//CIRCULARY ---------
+// Constructor
+ImageCircularity::ImageCircularity() {}
+
+// Método para encontrar la circularidad de una imagen
+double ImageCircularity::find(const std::vector<Point>& contour) {
+    if (contour.empty()) return 0;
+
+    // Calcular el centro de masa del contorno
+    Point center;
+    center.x = std::accumulate(contour.begin(), contour.end(), 0, [](int a, Point b) {
+        return a + b.x;
+    }) / contour.size();
+    center.y = std::accumulate(contour.begin(), contour.end(), 0, [](int a, Point b) {
+        return a + b.y;
+    }) / contour.size();
+
+    // Calcular la distancia promedio del centro de masa al contorno
+    double avgDist = std::accumulate(contour.begin(), contour.end(), 0.0, [center](double a, Point b) {
+        return a + sqrt((b.x - center.x) * (b.x - center.x) + (b.y - center.y) * (b.y - center.y));
+    }) / contour.size();
+
+    // Calcular el area del contorno
+    double area = 0;
+    for (int i = 0; i < contour.size() - 1; i++) {
+        area += contour[i].x * contour[i + 1].y - contour[i].y * contour[i + 1].x;
+    }
+    area = fabs(area) / 2.0;
+
+    // Calcular el area de la circunferencia con radio avgDist
+    double circleArea = M_PI * avgDist * avgDist;
+
+    // Devolver la circularidad como la relación entre el area del contorno y el area de la circunferencia
+    return area / circleArea;
 }
