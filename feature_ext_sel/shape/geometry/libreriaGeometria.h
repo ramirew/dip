@@ -43,9 +43,7 @@ public:
 
 //CIRCULARY ---------
 // Estructura para almacenar un punto en 2D
-struct PointC {
-    int x, y;
-};
+
 
 // Clase ImageCircularity para encontrar la circularidad de una imagen
 class ImageCircularity {
@@ -54,14 +52,11 @@ public:
     ImageCircularity();
 
     // Método para encontrar la circularidad de una imagen
-    double find(const std::vector<PointC>& contour);
+    double find(const std::vector<Point>& contour);
 };
 
 //compactness or shape ---------
 // Estructura para almacenar un punto en 2D
-struct PointS {
-    int x, y;
-};
 
 // Clase ImageCompactness para encontrar la compacidad o forma de una imagen
 class ImageCompactness {
@@ -70,7 +65,7 @@ public:
     ImageCompactness();
 
     // Método para encontrar la compacidad o forma de una imagen
-    double find(const std::vector<PointS>& contour);
+    double find(const std::vector<Point>& contour);
 };
 
 #endif // LIBRERIAGEOMETRIA_H_INCLUDED
