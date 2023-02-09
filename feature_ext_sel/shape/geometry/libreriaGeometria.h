@@ -2,8 +2,8 @@
 #define LIBRERIAGEOMETRIA_H_INCLUDED
 
 
-float resolverEcuacion(float valor)
-float resolverDerivada(float valor) 
+float resolverEcuacion(float valor);
+float resolverDerivada(float valor);
 
 #include  "libreriaGeometria.cpp"
 
