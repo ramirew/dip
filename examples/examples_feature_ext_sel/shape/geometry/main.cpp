@@ -38,11 +38,16 @@ int main() {
 	NormalizedRadialLength normalizedRadialLength;
 	cout<< "La longitud radial normalizada es:" << normalizedRadialLength.calculate(pixels)<<endl;
 	
-	
 	cout<< "El radio es:" << double calculateRadius(pixels)<<endl;
 	
+	Orientation orientationRelativeGradient;
+	cout<< "La longitud radial normalizada es:" <<  orientationRelativeGradient(pixels, width, height)<<endl;
 	
+	Redondez calcRoundness;
+	cout<< "La redondez es:" <<   calcRoundness(pixels, width, height)<<endl;
 	
+	Solidity calculateSolidity;
+	cout<< "La Solidez es:" <<  calculateSolidity(width, height)<<endl;
 	
 	
 }

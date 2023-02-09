@@ -149,6 +149,15 @@ public:
 private:
     int height, width;
 };
+//
+class Redondez{
+	// Constructor
+    double calcRoundness(const std::vector<Pixel>& pixels, int x, int y);
+	
+	
+	
+};
+
 
 
 #endif // LIBRERIAGEOMETRIA_H_INCLUDED
