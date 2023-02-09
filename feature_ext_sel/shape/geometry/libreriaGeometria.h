@@ -4,7 +4,7 @@
 #pragma once
 
 #include <vector>
-
+#include <complex>
 //CONVEX ------------------
 // Estructura para almacenar un punto en 2D
 struct Point {
@@ -78,6 +78,21 @@ public:
     // Método para encontrar el alargamiento de una imagen
     double find(const std::vector<Point>& contour);
 };
+
+//form ------------------------
+//FOURIER FEATURES ----------------------
+// Clase ImageFourierFeatures para encontrar las características de Fourier de una imagen
+class ImageFourierFeatures {
+public:
+    // Constructor
+    ImageFourierFeatures();
+
+    // Método para encontrar las características de Fourier de una imagen
+    std::vector<std::complex<double>> find(const std::vector<Point>& contour);
+};
+
+
+//MONETOS DE DISTANCIA NORMALIZADOS  ----------------------
 
 
 #endif // LIBRERIAGEOMETRIA_H_INCLUDED

@@ -164,3 +164,27 @@ double ImageElongation::find(const std::vector<Point>& contour) {
     // Devolver el alargamiento como la relación entre el diámetro máximo y el diámetro mínimo
     return maxDiameter / minDiameter;
 }
+//form ------------------------
+//FOURIER FEATURES ----------------------
+// Constructor
+ImageFourierFeatures::ImageFourierFeatures() {}
+
+// Método para encontrar las características de Fourier de una imagen
+std::vector<std::complex<double>> ImageFourierFeatures::find(const std::vector<Point>& contour) {
+    if (contour.empty()) return {};
+
+    // Calcular la transformada de Fourier de la imagen
+    const int N = contour.size();
+    std::vector<std::complex<double>> X(N);
+    for (int k = 0; k < N; k++) {
+        X[k] = {0, 0};
+        for (int n = 0; n < N; n++) {
+            double theta = 2 * M_PI * k * n / N;
+            X[k].real(X[k].real() + contour[n].x * std::cos(theta) - contour[n].y * std::sin(theta));
+            X[k].imag(X[k].imag() + contour[n].x * std::sin(theta) + contour[n].y * std::cos(theta));
+        }
+    }
+
+    return X;
+}
+//MONETOS DE DISTANCIA NORMALIZADOS  ----------------------
