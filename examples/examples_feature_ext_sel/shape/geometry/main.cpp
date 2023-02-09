@@ -14,10 +14,13 @@ int main() {
 	imageAsymmetry.find(pixels, width, height);
 	
 	ConvexHull convexHull;
-	convexHull.find(pixels);
+	cout<< "Casco convexo es:" << convexHull.find(pixels)<<endl;
 	
 	ImageCircularity imageCircularity;
 	imageCircularity.find(pixels);
+	
+	ImageCompactness imageCompactness;
+	imageCompactness.find(pixels);
 
 
 }

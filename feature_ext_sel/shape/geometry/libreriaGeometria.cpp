@@ -104,7 +104,7 @@ double ImageCircularity::find(const std::vector<Point>& contour) {
     // Devolver la circularidad como la relación entre el area del contorno y el area de la circunferencia
     return area / circleArea;
 }
-//c4.-ompactness or shape ---------
+//4.-ompactness or shape ---------
 // Constructor
 ImageCompactness::ImageCompactness() {}
 
