@@ -102,6 +102,8 @@ public:
     // Método para encontrar los momentos de distancia normalizados de una imagen
     std::vector<double> find(const std::vector<Point>& contour);
 };
+// radius -----------------------------------------------------
+double calculateRadius(const std::vector<std::vector<int>>& image);
 
 
 #endif // LIBRERIAGEOMETRIA_H_INCLUDED

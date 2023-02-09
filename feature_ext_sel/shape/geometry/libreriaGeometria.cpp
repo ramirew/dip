@@ -216,3 +216,31 @@ std::vector<double> ImageNormalizedDistanceMoments::find(const std::vector<Point
 
     return {m00, m10, m01};
 }
+//radius -------------------------------
+double calculateRadius(const std::vector<std::vector<int>>& image) {
+    int row_num = image.size();
+    int col_num = image[0].size();
+
+    int center_x = row_num / 2;
+    int center_y = col_num / 2;
+
+    double sum = 0;
+    for (int i = 0; i < row_num; i++) {
+        for (int j = 0; j < col_num; j++) {
+            if (image[i][j] > 0) {
+                sum += std::sqrt((i - center_x) * (i - center_x) + (j - center_y) * (j - center_y));
+            }
+        }
+    }
+
+    int count = 0;
+    for (int i = 0; i < row_num; i++) {
+        for (int j = 0; j < col_num; j++) {
+            if (image[i][j] > 0) {
+                count++;
+            }
+        }
+    }
+
+    return sum / count;
+}
