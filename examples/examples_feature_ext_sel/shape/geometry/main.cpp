@@ -25,5 +25,8 @@ int main() {
 
 	ImageElongation imageElongation;
 	cout<< "La alargacion es:" <<  imageElongation.find(pixels)<<endl;
+	
+	Shape calculateShape;
+	cout<< "La forma es:" <<  double calculateShape(width, height)<<endl;
 
 }
