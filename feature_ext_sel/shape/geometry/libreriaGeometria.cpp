@@ -1,7 +1,7 @@
 #include "libreriaGeometria.h"
 #include <algorithm>
 #include <cmath>
-
+#include <numeric>
 // Constructor
 ConvexHull::ConvexHull() {}
 
@@ -28,16 +28,33 @@ std::vector<Point> ConvexHull::find(const std::vector<Point>& points) {
     });
 }
 
-struct Pixel {
-    unsigned char intensity;
-};
 
-// Clase ImageAsymmetry para encontrar la asimetría de una imagen
-class ImageAsymmetry {
-public:
-    // Constructor
-    ImageAsymmetry();
 
-    // Método para encontrar la asimetría de una imagen
-    double find(const std::vector<Pixel>& pixels, int width, int height);
-};
+// Constructor
+ImageAsymmetry::ImageAsymmetry() {}
+
+// Método para encontrar la asimetría de una imagen
+double ImageAsymmetry::find(const std::vector<Pixel>& pixels, int width, int height) {
+    if (pixels.empty()) return 0;
+
+    // Calcular la media de la intensidad de los pixels
+    double mean = std::accumulate(pixels.begin(), pixels.end(), 0.0, [](double a, Pixel b) {
+        return a + b.intensity;
+    }) / pixels.size();
+
+    // Calcular la suma de los pixels a la izquierda y a la derecha de la media
+    double leftSum = 0, rightSum = 0;
+    for (int y = 0; y < height; y++) {
+        for (int x = 0; x < width; x++) {
+            int index = y * width + x;
+            if (pixels[index].intensity < mean) {
+                leftSum += pixels[index].intensity;
+            } else {
+                rightSum += pixels[index].intensity;
+            }
+        }
+    }
+
+    // Devolver la asimetría como la diferencia entre las dos sumas
+    return rightSum - leftSum;
+}
