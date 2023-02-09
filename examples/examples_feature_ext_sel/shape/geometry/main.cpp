@@ -30,11 +30,19 @@ int main() {
 	cout<< "La forma es:" <<  double calculateShape(width, height)<<endl;
 	
 	ImageFourierFeatures imageFourierFeatures;
-	cout<< "La Foueries Features es:" << imageFourierFeatures.find(pixels, width, height);<<endl;
+	cout<< "La Foueries Features es:" << imageFourierFeatures.find(pixels, width, height)<<endl;
 	
 	ImageNormalizedDistanceMoments imageNormalizedDistanceMoments; 
-    cout<< "Los momentos normalizados son:" << imageNormalizedDistanceMoments.find(pixels);<<endl;
+    cout<< "Los momentos normalizados son:" << imageNormalizedDistanceMoments.find(pixels)<<endl;
 	
 	NormalizedRadialLength normalizedRadialLength;
-	cout<< "La longitud radial normalizada es:" << normalizedRadialLength.calculate(pixels);<<endl;
+	cout<< "La longitud radial normalizada es:" << normalizedRadialLength.calculate(pixels)<<endl;
+	
+	
+	cout<< "El radio es:" << double calculateRadius(pixels)<<endl;
+	
+	
+	
+	
+	
 }
