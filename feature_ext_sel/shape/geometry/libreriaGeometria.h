@@ -1,16 +1,12 @@
 #ifndef LIBRERIAGEOMETRIA_H_INCLUDED
 #define LIBRERIAGEOMETRIA_H_INCLUDED
 
-const double PI = 3.14159265358979323846;
+struct Point;
 
-class Circle {
-public:
-    Circle(double r);
-    double getArea();
-    double getPerimeter();
-private:
-    double radius;
-};
+bool compare(Point a, Point b, Point base);
+vector<Point> convexHull(vector<Point>& points); 
+
+
 
 #endif // LIBRERIAGEOMETRIA_H_INCLUDED
 
