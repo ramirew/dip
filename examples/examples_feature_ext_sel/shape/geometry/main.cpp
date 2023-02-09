@@ -28,5 +28,8 @@ int main() {
 	
 	Shape calculateShape;
 	cout<< "La forma es:" <<  double calculateShape(width, height)<<endl;
+	
+	ImageFourierFeatures imageFourierFeatures;
+	cout<< "La Foueries Features es:" << imageFourierFeaturesfind(pixels, width, height);<<endl;
 
 }
