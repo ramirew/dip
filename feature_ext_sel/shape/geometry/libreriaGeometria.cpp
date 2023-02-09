@@ -129,3 +129,38 @@ double ImageCompactness::find(const std::vector<Point>& contour) {
     // Devolver la compacidad o forma como la relación entre el área del contorno y el área del rectángulo mínimo
     return area / rectArea;
 }
+
+//ellongation ------------------------
+// Constructor
+ImageElongation::ImageElongation() {}
+
+// Método para encontrar el alargamiento de una imagen
+double ImageElongation::find(const std::vector<Point>& contour) {
+    if (contour.empty()) return 0;
+
+    // Calcular el centro de masa de la imagen
+    double xMean = 0, yMean = 0;
+    for (const Point& p : contour) {
+        xMean += p.x;
+        yMean += p.y;
+    }
+    xMean /= contour.size();
+    yMean /= contour.size();
+
+    // Calcular el diámetro máximo de la imagen
+    double maxDiameter = 0;
+    for (const Point& p : contour) {
+        maxDiameter = std::max(maxDiameter, std::sqrt(std::pow(p.x - xMean, 2) + std::pow(p.y - yMean, 2)));
+    }
+
+    // Calcular el diámetro mínimo de la imagen
+    double minDiameter = std::numeric_limits<double>::max();
+    for (const Point& p1 : contour) {
+        for (const Point& p2 : contour) {
+            minDiameter = std::min(minDiameter, std::sqrt(std::pow(p1.x - p2.x, 2) + std::pow(p1.y - p2.y, 2)));
+        }
+    }
+
+    // Devolver el alargamiento como la relación entre el diámetro máximo y el diámetro mínimo
+    return maxDiameter / minDiameter;
+}

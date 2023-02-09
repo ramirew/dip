@@ -68,5 +68,17 @@ public:
     double find(const std::vector<Point>& contour);
 };
 
+//ellongation ------------------------
+// Clase ImageElongation para encontrar el alargamiento de una imagen
+class ImageElongation {
+public:
+    // Constructor
+    ImageElongation();
+
+    // Método para encontrar el alargamiento de una imagen
+    double find(const std::vector<Point>& contour);
+};
+
+
 #endif // LIBRERIAGEOMETRIA_H_INCLUDED
 
