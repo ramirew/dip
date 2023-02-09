@@ -90,10 +90,7 @@ public:
 class Orientation {
 public:
     // Constructor
-    Orientation();
-
-    // Método para encontrar la asimetría de una imagen
-    orientationRelativeGradient(const std::vector<Pixel>& pixels, int x, int y);
+    double orientationRelativeGradient(const std::vector<Pixel>& pixels, int x, int y);
 
 };
 //ellongation ------------------------

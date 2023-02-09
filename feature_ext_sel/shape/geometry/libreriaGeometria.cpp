@@ -265,6 +265,7 @@ double gradientY(const std::vector<std::vector<double>> &image, int x, int y) {
 }
 
 double orientationRelativeGradient(const std::vector<std::vector<double>> &image, int x, int y) {
+	
   double gx = gradientX(image, x, y);
   double gy = gradientY(image, x, y);
 
