@@ -1,7 +1,7 @@
 #ifndef LIBRERIAGEOMETRIA_H_INCLUDED
 #define LIBRERIAGEOMETRIA_H_INCLUDED
 
-double media(double arr[], int n);
+double media();
 
 #include  "libreriaGeometria.cpp"
 
