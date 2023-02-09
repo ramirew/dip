@@ -5,6 +5,7 @@
 
 #include <vector>
 #include <complex>
+const double PI = 3.14159265;
 //CONVEX ------------------
 // Estructura para almacenar un punto en 2D
 struct Point {
@@ -67,7 +68,25 @@ public:
     // Método para encontrar la compacidad o forma de una imagen
     double find(const std::vector<Point>& contour);
 };
+//Orientacion relativa del gradiante ----------------------------
+class GradientXClass {
+public:
+    // Constructor
+    gradientX();
 
+};
+class GradientYClass {
+public:
+    // Constructor
+    gradientY();
+
+};
+class Orientation {
+public:
+    // Constructor
+    orientationRelativeGradient();
+
+};
 //ellongation ------------------------
 // Clase ImageElongation para encontrar el alargamiento de una imagen
 class ImageElongation {
@@ -108,14 +127,14 @@ public:
 };
 // radius -----------------------------------------------------
 double calculateRadius(const std::vector<std::vector<int>>& image);
-
-
-#endif // LIBRERIAGEOMETRIA_H_INCLUDED
-
-//Orientacion relativa del gradiante ----------------------------
-
 //13.-solidity
 class Solidity {
  public:
   double calculateSolidity();
 };
+
+
+#endif // LIBRERIAGEOMETRIA_H_INCLUDED
+
+
+

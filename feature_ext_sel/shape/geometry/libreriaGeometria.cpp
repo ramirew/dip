@@ -250,6 +250,35 @@ double calculateRadius(const std::vector<std::vector<int>>& image) {
 }
 
 //11.-Orientacion relativa del gradiante ----------------------------
+double gradientX(const std::vector<std::vector<double>> &image, int x, int y) {
+  // Calcular gradiente en x usando una máscara de Sobel
+  double gx = image[x-1][y-1] + 2 * image[x][y-1] + image[x+1][y-1] -
+              image[x-1][y+1] - 2 * image[x][y+1] - image[x+1][y+1];
+  return gx;
+}
+
+double gradientY(const std::vector<std::vector<double>> &image, int x, int y) {
+  // Calcular gradiente en y usando una máscara de Sobel
+  double gy = image[x-1][y-1] + 2 * image[x-1][y] + image[x-1][y+1] -
+              image[x+1][y-1] - 2 * image[x+1][y] - image[x+1][y+1];
+  return gy;
+}
+
+double orientationRelativeGradient(const std::vector<std::vector<double>> &image, int x, int y) {
+  double gx = gradientX(image, x, y);
+  double gy = gradientY(image, x, y);
+
+  // Calcular ángulo entre gradientes
+  double angle = atan2(gy, gx) * 180 / PI;
+
+  // Normalizar ángulo a un rango de 0 a 360 grados
+  if (angle < 0) {
+    angle += 360;
+  }
+
+  return angle;
+}
+
 //12.-REDONDEZ------------------------------------------
 //Función para calcular el perímetro de una imagen
 int calcPerimeter(const int *image, int width, int height) {
