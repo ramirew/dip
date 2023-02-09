@@ -93,6 +93,15 @@ public:
 
 
 //MONETOS DE DISTANCIA NORMALIZADOS  ----------------------
+// Clase ImageNormalizedDistanceMoments para encontrar los momentos de distancia normalizados de una imagen
+class ImageNormalizedDistanceMoments {
+public:
+    // Constructor
+    ImageNormalizedDistanceMoments();
+
+    // Método para encontrar los momentos de distancia normalizados de una imagen
+    std::vector<double> find(const std::vector<Point>& contour);
+};
 
 
 #endif // LIBRERIAGEOMETRIA_H_INCLUDED

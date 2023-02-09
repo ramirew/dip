@@ -188,3 +188,31 @@ std::vector<std::complex<double>> ImageFourierFeatures::find(const std::vector<P
     return X;
 }
 //MONETOS DE DISTANCIA NORMALIZADOS  ----------------------
+// Constructor
+ImageNormalizedDistanceMoments::ImageNormalizedDistanceMoments() {}
+
+// Método para encontrar los momentos de distancia normalizados de una imagen
+std::vector<double> ImageNormalizedDistanceMoments::find(const std::vector<Point>& contour) {
+    if (contour.empty()) return {};
+
+    // Calcular los momentos de distancia normalizados de la imagen
+    const int N = contour.size();
+    const double cx = 0.5 * (contour[0].x + contour[N - 1].x);
+    const double cy = 0.5 * (contour[0].y + contour[N - 1].y);
+    double m00 = 0;
+    double m10 = 0;
+    double m01 = 0;
+    for (int i = 0; i < N; i++) {
+        double dx = contour[i].x - cx;
+        double dy = contour[i].y - cy;
+        double d = std::sqrt(dx * dx + dy * dy);
+        m00 += d;
+        m10 += d * dx;
+        m01 += d * dy;
+    }
+    m00 /= N;
+    m10 /= N;
+    m01 /= N;
+
+    return {m00, m10, m01};
+}
