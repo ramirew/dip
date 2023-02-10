@@ -1,24 +1,28 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
   )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/alexis/Documentos/octavosemestre/libreriaParalelo/dip-subido/feature_ext_sel/SecondOrder/secondorder.cpp" "/home/alexis/Documentos/octavosemestre/libreriaParalelo/dip-subido/build/CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/secondorder.cpp.o"
-  "/home/alexis/Documentos/octavosemestre/libreriaParalelo/dip-subido/feature_ext_sel/first_order/entropy.cpp" "/home/alexis/Documentos/octavosemestre/libreriaParalelo/dip-subido/build/CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/entropy.cpp.o"
-  "/home/alexis/Documentos/octavosemestre/libreriaParalelo/dip-subido/feature_ext_sel/first_order/entropyparallel.cpp" "/home/alexis/Documentos/octavosemestre/libreriaParalelo/dip-subido/build/CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/entropyparallel.cpp.o"
-  "/home/alexis/Documentos/octavosemestre/libreriaParalelo/dip-subido/feature_ext_sel/first_order/firstorderclassifiers.cpp" "/home/alexis/Documentos/octavosemestre/libreriaParalelo/dip-subido/build/CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/firstorderclassifiers.cpp.o"
-  "/home/alexis/Documentos/octavosemestre/libreriaParalelo/dip-subido/feature_ext_sel/first_order/firstorderclassifiersparallel.cpp" "/home/alexis/Documentos/octavosemestre/libreriaParalelo/dip-subido/build/CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/firstorderclassifiersparallel.cpp.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../classification"
-  "../metrics"
-  "../feature_ext_sel"
-  "/usr/lib/gcc/x86_64-linux-gnu/9/libgomp.so"
-  "/usr/lib/x86_64-linux-gnu/libpthread.so"
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/feature_ext_sel/SecondOrder/asm.cpp" "CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/asm.cpp.o" "gcc" "CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/asm.cpp.o.d"
+  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/feature_ext_sel/SecondOrder/clusterprominence.cpp" "CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/clusterprominence.cpp.o" "gcc" "CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/clusterprominence.cpp.o.d"
+  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/feature_ext_sel/SecondOrder/clustershade.cpp" "CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/clustershade.cpp.o" "gcc" "CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/clustershade.cpp.o.d"
+  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/feature_ext_sel/SecondOrder/diagonalmoment.cpp" "CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/diagonalmoment.cpp.o" "gcc" "CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/diagonalmoment.cpp.o.d"
+  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/feature_ext_sel/SecondOrder/dissimilarity.cpp" "CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/dissimilarity.cpp.o" "gcc" "CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/dissimilarity.cpp.o.d"
+  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/feature_ext_sel/SecondOrder/globalmean.cpp" "CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/globalmean.cpp.o" "gcc" "CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/globalmean.cpp.o.d"
+  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/feature_ext_sel/SecondOrder/idm.cpp" "CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/idm.cpp.o" "gcc" "CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/idm.cpp.o.d"
+  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/feature_ext_sel/SecondOrder/internalvariance.cpp" "CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/internalvariance.cpp.o" "gcc" "CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/internalvariance.cpp.o.d"
+  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/feature_ext_sel/SecondOrder/secondorder.cpp" "CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/secondorder.cpp.o" "gcc" "CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/secondorder.cpp.o.d"
+  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/feature_ext_sel/SecondOrder/uniformity.cpp" "CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/uniformity.cpp.o" "gcc" "CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/uniformity.cpp.o.d"
+  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/feature_ext_sel/first_order/entropy.cpp" "CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/entropy.cpp.o" "gcc" "CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/entropy.cpp.o.d"
+  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/feature_ext_sel/first_order/entropyparallel.cpp" "CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/entropyparallel.cpp.o" "gcc" "CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/entropyparallel.cpp.o.d"
+  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/feature_ext_sel/first_order/firstorderclassifiers.cpp" "CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/firstorderclassifiers.cpp.o" "gcc" "CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/firstorderclassifiers.cpp.o.d"
+  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/feature_ext_sel/first_order/firstorderclassifiersparallel.cpp" "CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/firstorderclassifiersparallel.cpp.o" "gcc" "CMakeFiles/featureExtraction.dir/feature_ext_sel/first_order/firstorderclassifiersparallel.cpp.o.d"
+  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/feature_ext_sel/shape/geometry/libreriaGeometria.cpp" "CMakeFiles/featureExtraction.dir/feature_ext_sel/shape/geometry/libreriaGeometria.cpp.o" "gcc" "CMakeFiles/featureExtraction.dir/feature_ext_sel/shape/geometry/libreriaGeometria.cpp.o.d"
   )
 
 # Targets to which this target links.

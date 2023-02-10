@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/classificationMetrics.dir/metrics/performance/benchmark.cpp.o"
+  "CMakeFiles/classificationMetrics.dir/metrics/performance/benchmark.cpp.o.d"
   "libclassificationMetrics.a"
   "libclassificationMetrics.pdb"
 )

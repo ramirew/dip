@@ -1,5 +1,5 @@
-/home/alexis/Documentos/octavosemestre/libreriaParalelo/dip-subido/build/CMakeFiles/rebuild_cache.dir
-/home/alexis/Documentos/octavosemestre/libreriaParalelo/dip-subido/build/CMakeFiles/edit_cache.dir
-/home/alexis/Documentos/octavosemestre/libreriaParalelo/dip-subido/build/CMakeFiles/featureExtraction.dir
-/home/alexis/Documentos/octavosemestre/libreriaParalelo/dip-subido/build/CMakeFiles/classificationMetrics.dir
-/home/alexis/Documentos/octavosemestre/libreriaParalelo/dip-subido/build/CMakeFiles/classification.dir
+/home/edwin/Documents/Proyecto Final Edwin Iza/dip/build/CMakeFiles/classification.dir
+/home/edwin/Documents/Proyecto Final Edwin Iza/dip/build/CMakeFiles/classificationMetrics.dir
+/home/edwin/Documents/Proyecto Final Edwin Iza/dip/build/CMakeFiles/featureExtraction.dir
+/home/edwin/Documents/Proyecto Final Edwin Iza/dip/build/CMakeFiles/edit_cache.dir
+/home/edwin/Documents/Proyecto Final Edwin Iza/dip/build/CMakeFiles/rebuild_cache.dir
