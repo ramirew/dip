@@ -1,38 +1,44 @@
-
-# Consider dependencies only in project.
-set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
-
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
+  "CXX"
   )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/user/SUBIR/dip/classification/dicom_read/DicomReader.cpp" "/home/user/SUBIR/dip/build/CMakeFiles/classification.dir/classification/dicom_read/DicomReader.cpp.o"
+  "/home/user/SUBIR/dip/classification/dicom_read/dicomutils.cpp" "/home/user/SUBIR/dip/build/CMakeFiles/classification.dir/classification/dicom_read/dicomutils.cpp.o"
+  "/home/user/SUBIR/dip/classification/fcm/fcm.cpp" "/home/user/SUBIR/dip/build/CMakeFiles/classification.dir/classification/fcm/fcm.cpp.o"
+  "/home/user/SUBIR/dip/classification/knn/Preprocessing.cpp" "/home/user/SUBIR/dip/build/CMakeFiles/classification.dir/classification/knn/Preprocessing.cpp.o"
+  "/home/user/SUBIR/dip/classification/knn/ReadDataset.cpp" "/home/user/SUBIR/dip/build/CMakeFiles/classification.dir/classification/knn/ReadDataset.cpp.o"
+  "/home/user/SUBIR/dip/classification/knn/dataset.cpp" "/home/user/SUBIR/dip/build/CMakeFiles/classification.dir/classification/knn/dataset.cpp.o"
+  "/home/user/SUBIR/dip/classification/knn/knn.cpp" "/home/user/SUBIR/dip/build/CMakeFiles/classification.dir/classification/knn/knn.cpp.o"
+  "/home/user/SUBIR/dip/classification/knn/knnresults.cpp" "/home/user/SUBIR/dip/build/CMakeFiles/classification.dir/classification/knn/knnresults.cpp.o"
+  "/home/user/SUBIR/dip/classification/knn/matrix.cpp" "/home/user/SUBIR/dip/build/CMakeFiles/classification.dir/classification/knn/matrix.cpp.o"
+  "/home/user/SUBIR/dip/classification/random_forest/ArgumentHandler.cpp" "/home/user/SUBIR/dip/build/CMakeFiles/classification.dir/classification/random_forest/ArgumentHandler.cpp.o"
+  "/home/user/SUBIR/dip/classification/random_forest/Data.cpp" "/home/user/SUBIR/dip/build/CMakeFiles/classification.dir/classification/random_forest/Data.cpp.o"
+  "/home/user/SUBIR/dip/classification/random_forest/Forest.cpp" "/home/user/SUBIR/dip/build/CMakeFiles/classification.dir/classification/random_forest/Forest.cpp.o"
+  "/home/user/SUBIR/dip/classification/random_forest/ForestClassification.cpp" "/home/user/SUBIR/dip/build/CMakeFiles/classification.dir/classification/random_forest/ForestClassification.cpp.o"
+  "/home/user/SUBIR/dip/classification/random_forest/ForestProbability.cpp" "/home/user/SUBIR/dip/build/CMakeFiles/classification.dir/classification/random_forest/ForestProbability.cpp.o"
+  "/home/user/SUBIR/dip/classification/random_forest/ForestRegression.cpp" "/home/user/SUBIR/dip/build/CMakeFiles/classification.dir/classification/random_forest/ForestRegression.cpp.o"
+  "/home/user/SUBIR/dip/classification/random_forest/ForestSurvival.cpp" "/home/user/SUBIR/dip/build/CMakeFiles/classification.dir/classification/random_forest/ForestSurvival.cpp.o"
+  "/home/user/SUBIR/dip/classification/random_forest/Tree.cpp" "/home/user/SUBIR/dip/build/CMakeFiles/classification.dir/classification/random_forest/Tree.cpp.o"
+  "/home/user/SUBIR/dip/classification/random_forest/TreeClassification.cpp" "/home/user/SUBIR/dip/build/CMakeFiles/classification.dir/classification/random_forest/TreeClassification.cpp.o"
+  "/home/user/SUBIR/dip/classification/random_forest/TreeProbability.cpp" "/home/user/SUBIR/dip/build/CMakeFiles/classification.dir/classification/random_forest/TreeProbability.cpp.o"
+  "/home/user/SUBIR/dip/classification/random_forest/TreeRegression.cpp" "/home/user/SUBIR/dip/build/CMakeFiles/classification.dir/classification/random_forest/TreeRegression.cpp.o"
+  "/home/user/SUBIR/dip/classification/random_forest/TreeSurvival.cpp" "/home/user/SUBIR/dip/build/CMakeFiles/classification.dir/classification/random_forest/TreeSurvival.cpp.o"
+  "/home/user/SUBIR/dip/classification/random_forest/rf.cpp" "/home/user/SUBIR/dip/build/CMakeFiles/classification.dir/classification/random_forest/rf.cpp.o"
+  "/home/user/SUBIR/dip/classification/random_forest/utility.cpp" "/home/user/SUBIR/dip/build/CMakeFiles/classification.dir/classification/random_forest/utility.cpp.o"
+  "/home/user/SUBIR/dip/classification/svm/svm.cpp" "/home/user/SUBIR/dip/build/CMakeFiles/classification.dir/classification/svm/svm.cpp.o"
+  "/home/user/SUBIR/dip/classification/svm/svm_util.cpp" "/home/user/SUBIR/dip/build/CMakeFiles/classification.dir/classification/svm/svm_util.cpp.o"
+  )
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The set of dependency files which are needed:
-set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/classification/dicom_read/DicomReader.cpp" "CMakeFiles/classification.dir/classification/dicom_read/DicomReader.cpp.o" "gcc" "CMakeFiles/classification.dir/classification/dicom_read/DicomReader.cpp.o.d"
-  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/classification/dicom_read/dicomutils.cpp" "CMakeFiles/classification.dir/classification/dicom_read/dicomutils.cpp.o" "gcc" "CMakeFiles/classification.dir/classification/dicom_read/dicomutils.cpp.o.d"
-  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/classification/fcm/fcm.cpp" "CMakeFiles/classification.dir/classification/fcm/fcm.cpp.o" "gcc" "CMakeFiles/classification.dir/classification/fcm/fcm.cpp.o.d"
-  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/classification/knn/Preprocessing.cpp" "CMakeFiles/classification.dir/classification/knn/Preprocessing.cpp.o" "gcc" "CMakeFiles/classification.dir/classification/knn/Preprocessing.cpp.o.d"
-  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/classification/knn/ReadDataset.cpp" "CMakeFiles/classification.dir/classification/knn/ReadDataset.cpp.o" "gcc" "CMakeFiles/classification.dir/classification/knn/ReadDataset.cpp.o.d"
-  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/classification/knn/dataset.cpp" "CMakeFiles/classification.dir/classification/knn/dataset.cpp.o" "gcc" "CMakeFiles/classification.dir/classification/knn/dataset.cpp.o.d"
-  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/classification/knn/knn.cpp" "CMakeFiles/classification.dir/classification/knn/knn.cpp.o" "gcc" "CMakeFiles/classification.dir/classification/knn/knn.cpp.o.d"
-  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/classification/knn/knnresults.cpp" "CMakeFiles/classification.dir/classification/knn/knnresults.cpp.o" "gcc" "CMakeFiles/classification.dir/classification/knn/knnresults.cpp.o.d"
-  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/classification/knn/matrix.cpp" "CMakeFiles/classification.dir/classification/knn/matrix.cpp.o" "gcc" "CMakeFiles/classification.dir/classification/knn/matrix.cpp.o.d"
-  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/classification/random_forest/ArgumentHandler.cpp" "CMakeFiles/classification.dir/classification/random_forest/ArgumentHandler.cpp.o" "gcc" "CMakeFiles/classification.dir/classification/random_forest/ArgumentHandler.cpp.o.d"
-  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/classification/random_forest/Data.cpp" "CMakeFiles/classification.dir/classification/random_forest/Data.cpp.o" "gcc" "CMakeFiles/classification.dir/classification/random_forest/Data.cpp.o.d"
-  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/classification/random_forest/Forest.cpp" "CMakeFiles/classification.dir/classification/random_forest/Forest.cpp.o" "gcc" "CMakeFiles/classification.dir/classification/random_forest/Forest.cpp.o.d"
-  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/classification/random_forest/ForestClassification.cpp" "CMakeFiles/classification.dir/classification/random_forest/ForestClassification.cpp.o" "gcc" "CMakeFiles/classification.dir/classification/random_forest/ForestClassification.cpp.o.d"
-  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/classification/random_forest/ForestProbability.cpp" "CMakeFiles/classification.dir/classification/random_forest/ForestProbability.cpp.o" "gcc" "CMakeFiles/classification.dir/classification/random_forest/ForestProbability.cpp.o.d"
-  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/classification/random_forest/ForestRegression.cpp" "CMakeFiles/classification.dir/classification/random_forest/ForestRegression.cpp.o" "gcc" "CMakeFiles/classification.dir/classification/random_forest/ForestRegression.cpp.o.d"
-  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/classification/random_forest/ForestSurvival.cpp" "CMakeFiles/classification.dir/classification/random_forest/ForestSurvival.cpp.o" "gcc" "CMakeFiles/classification.dir/classification/random_forest/ForestSurvival.cpp.o.d"
-  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/classification/random_forest/Tree.cpp" "CMakeFiles/classification.dir/classification/random_forest/Tree.cpp.o" "gcc" "CMakeFiles/classification.dir/classification/random_forest/Tree.cpp.o.d"
-  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/classification/random_forest/TreeClassification.cpp" "CMakeFiles/classification.dir/classification/random_forest/TreeClassification.cpp.o" "gcc" "CMakeFiles/classification.dir/classification/random_forest/TreeClassification.cpp.o.d"
-  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/classification/random_forest/TreeProbability.cpp" "CMakeFiles/classification.dir/classification/random_forest/TreeProbability.cpp.o" "gcc" "CMakeFiles/classification.dir/classification/random_forest/TreeProbability.cpp.o.d"
-  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/classification/random_forest/TreeRegression.cpp" "CMakeFiles/classification.dir/classification/random_forest/TreeRegression.cpp.o" "gcc" "CMakeFiles/classification.dir/classification/random_forest/TreeRegression.cpp.o.d"
-  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/classification/random_forest/TreeSurvival.cpp" "CMakeFiles/classification.dir/classification/random_forest/TreeSurvival.cpp.o" "gcc" "CMakeFiles/classification.dir/classification/random_forest/TreeSurvival.cpp.o.d"
-  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/classification/random_forest/rf.cpp" "CMakeFiles/classification.dir/classification/random_forest/rf.cpp.o" "gcc" "CMakeFiles/classification.dir/classification/random_forest/rf.cpp.o.d"
-  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/classification/random_forest/utility.cpp" "CMakeFiles/classification.dir/classification/random_forest/utility.cpp.o" "gcc" "CMakeFiles/classification.dir/classification/random_forest/utility.cpp.o.d"
-  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/classification/svm/svm.cpp" "CMakeFiles/classification.dir/classification/svm/svm.cpp.o" "gcc" "CMakeFiles/classification.dir/classification/svm/svm.cpp.o.d"
-  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/classification/svm/svm_util.cpp" "CMakeFiles/classification.dir/classification/svm/svm_util.cpp.o" "gcc" "CMakeFiles/classification.dir/classification/svm/svm_util.cpp.o.d"
+# The include file search paths:
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../classification"
+  "../metrics"
+  "../feature_ext_sel"
+  "/usr/lib/gcc/x86_64-linux-gnu/10/libgomp.so"
+  "/usr/lib/x86_64-linux-gnu/libpthread.so"
   )
 
 # Targets to which this target links.

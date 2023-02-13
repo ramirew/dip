@@ -1,14 +1,20 @@
-
-# Consider dependencies only in project.
-set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
-
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
+  "CXX"
   )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/user/SUBIR/dip/metrics/performance/benchmark.cpp" "/home/user/SUBIR/dip/build/CMakeFiles/classificationMetrics.dir/metrics/performance/benchmark.cpp.o"
+  )
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The set of dependency files which are needed:
-set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/metrics/performance/benchmark.cpp" "CMakeFiles/classificationMetrics.dir/metrics/performance/benchmark.cpp.o" "gcc" "CMakeFiles/classificationMetrics.dir/metrics/performance/benchmark.cpp.o.d"
+# The include file search paths:
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../classification"
+  "../metrics"
+  "../feature_ext_sel"
+  "/usr/lib/gcc/x86_64-linux-gnu/10/libgomp.so"
+  "/usr/lib/x86_64-linux-gnu/libpthread.so"
   )
 
 # Targets to which this target links.

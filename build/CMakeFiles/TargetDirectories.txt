@@ -1,5 +1,5 @@
-/home/edwin/Documents/Proyecto Final Edwin Iza/dip/build/CMakeFiles/classification.dir
-/home/edwin/Documents/Proyecto Final Edwin Iza/dip/build/CMakeFiles/classificationMetrics.dir
-/home/edwin/Documents/Proyecto Final Edwin Iza/dip/build/CMakeFiles/featureExtraction.dir
-/home/edwin/Documents/Proyecto Final Edwin Iza/dip/build/CMakeFiles/edit_cache.dir
-/home/edwin/Documents/Proyecto Final Edwin Iza/dip/build/CMakeFiles/rebuild_cache.dir
+/home/user/SUBIR/dip/build/CMakeFiles/rebuild_cache.dir
+/home/user/SUBIR/dip/build/CMakeFiles/edit_cache.dir
+/home/user/SUBIR/dip/build/CMakeFiles/featureExtraction.dir
+/home/user/SUBIR/dip/build/CMakeFiles/classificationMetrics.dir
+/home/user/SUBIR/dip/build/CMakeFiles/classification.dir

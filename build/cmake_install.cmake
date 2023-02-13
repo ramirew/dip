@@ -1,4 +1,4 @@
-# Install script for directory: /home/edwin/Documents/Proyecto Final Edwin Iza/dip
+# Install script for directory: /home/user/SUBIR/dip
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/edwin/Documents/Proyecto Final Edwin Iza/dip/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/user/SUBIR/dip/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
