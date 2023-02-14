@@ -5,28 +5,28 @@
 #include "dicom_read/DicomReader.h"
 #include "fcm/fcm.h"
 //LIBRERIAS NO PARALELIZADAS
-#include <GLCM/imagenes.h>
-#include <GLCM/VARIANCE.h>
-#include <GLCM/SQUAREVARIANCE.h>
-#include <GLCM/ENTROPIA.h>
-#include <GLCM/AVEREGE.h>
-#include <GLCM/CORRELATIONCOEFICIENT.h>
-#include <GLCM/MESURE.h>
-#include <GLCM/CONTRASTE.h>
-#include <GLCM/MOEMNT.h>
-#include <GLCM/SECONDANGULAR.h>
+#include <glcm/imagenes.h>
+#include <glcm/variance.h>
+#include <glcm/squarevariance.h>
+#include <glcm/entropia.h>
+#include <glcm/averege.h>
+#include <glcm/correlationcoeficient.h>
+#include <glcm/mesure.h>
+#include <glcm/contraste.h>
+#include <glcm/moment.h>
+#include <glcm/secondangular.h>
 //LIBRERIAS PARALELIZADAS
-#include <GLCM_P/imagenes_P.h>
-#include <GLCM_P/VARIANCE_P.h>
-#include <GLCM_P/SQUAREVARIANCE_P.h>
-#include <GLCM_P/ENTROPIA_P.h>
-#include <GLCM_P/AVEREGE_P.h>
-#include <GLCM_P/CORRELATIONCOEFICIENT_P.h>
-#include <GLCM_P/MESURE_P.h>
-#include <GLCM_P/CONTRASTE_P.h>
-#include <GLCM_P/MOEMNT_P.h>
-#include <GLCM_P/SECONDANGULAR_P.h>
-#include <GLCM/benchmark.h>
+#include <glcm_p/imagenes_p.h>
+#include <glcm_p/variance_p.h>
+#include <glcm_p/squarevariance_p.h>
+#include <glcm_p/entropia_p.h>
+#include <glcm_p/averege_p.h>
+#include <glcm_p/correlationcoeficient_p.h>
+#include <glcm_p/mesure_p.h>
+#include <glcm_p/contraste_p.h>
+#include <glcm_p/moment_p.h>
+#include <glcm_p/secondangular_p.h>
+#include <glcm/benchmark.h>
 #include <svm/svm.h>
 
 using namespace std;
@@ -34,16 +34,16 @@ using namespace std;
 void usarLibreria(vector<vector<int>> imageData,int rows,int cols){
     systemMetrics metrica("GLCM");
     metrica.resetCounters();
-    IMAGENES img;
-    VARIANCE variance;
-    SQUAREVARIANCE sqvariance;
-    ENTROPIA entropia;
-    AVEREGE averege;
-    CORRELATIONCOEFICIENT coefi;
-    MESURE mesure;
-    CONTRASTE contraste;
-    MOEMNT moment;
-    SECONDANGULAR sang;
+    imagenes img;
+    variance variance;
+    squarevariance sqvariance;
+    entropia entropia;
+    averege averege;
+    correlationcoeficient coefi;
+    mesure mesure;
+    contraste contraste;
+    moment moment;
+    secondangular sang;
     double **pMatriz = img.ESCALAGRISES(imageData,rows,cols);
     int toneCount = img.ObtenertoneCount(imageData,rows,cols);
     double m_asm, m_contrast, m_corr, m_var, m_idm, m_savg, m_svar, m_sentropy, m_entropy, m_dvar, m_dentropy, m_icorr1, m_icorr2, m_maxcorr;
@@ -108,17 +108,17 @@ void usarLibreriaParalela(vector<vector<int>> imageData,int rows,int cols, int h
         systemMetrics metrica("GLCM");
         metrica.resetCounters();
         int hilo = omp_get_thread_num();
-        IMAGENES_P img;
-        IMAGENES img2;
-        VARIANCE_P variance;
-        SQUAREVARIANCE_P sqvariance;
-        ENTROPIA_P entropia;
-        AVEREGE_P averege;
-        CORRELATIONCOEFICIENT_P coefi;
-        MESURE_P mesure;
-        CONTRASTE_P contraste;
-        MOEMNT_P moment;
-        SECONDANGULAR_P sang;
+        imagenes_p img;
+        imagenes img2;
+        variance_p variance;
+        squarevariance_p sqvariance;
+        entropia_p entropia;
+        averege_p  averege;
+        correlationcoeficient_p coefi;
+        mesure_p mesure;
+        contraste_p contraste;
+        moment_p moment;
+        secondangular_p sang;
         double **pMatriz = img.ESCALAGRISES(imageData,rows,cols, hilos);
         int toneCount = img.ObtenertoneCount(imageData,rows,cols, hilos);
         double m_asm, m_contrast, m_corr, m_var, m_idm, m_savg, m_svar, m_sentropy, m_entropy, m_dvar, m_dentropy, m_icorr1, m_icorr2, m_maxcorr;
