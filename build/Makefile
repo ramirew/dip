@@ -130,6 +130,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named GLCM
+
+# Build rule for target.
+GLCM: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 GLCM
+.PHONY : GLCM
+
+# fast build rule for target.
+GLCM/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/build
+.PHONY : GLCM/fast
+
+#=============================================================================
 # Target rules for targets named featureExtraction
 
 # Build rule for target.
@@ -849,6 +862,7 @@ feature_ext_sel/SecondOrder/GLCM/AVEREGE.o: feature_ext_sel/SecondOrder/GLCM/AVE
 
 # target to build an object file
 feature_ext_sel/SecondOrder/GLCM/AVEREGE.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM/AVEREGE.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/AVEREGE.cpp.o
 .PHONY : feature_ext_sel/SecondOrder/GLCM/AVEREGE.cpp.o
 
@@ -858,6 +872,7 @@ feature_ext_sel/SecondOrder/GLCM/AVEREGE.i: feature_ext_sel/SecondOrder/GLCM/AVE
 
 # target to preprocess a source file
 feature_ext_sel/SecondOrder/GLCM/AVEREGE.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM/AVEREGE.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/AVEREGE.cpp.i
 .PHONY : feature_ext_sel/SecondOrder/GLCM/AVEREGE.cpp.i
 
@@ -867,6 +882,7 @@ feature_ext_sel/SecondOrder/GLCM/AVEREGE.s: feature_ext_sel/SecondOrder/GLCM/AVE
 
 # target to generate assembly for a file
 feature_ext_sel/SecondOrder/GLCM/AVEREGE.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM/AVEREGE.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/AVEREGE.cpp.s
 .PHONY : feature_ext_sel/SecondOrder/GLCM/AVEREGE.cpp.s
 
@@ -876,6 +892,7 @@ feature_ext_sel/SecondOrder/GLCM/CONTRASTE.o: feature_ext_sel/SecondOrder/GLCM/C
 
 # target to build an object file
 feature_ext_sel/SecondOrder/GLCM/CONTRASTE.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM/CONTRASTE.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/CONTRASTE.cpp.o
 .PHONY : feature_ext_sel/SecondOrder/GLCM/CONTRASTE.cpp.o
 
@@ -885,6 +902,7 @@ feature_ext_sel/SecondOrder/GLCM/CONTRASTE.i: feature_ext_sel/SecondOrder/GLCM/C
 
 # target to preprocess a source file
 feature_ext_sel/SecondOrder/GLCM/CONTRASTE.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM/CONTRASTE.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/CONTRASTE.cpp.i
 .PHONY : feature_ext_sel/SecondOrder/GLCM/CONTRASTE.cpp.i
 
@@ -894,6 +912,7 @@ feature_ext_sel/SecondOrder/GLCM/CONTRASTE.s: feature_ext_sel/SecondOrder/GLCM/C
 
 # target to generate assembly for a file
 feature_ext_sel/SecondOrder/GLCM/CONTRASTE.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM/CONTRASTE.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/CONTRASTE.cpp.s
 .PHONY : feature_ext_sel/SecondOrder/GLCM/CONTRASTE.cpp.s
 
@@ -903,6 +922,7 @@ feature_ext_sel/SecondOrder/GLCM/CORRELATIONCOEFICIENT.o: feature_ext_sel/Second
 
 # target to build an object file
 feature_ext_sel/SecondOrder/GLCM/CORRELATIONCOEFICIENT.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM/CORRELATIONCOEFICIENT.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/CORRELATIONCOEFICIENT.cpp.o
 .PHONY : feature_ext_sel/SecondOrder/GLCM/CORRELATIONCOEFICIENT.cpp.o
 
@@ -912,6 +932,7 @@ feature_ext_sel/SecondOrder/GLCM/CORRELATIONCOEFICIENT.i: feature_ext_sel/Second
 
 # target to preprocess a source file
 feature_ext_sel/SecondOrder/GLCM/CORRELATIONCOEFICIENT.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM/CORRELATIONCOEFICIENT.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/CORRELATIONCOEFICIENT.cpp.i
 .PHONY : feature_ext_sel/SecondOrder/GLCM/CORRELATIONCOEFICIENT.cpp.i
 
@@ -921,6 +942,7 @@ feature_ext_sel/SecondOrder/GLCM/CORRELATIONCOEFICIENT.s: feature_ext_sel/Second
 
 # target to generate assembly for a file
 feature_ext_sel/SecondOrder/GLCM/CORRELATIONCOEFICIENT.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM/CORRELATIONCOEFICIENT.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/CORRELATIONCOEFICIENT.cpp.s
 .PHONY : feature_ext_sel/SecondOrder/GLCM/CORRELATIONCOEFICIENT.cpp.s
 
@@ -930,6 +952,7 @@ feature_ext_sel/SecondOrder/GLCM/ENTROPIA.o: feature_ext_sel/SecondOrder/GLCM/EN
 
 # target to build an object file
 feature_ext_sel/SecondOrder/GLCM/ENTROPIA.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM/ENTROPIA.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/ENTROPIA.cpp.o
 .PHONY : feature_ext_sel/SecondOrder/GLCM/ENTROPIA.cpp.o
 
@@ -939,6 +962,7 @@ feature_ext_sel/SecondOrder/GLCM/ENTROPIA.i: feature_ext_sel/SecondOrder/GLCM/EN
 
 # target to preprocess a source file
 feature_ext_sel/SecondOrder/GLCM/ENTROPIA.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM/ENTROPIA.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/ENTROPIA.cpp.i
 .PHONY : feature_ext_sel/SecondOrder/GLCM/ENTROPIA.cpp.i
 
@@ -948,6 +972,7 @@ feature_ext_sel/SecondOrder/GLCM/ENTROPIA.s: feature_ext_sel/SecondOrder/GLCM/EN
 
 # target to generate assembly for a file
 feature_ext_sel/SecondOrder/GLCM/ENTROPIA.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM/ENTROPIA.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/ENTROPIA.cpp.s
 .PHONY : feature_ext_sel/SecondOrder/GLCM/ENTROPIA.cpp.s
 
@@ -957,6 +982,7 @@ feature_ext_sel/SecondOrder/GLCM/MESURE.o: feature_ext_sel/SecondOrder/GLCM/MESU
 
 # target to build an object file
 feature_ext_sel/SecondOrder/GLCM/MESURE.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM/MESURE.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/MESURE.cpp.o
 .PHONY : feature_ext_sel/SecondOrder/GLCM/MESURE.cpp.o
 
@@ -966,6 +992,7 @@ feature_ext_sel/SecondOrder/GLCM/MESURE.i: feature_ext_sel/SecondOrder/GLCM/MESU
 
 # target to preprocess a source file
 feature_ext_sel/SecondOrder/GLCM/MESURE.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM/MESURE.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/MESURE.cpp.i
 .PHONY : feature_ext_sel/SecondOrder/GLCM/MESURE.cpp.i
 
@@ -975,6 +1002,7 @@ feature_ext_sel/SecondOrder/GLCM/MESURE.s: feature_ext_sel/SecondOrder/GLCM/MESU
 
 # target to generate assembly for a file
 feature_ext_sel/SecondOrder/GLCM/MESURE.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM/MESURE.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/MESURE.cpp.s
 .PHONY : feature_ext_sel/SecondOrder/GLCM/MESURE.cpp.s
 
@@ -984,6 +1012,7 @@ feature_ext_sel/SecondOrder/GLCM/MOEMNT.o: feature_ext_sel/SecondOrder/GLCM/MOEM
 
 # target to build an object file
 feature_ext_sel/SecondOrder/GLCM/MOEMNT.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM/MOEMNT.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/MOEMNT.cpp.o
 .PHONY : feature_ext_sel/SecondOrder/GLCM/MOEMNT.cpp.o
 
@@ -993,6 +1022,7 @@ feature_ext_sel/SecondOrder/GLCM/MOEMNT.i: feature_ext_sel/SecondOrder/GLCM/MOEM
 
 # target to preprocess a source file
 feature_ext_sel/SecondOrder/GLCM/MOEMNT.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM/MOEMNT.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/MOEMNT.cpp.i
 .PHONY : feature_ext_sel/SecondOrder/GLCM/MOEMNT.cpp.i
 
@@ -1002,6 +1032,7 @@ feature_ext_sel/SecondOrder/GLCM/MOEMNT.s: feature_ext_sel/SecondOrder/GLCM/MOEM
 
 # target to generate assembly for a file
 feature_ext_sel/SecondOrder/GLCM/MOEMNT.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM/MOEMNT.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/MOEMNT.cpp.s
 .PHONY : feature_ext_sel/SecondOrder/GLCM/MOEMNT.cpp.s
 
@@ -1011,6 +1042,7 @@ feature_ext_sel/SecondOrder/GLCM/SECONDANGULAR.o: feature_ext_sel/SecondOrder/GL
 
 # target to build an object file
 feature_ext_sel/SecondOrder/GLCM/SECONDANGULAR.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM/SECONDANGULAR.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/SECONDANGULAR.cpp.o
 .PHONY : feature_ext_sel/SecondOrder/GLCM/SECONDANGULAR.cpp.o
 
@@ -1020,6 +1052,7 @@ feature_ext_sel/SecondOrder/GLCM/SECONDANGULAR.i: feature_ext_sel/SecondOrder/GL
 
 # target to preprocess a source file
 feature_ext_sel/SecondOrder/GLCM/SECONDANGULAR.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM/SECONDANGULAR.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/SECONDANGULAR.cpp.i
 .PHONY : feature_ext_sel/SecondOrder/GLCM/SECONDANGULAR.cpp.i
 
@@ -1029,6 +1062,7 @@ feature_ext_sel/SecondOrder/GLCM/SECONDANGULAR.s: feature_ext_sel/SecondOrder/GL
 
 # target to generate assembly for a file
 feature_ext_sel/SecondOrder/GLCM/SECONDANGULAR.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM/SECONDANGULAR.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/SECONDANGULAR.cpp.s
 .PHONY : feature_ext_sel/SecondOrder/GLCM/SECONDANGULAR.cpp.s
 
@@ -1038,6 +1072,7 @@ feature_ext_sel/SecondOrder/GLCM/SQUAREVARIANCE.o: feature_ext_sel/SecondOrder/G
 
 # target to build an object file
 feature_ext_sel/SecondOrder/GLCM/SQUAREVARIANCE.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM/SQUAREVARIANCE.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/SQUAREVARIANCE.cpp.o
 .PHONY : feature_ext_sel/SecondOrder/GLCM/SQUAREVARIANCE.cpp.o
 
@@ -1047,6 +1082,7 @@ feature_ext_sel/SecondOrder/GLCM/SQUAREVARIANCE.i: feature_ext_sel/SecondOrder/G
 
 # target to preprocess a source file
 feature_ext_sel/SecondOrder/GLCM/SQUAREVARIANCE.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM/SQUAREVARIANCE.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/SQUAREVARIANCE.cpp.i
 .PHONY : feature_ext_sel/SecondOrder/GLCM/SQUAREVARIANCE.cpp.i
 
@@ -1056,6 +1092,7 @@ feature_ext_sel/SecondOrder/GLCM/SQUAREVARIANCE.s: feature_ext_sel/SecondOrder/G
 
 # target to generate assembly for a file
 feature_ext_sel/SecondOrder/GLCM/SQUAREVARIANCE.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM/SQUAREVARIANCE.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/SQUAREVARIANCE.cpp.s
 .PHONY : feature_ext_sel/SecondOrder/GLCM/SQUAREVARIANCE.cpp.s
 
@@ -1065,6 +1102,7 @@ feature_ext_sel/SecondOrder/GLCM/VARIANCE.o: feature_ext_sel/SecondOrder/GLCM/VA
 
 # target to build an object file
 feature_ext_sel/SecondOrder/GLCM/VARIANCE.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM/VARIANCE.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/VARIANCE.cpp.o
 .PHONY : feature_ext_sel/SecondOrder/GLCM/VARIANCE.cpp.o
 
@@ -1074,6 +1112,7 @@ feature_ext_sel/SecondOrder/GLCM/VARIANCE.i: feature_ext_sel/SecondOrder/GLCM/VA
 
 # target to preprocess a source file
 feature_ext_sel/SecondOrder/GLCM/VARIANCE.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM/VARIANCE.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/VARIANCE.cpp.i
 .PHONY : feature_ext_sel/SecondOrder/GLCM/VARIANCE.cpp.i
 
@@ -1083,6 +1122,7 @@ feature_ext_sel/SecondOrder/GLCM/VARIANCE.s: feature_ext_sel/SecondOrder/GLCM/VA
 
 # target to generate assembly for a file
 feature_ext_sel/SecondOrder/GLCM/VARIANCE.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM/VARIANCE.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/VARIANCE.cpp.s
 .PHONY : feature_ext_sel/SecondOrder/GLCM/VARIANCE.cpp.s
 
@@ -1092,6 +1132,7 @@ feature_ext_sel/SecondOrder/GLCM/benchmark.o: feature_ext_sel/SecondOrder/GLCM/b
 
 # target to build an object file
 feature_ext_sel/SecondOrder/GLCM/benchmark.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM/benchmark.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/benchmark.cpp.o
 .PHONY : feature_ext_sel/SecondOrder/GLCM/benchmark.cpp.o
 
@@ -1101,6 +1142,7 @@ feature_ext_sel/SecondOrder/GLCM/benchmark.i: feature_ext_sel/SecondOrder/GLCM/b
 
 # target to preprocess a source file
 feature_ext_sel/SecondOrder/GLCM/benchmark.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM/benchmark.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/benchmark.cpp.i
 .PHONY : feature_ext_sel/SecondOrder/GLCM/benchmark.cpp.i
 
@@ -1110,6 +1152,7 @@ feature_ext_sel/SecondOrder/GLCM/benchmark.s: feature_ext_sel/SecondOrder/GLCM/b
 
 # target to generate assembly for a file
 feature_ext_sel/SecondOrder/GLCM/benchmark.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM/benchmark.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/benchmark.cpp.s
 .PHONY : feature_ext_sel/SecondOrder/GLCM/benchmark.cpp.s
 
@@ -1119,6 +1162,7 @@ feature_ext_sel/SecondOrder/GLCM/imagenes.o: feature_ext_sel/SecondOrder/GLCM/im
 
 # target to build an object file
 feature_ext_sel/SecondOrder/GLCM/imagenes.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM/imagenes.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/imagenes.cpp.o
 .PHONY : feature_ext_sel/SecondOrder/GLCM/imagenes.cpp.o
 
@@ -1128,6 +1172,7 @@ feature_ext_sel/SecondOrder/GLCM/imagenes.i: feature_ext_sel/SecondOrder/GLCM/im
 
 # target to preprocess a source file
 feature_ext_sel/SecondOrder/GLCM/imagenes.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM/imagenes.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/imagenes.cpp.i
 .PHONY : feature_ext_sel/SecondOrder/GLCM/imagenes.cpp.i
 
@@ -1137,6 +1182,7 @@ feature_ext_sel/SecondOrder/GLCM/imagenes.s: feature_ext_sel/SecondOrder/GLCM/im
 
 # target to generate assembly for a file
 feature_ext_sel/SecondOrder/GLCM/imagenes.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM/imagenes.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/imagenes.cpp.s
 .PHONY : feature_ext_sel/SecondOrder/GLCM/imagenes.cpp.s
 
@@ -1146,6 +1192,7 @@ feature_ext_sel/SecondOrder/GLCM_P/AVEREGE_P.o: feature_ext_sel/SecondOrder/GLCM
 
 # target to build an object file
 feature_ext_sel/SecondOrder/GLCM_P/AVEREGE_P.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM_P/AVEREGE_P.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/AVEREGE_P.cpp.o
 .PHONY : feature_ext_sel/SecondOrder/GLCM_P/AVEREGE_P.cpp.o
 
@@ -1155,6 +1202,7 @@ feature_ext_sel/SecondOrder/GLCM_P/AVEREGE_P.i: feature_ext_sel/SecondOrder/GLCM
 
 # target to preprocess a source file
 feature_ext_sel/SecondOrder/GLCM_P/AVEREGE_P.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM_P/AVEREGE_P.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/AVEREGE_P.cpp.i
 .PHONY : feature_ext_sel/SecondOrder/GLCM_P/AVEREGE_P.cpp.i
 
@@ -1164,6 +1212,7 @@ feature_ext_sel/SecondOrder/GLCM_P/AVEREGE_P.s: feature_ext_sel/SecondOrder/GLCM
 
 # target to generate assembly for a file
 feature_ext_sel/SecondOrder/GLCM_P/AVEREGE_P.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM_P/AVEREGE_P.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/AVEREGE_P.cpp.s
 .PHONY : feature_ext_sel/SecondOrder/GLCM_P/AVEREGE_P.cpp.s
 
@@ -1173,6 +1222,7 @@ feature_ext_sel/SecondOrder/GLCM_P/CONTRASTE_P.o: feature_ext_sel/SecondOrder/GL
 
 # target to build an object file
 feature_ext_sel/SecondOrder/GLCM_P/CONTRASTE_P.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM_P/CONTRASTE_P.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/CONTRASTE_P.cpp.o
 .PHONY : feature_ext_sel/SecondOrder/GLCM_P/CONTRASTE_P.cpp.o
 
@@ -1182,6 +1232,7 @@ feature_ext_sel/SecondOrder/GLCM_P/CONTRASTE_P.i: feature_ext_sel/SecondOrder/GL
 
 # target to preprocess a source file
 feature_ext_sel/SecondOrder/GLCM_P/CONTRASTE_P.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM_P/CONTRASTE_P.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/CONTRASTE_P.cpp.i
 .PHONY : feature_ext_sel/SecondOrder/GLCM_P/CONTRASTE_P.cpp.i
 
@@ -1191,6 +1242,7 @@ feature_ext_sel/SecondOrder/GLCM_P/CONTRASTE_P.s: feature_ext_sel/SecondOrder/GL
 
 # target to generate assembly for a file
 feature_ext_sel/SecondOrder/GLCM_P/CONTRASTE_P.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM_P/CONTRASTE_P.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/CONTRASTE_P.cpp.s
 .PHONY : feature_ext_sel/SecondOrder/GLCM_P/CONTRASTE_P.cpp.s
 
@@ -1200,6 +1252,7 @@ feature_ext_sel/SecondOrder/GLCM_P/CORRELATIONCOEFICIENT_P.o: feature_ext_sel/Se
 
 # target to build an object file
 feature_ext_sel/SecondOrder/GLCM_P/CORRELATIONCOEFICIENT_P.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM_P/CORRELATIONCOEFICIENT_P.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/CORRELATIONCOEFICIENT_P.cpp.o
 .PHONY : feature_ext_sel/SecondOrder/GLCM_P/CORRELATIONCOEFICIENT_P.cpp.o
 
@@ -1209,6 +1262,7 @@ feature_ext_sel/SecondOrder/GLCM_P/CORRELATIONCOEFICIENT_P.i: feature_ext_sel/Se
 
 # target to preprocess a source file
 feature_ext_sel/SecondOrder/GLCM_P/CORRELATIONCOEFICIENT_P.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM_P/CORRELATIONCOEFICIENT_P.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/CORRELATIONCOEFICIENT_P.cpp.i
 .PHONY : feature_ext_sel/SecondOrder/GLCM_P/CORRELATIONCOEFICIENT_P.cpp.i
 
@@ -1218,6 +1272,7 @@ feature_ext_sel/SecondOrder/GLCM_P/CORRELATIONCOEFICIENT_P.s: feature_ext_sel/Se
 
 # target to generate assembly for a file
 feature_ext_sel/SecondOrder/GLCM_P/CORRELATIONCOEFICIENT_P.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM_P/CORRELATIONCOEFICIENT_P.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/CORRELATIONCOEFICIENT_P.cpp.s
 .PHONY : feature_ext_sel/SecondOrder/GLCM_P/CORRELATIONCOEFICIENT_P.cpp.s
 
@@ -1227,6 +1282,7 @@ feature_ext_sel/SecondOrder/GLCM_P/ENTROPIA_P.o: feature_ext_sel/SecondOrder/GLC
 
 # target to build an object file
 feature_ext_sel/SecondOrder/GLCM_P/ENTROPIA_P.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM_P/ENTROPIA_P.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/ENTROPIA_P.cpp.o
 .PHONY : feature_ext_sel/SecondOrder/GLCM_P/ENTROPIA_P.cpp.o
 
@@ -1236,6 +1292,7 @@ feature_ext_sel/SecondOrder/GLCM_P/ENTROPIA_P.i: feature_ext_sel/SecondOrder/GLC
 
 # target to preprocess a source file
 feature_ext_sel/SecondOrder/GLCM_P/ENTROPIA_P.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM_P/ENTROPIA_P.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/ENTROPIA_P.cpp.i
 .PHONY : feature_ext_sel/SecondOrder/GLCM_P/ENTROPIA_P.cpp.i
 
@@ -1245,6 +1302,7 @@ feature_ext_sel/SecondOrder/GLCM_P/ENTROPIA_P.s: feature_ext_sel/SecondOrder/GLC
 
 # target to generate assembly for a file
 feature_ext_sel/SecondOrder/GLCM_P/ENTROPIA_P.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM_P/ENTROPIA_P.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/ENTROPIA_P.cpp.s
 .PHONY : feature_ext_sel/SecondOrder/GLCM_P/ENTROPIA_P.cpp.s
 
@@ -1254,6 +1312,7 @@ feature_ext_sel/SecondOrder/GLCM_P/MESURE_P.o: feature_ext_sel/SecondOrder/GLCM_
 
 # target to build an object file
 feature_ext_sel/SecondOrder/GLCM_P/MESURE_P.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM_P/MESURE_P.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/MESURE_P.cpp.o
 .PHONY : feature_ext_sel/SecondOrder/GLCM_P/MESURE_P.cpp.o
 
@@ -1263,6 +1322,7 @@ feature_ext_sel/SecondOrder/GLCM_P/MESURE_P.i: feature_ext_sel/SecondOrder/GLCM_
 
 # target to preprocess a source file
 feature_ext_sel/SecondOrder/GLCM_P/MESURE_P.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM_P/MESURE_P.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/MESURE_P.cpp.i
 .PHONY : feature_ext_sel/SecondOrder/GLCM_P/MESURE_P.cpp.i
 
@@ -1272,6 +1332,7 @@ feature_ext_sel/SecondOrder/GLCM_P/MESURE_P.s: feature_ext_sel/SecondOrder/GLCM_
 
 # target to generate assembly for a file
 feature_ext_sel/SecondOrder/GLCM_P/MESURE_P.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM_P/MESURE_P.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/MESURE_P.cpp.s
 .PHONY : feature_ext_sel/SecondOrder/GLCM_P/MESURE_P.cpp.s
 
@@ -1281,6 +1342,7 @@ feature_ext_sel/SecondOrder/GLCM_P/MOEMNT_P.o: feature_ext_sel/SecondOrder/GLCM_
 
 # target to build an object file
 feature_ext_sel/SecondOrder/GLCM_P/MOEMNT_P.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM_P/MOEMNT_P.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/MOEMNT_P.cpp.o
 .PHONY : feature_ext_sel/SecondOrder/GLCM_P/MOEMNT_P.cpp.o
 
@@ -1290,6 +1352,7 @@ feature_ext_sel/SecondOrder/GLCM_P/MOEMNT_P.i: feature_ext_sel/SecondOrder/GLCM_
 
 # target to preprocess a source file
 feature_ext_sel/SecondOrder/GLCM_P/MOEMNT_P.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM_P/MOEMNT_P.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/MOEMNT_P.cpp.i
 .PHONY : feature_ext_sel/SecondOrder/GLCM_P/MOEMNT_P.cpp.i
 
@@ -1299,6 +1362,7 @@ feature_ext_sel/SecondOrder/GLCM_P/MOEMNT_P.s: feature_ext_sel/SecondOrder/GLCM_
 
 # target to generate assembly for a file
 feature_ext_sel/SecondOrder/GLCM_P/MOEMNT_P.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM_P/MOEMNT_P.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/MOEMNT_P.cpp.s
 .PHONY : feature_ext_sel/SecondOrder/GLCM_P/MOEMNT_P.cpp.s
 
@@ -1308,6 +1372,7 @@ feature_ext_sel/SecondOrder/GLCM_P/SECONDANGULAR_P.o: feature_ext_sel/SecondOrde
 
 # target to build an object file
 feature_ext_sel/SecondOrder/GLCM_P/SECONDANGULAR_P.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM_P/SECONDANGULAR_P.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/SECONDANGULAR_P.cpp.o
 .PHONY : feature_ext_sel/SecondOrder/GLCM_P/SECONDANGULAR_P.cpp.o
 
@@ -1317,6 +1382,7 @@ feature_ext_sel/SecondOrder/GLCM_P/SECONDANGULAR_P.i: feature_ext_sel/SecondOrde
 
 # target to preprocess a source file
 feature_ext_sel/SecondOrder/GLCM_P/SECONDANGULAR_P.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM_P/SECONDANGULAR_P.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/SECONDANGULAR_P.cpp.i
 .PHONY : feature_ext_sel/SecondOrder/GLCM_P/SECONDANGULAR_P.cpp.i
 
@@ -1326,6 +1392,7 @@ feature_ext_sel/SecondOrder/GLCM_P/SECONDANGULAR_P.s: feature_ext_sel/SecondOrde
 
 # target to generate assembly for a file
 feature_ext_sel/SecondOrder/GLCM_P/SECONDANGULAR_P.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM_P/SECONDANGULAR_P.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/SECONDANGULAR_P.cpp.s
 .PHONY : feature_ext_sel/SecondOrder/GLCM_P/SECONDANGULAR_P.cpp.s
 
@@ -1335,6 +1402,7 @@ feature_ext_sel/SecondOrder/GLCM_P/SQUAREVARIANCE_P.o: feature_ext_sel/SecondOrd
 
 # target to build an object file
 feature_ext_sel/SecondOrder/GLCM_P/SQUAREVARIANCE_P.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM_P/SQUAREVARIANCE_P.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/SQUAREVARIANCE_P.cpp.o
 .PHONY : feature_ext_sel/SecondOrder/GLCM_P/SQUAREVARIANCE_P.cpp.o
 
@@ -1344,6 +1412,7 @@ feature_ext_sel/SecondOrder/GLCM_P/SQUAREVARIANCE_P.i: feature_ext_sel/SecondOrd
 
 # target to preprocess a source file
 feature_ext_sel/SecondOrder/GLCM_P/SQUAREVARIANCE_P.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM_P/SQUAREVARIANCE_P.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/SQUAREVARIANCE_P.cpp.i
 .PHONY : feature_ext_sel/SecondOrder/GLCM_P/SQUAREVARIANCE_P.cpp.i
 
@@ -1353,6 +1422,7 @@ feature_ext_sel/SecondOrder/GLCM_P/SQUAREVARIANCE_P.s: feature_ext_sel/SecondOrd
 
 # target to generate assembly for a file
 feature_ext_sel/SecondOrder/GLCM_P/SQUAREVARIANCE_P.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM_P/SQUAREVARIANCE_P.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/SQUAREVARIANCE_P.cpp.s
 .PHONY : feature_ext_sel/SecondOrder/GLCM_P/SQUAREVARIANCE_P.cpp.s
 
@@ -1362,6 +1432,7 @@ feature_ext_sel/SecondOrder/GLCM_P/VARIANCE_P.o: feature_ext_sel/SecondOrder/GLC
 
 # target to build an object file
 feature_ext_sel/SecondOrder/GLCM_P/VARIANCE_P.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM_P/VARIANCE_P.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/VARIANCE_P.cpp.o
 .PHONY : feature_ext_sel/SecondOrder/GLCM_P/VARIANCE_P.cpp.o
 
@@ -1371,6 +1442,7 @@ feature_ext_sel/SecondOrder/GLCM_P/VARIANCE_P.i: feature_ext_sel/SecondOrder/GLC
 
 # target to preprocess a source file
 feature_ext_sel/SecondOrder/GLCM_P/VARIANCE_P.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM_P/VARIANCE_P.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/VARIANCE_P.cpp.i
 .PHONY : feature_ext_sel/SecondOrder/GLCM_P/VARIANCE_P.cpp.i
 
@@ -1380,6 +1452,7 @@ feature_ext_sel/SecondOrder/GLCM_P/VARIANCE_P.s: feature_ext_sel/SecondOrder/GLC
 
 # target to generate assembly for a file
 feature_ext_sel/SecondOrder/GLCM_P/VARIANCE_P.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM_P/VARIANCE_P.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/VARIANCE_P.cpp.s
 .PHONY : feature_ext_sel/SecondOrder/GLCM_P/VARIANCE_P.cpp.s
 
@@ -1389,6 +1462,7 @@ feature_ext_sel/SecondOrder/GLCM_P/imagenes_P.o: feature_ext_sel/SecondOrder/GLC
 
 # target to build an object file
 feature_ext_sel/SecondOrder/GLCM_P/imagenes_P.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM_P/imagenes_P.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/imagenes_P.cpp.o
 .PHONY : feature_ext_sel/SecondOrder/GLCM_P/imagenes_P.cpp.o
 
@@ -1398,6 +1472,7 @@ feature_ext_sel/SecondOrder/GLCM_P/imagenes_P.i: feature_ext_sel/SecondOrder/GLC
 
 # target to preprocess a source file
 feature_ext_sel/SecondOrder/GLCM_P/imagenes_P.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM_P/imagenes_P.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/imagenes_P.cpp.i
 .PHONY : feature_ext_sel/SecondOrder/GLCM_P/imagenes_P.cpp.i
 
@@ -1407,6 +1482,7 @@ feature_ext_sel/SecondOrder/GLCM_P/imagenes_P.s: feature_ext_sel/SecondOrder/GLC
 
 # target to generate assembly for a file
 feature_ext_sel/SecondOrder/GLCM_P/imagenes_P.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/feature_ext_sel/SecondOrder/GLCM_P/imagenes_P.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/imagenes_P.cpp.s
 .PHONY : feature_ext_sel/SecondOrder/GLCM_P/imagenes_P.cpp.s
 
@@ -1850,6 +1926,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... GLCM"
 	@echo "... classification"
 	@echo "... classificationMetrics"
 	@echo "... featureExtraction"

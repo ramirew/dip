@@ -72,6 +72,7 @@ CMAKE_BINARY_DIR = /home/user/SUBIR/dip/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/GLCM.dir/all
 all: CMakeFiles/featureExtraction.dir/all
 all: CMakeFiles/classificationMetrics.dir/all
 all: CMakeFiles/classification.dir/all
@@ -84,11 +85,39 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/GLCM.dir/clean
 clean: CMakeFiles/featureExtraction.dir/clean
 clean: CMakeFiles/classificationMetrics.dir/clean
 clean: CMakeFiles/classification.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/GLCM.dir
+
+# All Build rule for target.
+CMakeFiles/GLCM.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22 "Built target GLCM"
+.PHONY : CMakeFiles/GLCM.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/GLCM.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/SUBIR/dip/build/CMakeFiles 22
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/GLCM.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/SUBIR/dip/build/CMakeFiles 0
+.PHONY : CMakeFiles/GLCM.dir/rule
+
+# Convenience name for target.
+GLCM: CMakeFiles/GLCM.dir/rule
+
+.PHONY : GLCM
+
+# clean rule for target.
+CMakeFiles/GLCM.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLCM.dir/build.make CMakeFiles/GLCM.dir/clean
+.PHONY : CMakeFiles/GLCM.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/featureExtraction.dir
@@ -97,7 +126,7 @@ clean: CMakeFiles/classification.dir/clean
 CMakeFiles/featureExtraction.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/featureExtraction.dir/build.make CMakeFiles/featureExtraction.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65 "Built target featureExtraction"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87 "Built target featureExtraction"
 .PHONY : CMakeFiles/featureExtraction.dir/all
 
 # Build rule for subdir invocation for target.
@@ -124,7 +153,7 @@ CMakeFiles/featureExtraction.dir/clean:
 CMakeFiles/classificationMetrics.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/classificationMetrics.dir/build.make CMakeFiles/classificationMetrics.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/classificationMetrics.dir/build.make CMakeFiles/classificationMetrics.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=27,28 "Built target classificationMetrics"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=49,50 "Built target classificationMetrics"
 .PHONY : CMakeFiles/classificationMetrics.dir/all
 
 # Build rule for subdir invocation for target.
@@ -151,7 +180,7 @@ CMakeFiles/classificationMetrics.dir/clean:
 CMakeFiles/classification.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/classification.dir/build.make CMakeFiles/classification.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26 "Built target classification"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48 "Built target classification"
 .PHONY : CMakeFiles/classification.dir/all
 
 # Build rule for subdir invocation for target.
