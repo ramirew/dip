@@ -30,6 +30,13 @@ public:
                       double m_icorr1,
                       double m_icorr2,
                       double m_maxcorr) const;
+    void generarExcelMetricas(
+            double a,
+            double b,
+            double c,
+            double d,
+            double e
+            ) const;
 };
 
 

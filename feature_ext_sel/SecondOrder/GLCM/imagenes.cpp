@@ -238,6 +238,33 @@ void IMAGENES::generarExcel(double m_asm,
     cout << "\nDATOS ALMACENADIOS\n";
 }
 
+
+void IMAGENES::generarExcelMetricas(
+        double a,
+        double b,
+        double c,
+        double d,
+        double e
+        ) const
+{
+    lxw_workbook  *workbook  = workbook_new("/home/user/PARALELA/RESULTADOS/resultadosMetricas.xlsx");
+    lxw_worksheet *worksheet = workbook_add_worksheet(workbook, NULL);
+    worksheet_write_string(worksheet, 0, 0, "CPU", NULL);
+    worksheet_write_number(worksheet, 0, 1, a, NULL);
+    worksheet_write_string(worksheet, 1, 0, "MEMORIA", NULL);
+    worksheet_write_number(worksheet, 1, 1, b, NULL);
+    worksheet_write_string(worksheet, 2, 0, "TIEMPO EN MILISIEGUNDOS", NULL);
+    worksheet_write_number(worksheet, 2, 1, c, NULL);
+    worksheet_write_string(worksheet, 3, 0, "TIEMPO EN SEGUNDOS", NULL);
+    worksheet_write_number(worksheet, 3, 1, d, NULL);
+    worksheet_write_string(worksheet, 4, 0, "RAM", NULL);
+    worksheet_write_number(worksheet, 4, 1, e, NULL);
+    workbook_close(workbook);
+    cout << "\nDATOS ALMACENADIOS\n";
+}
+
+
+
 void IMAGENES::mensaje(string data) const
 {
     cout << "\n" << data <<"\n";

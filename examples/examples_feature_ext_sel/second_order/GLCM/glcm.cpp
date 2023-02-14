@@ -91,7 +91,14 @@ void usarLibreria(vector<vector<int>> imageData,int rows,int cols){
 
     metrica.calculate();
     metrica.printMetrics();
+    double a = metrica.getCpuPercent();//CPU
+    double b = metrica.getDifMemoryKb();//MEMORIA
+    double c = metrica.getDurationInMiliseconds();//TIEMPO EN MILISEGUNDOS
+    double d = metrica.getDurationInSeconds();// TIEMPO EN SEGUNDOS
+    double e = metrica.getPeakDifMemoryKb(); // RAM
     cout << "\nRam = " << getRamUsage() << " kb" << endl;
+
+    img.generarExcelMetricas(a,b,c,d,getRamUsage());
 
 }
 
@@ -102,6 +109,7 @@ void usarLibreriaParalela(vector<vector<int>> imageData,int rows,int cols, int h
         metrica.resetCounters();
         int hilo = omp_get_thread_num();
         IMAGENES_P img;
+        IMAGENES img2;
         VARIANCE_P variance;
         SQUAREVARIANCE_P sqvariance;
         ENTROPIA_P entropia;
@@ -160,7 +168,12 @@ void usarLibreriaParalela(vector<vector<int>> imageData,int rows,int cols, int h
 
             metrica.calculate();
             metrica.printMetrics();
+            double a = metrica.getCpuPercent();//CPU
+            double b = metrica.getDifMemoryKb();//MEMORIA
+            double c = metrica.getDurationInMiliseconds();//TIEMPO EN MILISEGUNDOS
+            double d = metrica.getDurationInSeconds();// TIEMPO EN SEGUNDOS
             cout << "\nRam = " << getRamUsage() << " kb" << endl;
+            img2.generarExcelMetricas(a,b,c,d,getRamUsage());
         }
     }
 
@@ -189,3 +202,5 @@ int main()
 
     return 0;
 }
+
+
