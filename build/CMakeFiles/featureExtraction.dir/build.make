@@ -76,282 +76,9 @@ include CMakeFiles/featureExtraction.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/featureExtraction.dir/flags.make
 
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/AVEREGE.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/AVEREGE.cpp.o: ../feature_ext_sel/SecondOrder/GLCM/AVEREGE.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/AVEREGE.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/AVEREGE.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM/AVEREGE.cpp
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/AVEREGE.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/AVEREGE.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM/AVEREGE.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/AVEREGE.cpp.i
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/AVEREGE.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/AVEREGE.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM/AVEREGE.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/AVEREGE.cpp.s
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/CONTRASTE.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/CONTRASTE.cpp.o: ../feature_ext_sel/SecondOrder/GLCM/CONTRASTE.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/CONTRASTE.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/CONTRASTE.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM/CONTRASTE.cpp
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/CONTRASTE.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/CONTRASTE.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM/CONTRASTE.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/CONTRASTE.cpp.i
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/CONTRASTE.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/CONTRASTE.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM/CONTRASTE.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/CONTRASTE.cpp.s
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/CORRELATIONCOEFICIENT.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/CORRELATIONCOEFICIENT.cpp.o: ../feature_ext_sel/SecondOrder/GLCM/CORRELATIONCOEFICIENT.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/CORRELATIONCOEFICIENT.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/CORRELATIONCOEFICIENT.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM/CORRELATIONCOEFICIENT.cpp
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/CORRELATIONCOEFICIENT.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/CORRELATIONCOEFICIENT.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM/CORRELATIONCOEFICIENT.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/CORRELATIONCOEFICIENT.cpp.i
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/CORRELATIONCOEFICIENT.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/CORRELATIONCOEFICIENT.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM/CORRELATIONCOEFICIENT.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/CORRELATIONCOEFICIENT.cpp.s
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/ENTROPIA.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/ENTROPIA.cpp.o: ../feature_ext_sel/SecondOrder/GLCM/ENTROPIA.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/ENTROPIA.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/ENTROPIA.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM/ENTROPIA.cpp
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/ENTROPIA.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/ENTROPIA.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM/ENTROPIA.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/ENTROPIA.cpp.i
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/ENTROPIA.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/ENTROPIA.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM/ENTROPIA.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/ENTROPIA.cpp.s
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/MESURE.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/MESURE.cpp.o: ../feature_ext_sel/SecondOrder/GLCM/MESURE.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/MESURE.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/MESURE.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM/MESURE.cpp
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/MESURE.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/MESURE.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM/MESURE.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/MESURE.cpp.i
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/MESURE.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/MESURE.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM/MESURE.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/MESURE.cpp.s
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/MOEMNT.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/MOEMNT.cpp.o: ../feature_ext_sel/SecondOrder/GLCM/MOEMNT.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/MOEMNT.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/MOEMNT.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM/MOEMNT.cpp
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/MOEMNT.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/MOEMNT.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM/MOEMNT.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/MOEMNT.cpp.i
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/MOEMNT.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/MOEMNT.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM/MOEMNT.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/MOEMNT.cpp.s
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/SECONDANGULAR.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/SECONDANGULAR.cpp.o: ../feature_ext_sel/SecondOrder/GLCM/SECONDANGULAR.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/SECONDANGULAR.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/SECONDANGULAR.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM/SECONDANGULAR.cpp
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/SECONDANGULAR.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/SECONDANGULAR.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM/SECONDANGULAR.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/SECONDANGULAR.cpp.i
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/SECONDANGULAR.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/SECONDANGULAR.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM/SECONDANGULAR.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/SECONDANGULAR.cpp.s
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/SQUAREVARIANCE.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/SQUAREVARIANCE.cpp.o: ../feature_ext_sel/SecondOrder/GLCM/SQUAREVARIANCE.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/SQUAREVARIANCE.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/SQUAREVARIANCE.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM/SQUAREVARIANCE.cpp
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/SQUAREVARIANCE.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/SQUAREVARIANCE.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM/SQUAREVARIANCE.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/SQUAREVARIANCE.cpp.i
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/SQUAREVARIANCE.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/SQUAREVARIANCE.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM/SQUAREVARIANCE.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/SQUAREVARIANCE.cpp.s
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/VARIANCE.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/VARIANCE.cpp.o: ../feature_ext_sel/SecondOrder/GLCM/VARIANCE.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/VARIANCE.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/VARIANCE.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM/VARIANCE.cpp
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/VARIANCE.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/VARIANCE.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM/VARIANCE.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/VARIANCE.cpp.i
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/VARIANCE.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/VARIANCE.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM/VARIANCE.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/VARIANCE.cpp.s
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/benchmark.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/benchmark.cpp.o: ../feature_ext_sel/SecondOrder/GLCM/benchmark.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/benchmark.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/benchmark.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM/benchmark.cpp
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/benchmark.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/benchmark.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM/benchmark.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/benchmark.cpp.i
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/benchmark.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/benchmark.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM/benchmark.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/benchmark.cpp.s
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/imagenes.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/imagenes.cpp.o: ../feature_ext_sel/SecondOrder/GLCM/imagenes.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/imagenes.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/imagenes.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM/imagenes.cpp
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/imagenes.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/imagenes.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM/imagenes.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/imagenes.cpp.i
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/imagenes.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/imagenes.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM/imagenes.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/imagenes.cpp.s
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/AVEREGE_P.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/AVEREGE_P.cpp.o: ../feature_ext_sel/SecondOrder/GLCM_P/AVEREGE_P.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/AVEREGE_P.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/AVEREGE_P.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM_P/AVEREGE_P.cpp
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/AVEREGE_P.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/AVEREGE_P.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM_P/AVEREGE_P.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/AVEREGE_P.cpp.i
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/AVEREGE_P.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/AVEREGE_P.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM_P/AVEREGE_P.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/AVEREGE_P.cpp.s
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/CONTRASTE_P.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/CONTRASTE_P.cpp.o: ../feature_ext_sel/SecondOrder/GLCM_P/CONTRASTE_P.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/CONTRASTE_P.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/CONTRASTE_P.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM_P/CONTRASTE_P.cpp
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/CONTRASTE_P.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/CONTRASTE_P.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM_P/CONTRASTE_P.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/CONTRASTE_P.cpp.i
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/CONTRASTE_P.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/CONTRASTE_P.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM_P/CONTRASTE_P.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/CONTRASTE_P.cpp.s
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/CORRELATIONCOEFICIENT_P.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/CORRELATIONCOEFICIENT_P.cpp.o: ../feature_ext_sel/SecondOrder/GLCM_P/CORRELATIONCOEFICIENT_P.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/CORRELATIONCOEFICIENT_P.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/CORRELATIONCOEFICIENT_P.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM_P/CORRELATIONCOEFICIENT_P.cpp
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/CORRELATIONCOEFICIENT_P.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/CORRELATIONCOEFICIENT_P.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM_P/CORRELATIONCOEFICIENT_P.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/CORRELATIONCOEFICIENT_P.cpp.i
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/CORRELATIONCOEFICIENT_P.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/CORRELATIONCOEFICIENT_P.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM_P/CORRELATIONCOEFICIENT_P.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/CORRELATIONCOEFICIENT_P.cpp.s
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/ENTROPIA_P.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/ENTROPIA_P.cpp.o: ../feature_ext_sel/SecondOrder/GLCM_P/ENTROPIA_P.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/ENTROPIA_P.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/ENTROPIA_P.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM_P/ENTROPIA_P.cpp
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/ENTROPIA_P.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/ENTROPIA_P.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM_P/ENTROPIA_P.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/ENTROPIA_P.cpp.i
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/ENTROPIA_P.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/ENTROPIA_P.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM_P/ENTROPIA_P.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/ENTROPIA_P.cpp.s
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/MESURE_P.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/MESURE_P.cpp.o: ../feature_ext_sel/SecondOrder/GLCM_P/MESURE_P.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/MESURE_P.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/MESURE_P.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM_P/MESURE_P.cpp
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/MESURE_P.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/MESURE_P.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM_P/MESURE_P.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/MESURE_P.cpp.i
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/MESURE_P.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/MESURE_P.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM_P/MESURE_P.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/MESURE_P.cpp.s
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/MOEMNT_P.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/MOEMNT_P.cpp.o: ../feature_ext_sel/SecondOrder/GLCM_P/MOEMNT_P.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/MOEMNT_P.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/MOEMNT_P.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM_P/MOEMNT_P.cpp
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/MOEMNT_P.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/MOEMNT_P.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM_P/MOEMNT_P.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/MOEMNT_P.cpp.i
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/MOEMNT_P.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/MOEMNT_P.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM_P/MOEMNT_P.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/MOEMNT_P.cpp.s
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/SECONDANGULAR_P.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/SECONDANGULAR_P.cpp.o: ../feature_ext_sel/SecondOrder/GLCM_P/SECONDANGULAR_P.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/SECONDANGULAR_P.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/SECONDANGULAR_P.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM_P/SECONDANGULAR_P.cpp
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/SECONDANGULAR_P.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/SECONDANGULAR_P.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM_P/SECONDANGULAR_P.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/SECONDANGULAR_P.cpp.i
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/SECONDANGULAR_P.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/SECONDANGULAR_P.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM_P/SECONDANGULAR_P.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/SECONDANGULAR_P.cpp.s
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/SQUAREVARIANCE_P.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/SQUAREVARIANCE_P.cpp.o: ../feature_ext_sel/SecondOrder/GLCM_P/SQUAREVARIANCE_P.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/SQUAREVARIANCE_P.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/SQUAREVARIANCE_P.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM_P/SQUAREVARIANCE_P.cpp
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/SQUAREVARIANCE_P.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/SQUAREVARIANCE_P.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM_P/SQUAREVARIANCE_P.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/SQUAREVARIANCE_P.cpp.i
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/SQUAREVARIANCE_P.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/SQUAREVARIANCE_P.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM_P/SQUAREVARIANCE_P.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/SQUAREVARIANCE_P.cpp.s
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/VARIANCE_P.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/VARIANCE_P.cpp.o: ../feature_ext_sel/SecondOrder/GLCM_P/VARIANCE_P.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/VARIANCE_P.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/VARIANCE_P.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM_P/VARIANCE_P.cpp
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/VARIANCE_P.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/VARIANCE_P.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM_P/VARIANCE_P.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/VARIANCE_P.cpp.i
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/VARIANCE_P.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/VARIANCE_P.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM_P/VARIANCE_P.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/VARIANCE_P.cpp.s
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/imagenes_P.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/imagenes_P.cpp.o: ../feature_ext_sel/SecondOrder/GLCM_P/imagenes_P.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/imagenes_P.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/imagenes_P.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM_P/imagenes_P.cpp
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/imagenes_P.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/imagenes_P.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM_P/imagenes_P.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/imagenes_P.cpp.i
-
-CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/imagenes_P.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/imagenes_P.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/GLCM_P/imagenes_P.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/imagenes_P.cpp.s
-
 CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/asm.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
 CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/asm.cpp.o: ../feature_ext_sel/SecondOrder/asm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/asm.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/asm.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/asm.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/asm.cpp
 
 CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/asm.cpp.i: cmake_force
@@ -364,7 +91,7 @@ CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/asm.cpp.s: cmake_fo
 
 CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/clusterprominence.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
 CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/clusterprominence.cpp.o: ../feature_ext_sel/SecondOrder/clusterprominence.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/clusterprominence.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/clusterprominence.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/clusterprominence.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/clusterprominence.cpp
 
 CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/clusterprominence.cpp.i: cmake_force
@@ -377,7 +104,7 @@ CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/clusterprominence.c
 
 CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/clustershade.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
 CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/clustershade.cpp.o: ../feature_ext_sel/SecondOrder/clustershade.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/clustershade.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/clustershade.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/clustershade.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/clustershade.cpp
 
 CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/clustershade.cpp.i: cmake_force
@@ -390,7 +117,7 @@ CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/clustershade.cpp.s:
 
 CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/diagonalmoment.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
 CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/diagonalmoment.cpp.o: ../feature_ext_sel/SecondOrder/diagonalmoment.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/diagonalmoment.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/diagonalmoment.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/diagonalmoment.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/diagonalmoment.cpp
 
 CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/diagonalmoment.cpp.i: cmake_force
@@ -403,7 +130,7 @@ CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/diagonalmoment.cpp.
 
 CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/dissimilarity.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
 CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/dissimilarity.cpp.o: ../feature_ext_sel/SecondOrder/dissimilarity.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/dissimilarity.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/dissimilarity.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/dissimilarity.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/dissimilarity.cpp
 
 CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/dissimilarity.cpp.i: cmake_force
@@ -413,6 +140,279 @@ CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/dissimilarity.cpp.i
 CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/dissimilarity.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/dissimilarity.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/dissimilarity.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/dissimilarity.cpp.s
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/averege.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/averege.cpp.o: ../feature_ext_sel/SecondOrder/glcm/averege.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/averege.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/averege.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm/averege.cpp
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/averege.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/averege.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm/averege.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/averege.cpp.i
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/averege.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/averege.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm/averege.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/averege.cpp.s
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/benchmark.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/benchmark.cpp.o: ../feature_ext_sel/SecondOrder/glcm/benchmark.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/benchmark.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/benchmark.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm/benchmark.cpp
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/benchmark.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/benchmark.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm/benchmark.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/benchmark.cpp.i
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/benchmark.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/benchmark.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm/benchmark.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/benchmark.cpp.s
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/contraste.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/contraste.cpp.o: ../feature_ext_sel/SecondOrder/glcm/contraste.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/contraste.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/contraste.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm/contraste.cpp
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/contraste.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/contraste.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm/contraste.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/contraste.cpp.i
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/contraste.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/contraste.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm/contraste.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/contraste.cpp.s
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/correlationcoeficient.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/correlationcoeficient.cpp.o: ../feature_ext_sel/SecondOrder/glcm/correlationcoeficient.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/correlationcoeficient.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/correlationcoeficient.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm/correlationcoeficient.cpp
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/correlationcoeficient.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/correlationcoeficient.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm/correlationcoeficient.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/correlationcoeficient.cpp.i
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/correlationcoeficient.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/correlationcoeficient.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm/correlationcoeficient.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/correlationcoeficient.cpp.s
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/entropia.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/entropia.cpp.o: ../feature_ext_sel/SecondOrder/glcm/entropia.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/entropia.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/entropia.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm/entropia.cpp
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/entropia.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/entropia.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm/entropia.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/entropia.cpp.i
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/entropia.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/entropia.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm/entropia.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/entropia.cpp.s
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/imagenes.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/imagenes.cpp.o: ../feature_ext_sel/SecondOrder/glcm/imagenes.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/imagenes.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/imagenes.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm/imagenes.cpp
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/imagenes.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/imagenes.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm/imagenes.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/imagenes.cpp.i
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/imagenes.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/imagenes.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm/imagenes.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/imagenes.cpp.s
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/mesure.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/mesure.cpp.o: ../feature_ext_sel/SecondOrder/glcm/mesure.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/mesure.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/mesure.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm/mesure.cpp
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/mesure.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/mesure.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm/mesure.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/mesure.cpp.i
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/mesure.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/mesure.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm/mesure.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/mesure.cpp.s
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/moment.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/moment.cpp.o: ../feature_ext_sel/SecondOrder/glcm/moment.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/moment.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/moment.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm/moment.cpp
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/moment.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/moment.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm/moment.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/moment.cpp.i
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/moment.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/moment.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm/moment.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/moment.cpp.s
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/secondangular.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/secondangular.cpp.o: ../feature_ext_sel/SecondOrder/glcm/secondangular.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/secondangular.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/secondangular.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm/secondangular.cpp
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/secondangular.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/secondangular.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm/secondangular.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/secondangular.cpp.i
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/secondangular.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/secondangular.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm/secondangular.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/secondangular.cpp.s
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/squarevariance.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/squarevariance.cpp.o: ../feature_ext_sel/SecondOrder/glcm/squarevariance.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/squarevariance.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/squarevariance.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm/squarevariance.cpp
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/squarevariance.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/squarevariance.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm/squarevariance.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/squarevariance.cpp.i
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/squarevariance.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/squarevariance.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm/squarevariance.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/squarevariance.cpp.s
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/variance.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/variance.cpp.o: ../feature_ext_sel/SecondOrder/glcm/variance.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/variance.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/variance.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm/variance.cpp
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/variance.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/variance.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm/variance.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/variance.cpp.i
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/variance.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/variance.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm/variance.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/variance.cpp.s
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/averege_p.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/averege_p.cpp.o: ../feature_ext_sel/SecondOrder/glcm_p/averege_p.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/averege_p.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/averege_p.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm_p/averege_p.cpp
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/averege_p.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/averege_p.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm_p/averege_p.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/averege_p.cpp.i
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/averege_p.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/averege_p.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm_p/averege_p.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/averege_p.cpp.s
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/contraste_p.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/contraste_p.cpp.o: ../feature_ext_sel/SecondOrder/glcm_p/contraste_p.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/contraste_p.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/contraste_p.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm_p/contraste_p.cpp
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/contraste_p.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/contraste_p.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm_p/contraste_p.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/contraste_p.cpp.i
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/contraste_p.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/contraste_p.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm_p/contraste_p.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/contraste_p.cpp.s
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/correlationcoeficient_p.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/correlationcoeficient_p.cpp.o: ../feature_ext_sel/SecondOrder/glcm_p/correlationcoeficient_p.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/correlationcoeficient_p.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/correlationcoeficient_p.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm_p/correlationcoeficient_p.cpp
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/correlationcoeficient_p.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/correlationcoeficient_p.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm_p/correlationcoeficient_p.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/correlationcoeficient_p.cpp.i
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/correlationcoeficient_p.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/correlationcoeficient_p.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm_p/correlationcoeficient_p.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/correlationcoeficient_p.cpp.s
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/entropia_p.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/entropia_p.cpp.o: ../feature_ext_sel/SecondOrder/glcm_p/entropia_p.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/entropia_p.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/entropia_p.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm_p/entropia_p.cpp
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/entropia_p.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/entropia_p.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm_p/entropia_p.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/entropia_p.cpp.i
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/entropia_p.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/entropia_p.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm_p/entropia_p.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/entropia_p.cpp.s
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/imagenes_p.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/imagenes_p.cpp.o: ../feature_ext_sel/SecondOrder/glcm_p/imagenes_p.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/imagenes_p.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/imagenes_p.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm_p/imagenes_p.cpp
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/imagenes_p.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/imagenes_p.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm_p/imagenes_p.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/imagenes_p.cpp.i
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/imagenes_p.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/imagenes_p.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm_p/imagenes_p.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/imagenes_p.cpp.s
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/mesure_p.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/mesure_p.cpp.o: ../feature_ext_sel/SecondOrder/glcm_p/mesure_p.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/mesure_p.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/mesure_p.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm_p/mesure_p.cpp
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/mesure_p.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/mesure_p.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm_p/mesure_p.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/mesure_p.cpp.i
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/mesure_p.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/mesure_p.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm_p/mesure_p.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/mesure_p.cpp.s
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/moment_p.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/moment_p.cpp.o: ../feature_ext_sel/SecondOrder/glcm_p/moment_p.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/moment_p.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/moment_p.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm_p/moment_p.cpp
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/moment_p.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/moment_p.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm_p/moment_p.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/moment_p.cpp.i
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/moment_p.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/moment_p.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm_p/moment_p.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/moment_p.cpp.s
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/secondangular_p.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/secondangular_p.cpp.o: ../feature_ext_sel/SecondOrder/glcm_p/secondangular_p.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/secondangular_p.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/secondangular_p.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm_p/secondangular_p.cpp
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/secondangular_p.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/secondangular_p.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm_p/secondangular_p.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/secondangular_p.cpp.i
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/secondangular_p.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/secondangular_p.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm_p/secondangular_p.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/secondangular_p.cpp.s
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/squarevariance_p.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/squarevariance_p.cpp.o: ../feature_ext_sel/SecondOrder/glcm_p/squarevariance_p.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/squarevariance_p.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/squarevariance_p.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm_p/squarevariance_p.cpp
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/squarevariance_p.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/squarevariance_p.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm_p/squarevariance_p.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/squarevariance_p.cpp.i
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/squarevariance_p.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/squarevariance_p.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm_p/squarevariance_p.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/squarevariance_p.cpp.s
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/variance_p.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/variance_p.cpp.o: ../feature_ext_sel/SecondOrder/glcm_p/variance_p.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/SUBIR/dip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/variance_p.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/variance_p.cpp.o -c /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm_p/variance_p.cpp
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/variance_p.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/variance_p.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm_p/variance_p.cpp > CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/variance_p.cpp.i
+
+CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/variance_p.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/variance_p.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/SUBIR/dip/feature_ext_sel/SecondOrder/glcm_p/variance_p.cpp -o CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/variance_p.cpp.s
 
 CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/globalmean.cpp.o: CMakeFiles/featureExtraction.dir/flags.make
 CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/globalmean.cpp.o: ../feature_ext_sel/SecondOrder/globalmean.cpp
@@ -546,32 +546,32 @@ CMakeFiles/featureExtraction.dir/feature_ext_sel/shape/geometry/libreriaGeometri
 
 # Object files for target featureExtraction
 featureExtraction_OBJECTS = \
-"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/AVEREGE.cpp.o" \
-"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/CONTRASTE.cpp.o" \
-"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/CORRELATIONCOEFICIENT.cpp.o" \
-"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/ENTROPIA.cpp.o" \
-"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/MESURE.cpp.o" \
-"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/MOEMNT.cpp.o" \
-"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/SECONDANGULAR.cpp.o" \
-"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/SQUAREVARIANCE.cpp.o" \
-"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/VARIANCE.cpp.o" \
-"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/benchmark.cpp.o" \
-"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/imagenes.cpp.o" \
-"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/AVEREGE_P.cpp.o" \
-"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/CONTRASTE_P.cpp.o" \
-"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/CORRELATIONCOEFICIENT_P.cpp.o" \
-"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/ENTROPIA_P.cpp.o" \
-"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/MESURE_P.cpp.o" \
-"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/MOEMNT_P.cpp.o" \
-"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/SECONDANGULAR_P.cpp.o" \
-"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/SQUAREVARIANCE_P.cpp.o" \
-"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/VARIANCE_P.cpp.o" \
-"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/imagenes_P.cpp.o" \
 "CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/asm.cpp.o" \
 "CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/clusterprominence.cpp.o" \
 "CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/clustershade.cpp.o" \
 "CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/diagonalmoment.cpp.o" \
 "CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/dissimilarity.cpp.o" \
+"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/averege.cpp.o" \
+"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/benchmark.cpp.o" \
+"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/contraste.cpp.o" \
+"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/correlationcoeficient.cpp.o" \
+"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/entropia.cpp.o" \
+"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/imagenes.cpp.o" \
+"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/mesure.cpp.o" \
+"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/moment.cpp.o" \
+"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/secondangular.cpp.o" \
+"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/squarevariance.cpp.o" \
+"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/variance.cpp.o" \
+"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/averege_p.cpp.o" \
+"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/contraste_p.cpp.o" \
+"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/correlationcoeficient_p.cpp.o" \
+"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/entropia_p.cpp.o" \
+"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/imagenes_p.cpp.o" \
+"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/mesure_p.cpp.o" \
+"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/moment_p.cpp.o" \
+"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/secondangular_p.cpp.o" \
+"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/squarevariance_p.cpp.o" \
+"CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/variance_p.cpp.o" \
 "CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/globalmean.cpp.o" \
 "CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/idm.cpp.o" \
 "CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/internalvariance.cpp.o" \
@@ -586,32 +586,32 @@ featureExtraction_OBJECTS = \
 # External object files for target featureExtraction
 featureExtraction_EXTERNAL_OBJECTS =
 
-libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/AVEREGE.cpp.o
-libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/CONTRASTE.cpp.o
-libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/CORRELATIONCOEFICIENT.cpp.o
-libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/ENTROPIA.cpp.o
-libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/MESURE.cpp.o
-libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/MOEMNT.cpp.o
-libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/SECONDANGULAR.cpp.o
-libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/SQUAREVARIANCE.cpp.o
-libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/VARIANCE.cpp.o
-libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/benchmark.cpp.o
-libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM/imagenes.cpp.o
-libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/AVEREGE_P.cpp.o
-libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/CONTRASTE_P.cpp.o
-libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/CORRELATIONCOEFICIENT_P.cpp.o
-libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/ENTROPIA_P.cpp.o
-libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/MESURE_P.cpp.o
-libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/MOEMNT_P.cpp.o
-libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/SECONDANGULAR_P.cpp.o
-libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/SQUAREVARIANCE_P.cpp.o
-libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/VARIANCE_P.cpp.o
-libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/GLCM_P/imagenes_P.cpp.o
 libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/asm.cpp.o
 libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/clusterprominence.cpp.o
 libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/clustershade.cpp.o
 libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/diagonalmoment.cpp.o
 libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/dissimilarity.cpp.o
+libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/averege.cpp.o
+libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/benchmark.cpp.o
+libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/contraste.cpp.o
+libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/correlationcoeficient.cpp.o
+libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/entropia.cpp.o
+libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/imagenes.cpp.o
+libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/mesure.cpp.o
+libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/moment.cpp.o
+libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/secondangular.cpp.o
+libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/squarevariance.cpp.o
+libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm/variance.cpp.o
+libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/averege_p.cpp.o
+libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/contraste_p.cpp.o
+libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/correlationcoeficient_p.cpp.o
+libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/entropia_p.cpp.o
+libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/imagenes_p.cpp.o
+libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/mesure_p.cpp.o
+libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/moment_p.cpp.o
+libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/secondangular_p.cpp.o
+libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/squarevariance_p.cpp.o
+libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/glcm_p/variance_p.cpp.o
 libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/globalmean.cpp.o
 libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/idm.cpp.o
 libfeatureExtraction.a: CMakeFiles/featureExtraction.dir/feature_ext_sel/SecondOrder/internalvariance.cpp.o
