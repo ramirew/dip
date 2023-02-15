@@ -18,25 +18,48 @@ using namespace std;
 #define SIGN(x,y) ((y)<0 ? -fabs(x) : fabs(x))
 #define SWAP(a,b) {y=(a);(a)=(b);(b)=y;}
 
+/*
+correlationcoeficient_p, en la cual se incluyen varios métodos que son utilizados para el cálculo de coeficientes de correlación entre imágenes.
+correlationcoeficient_p::correlationcoeficient_p(): Constructor de la clase correlationcoeficient_p.
+*/
+
 correlationcoeficient_p::correlationcoeficient_p(){
 
 }
 
 //Initialize functions that have been used for measuring co-occurence matrixes for 0,45,90,135 degree angle
+/*
+CoOcMat_Angle_0: Calcula la matriz de coocurrencia para un ángulo de 0 grados.
+CoOcMat_Angle_45: Calcula la matriz de coocurrencia para un ángulo de 45 grados.
+CoOcMat_Angle_90: Calcula la matriz de coocurrencia para un ángulo de 90 grados.
+CoOcMat_Angle_135: Calcula la matriz de coocurrencia para un ángulo de 135 grados.
+f1_asm: Calcula el momento angular de segundo orden de una matriz de coocurrencia.
+*/
 double** CoOcMat_Angle_0   (int distance, u_int16_t **grays, int rows, int cols, int* tone_LUT, int tone_count);
 double** CoOcMat_Angle_45  (int distance, u_int16_t **grays, int rows, int cols, int* tone_LUT, int tone_count);
 double** CoOcMat_Angle_90  (int distance, u_int16_t **grays, int rows, int cols, int* tone_LUT, int tone_count);
 double** CoOcMat_Angle_135 (int distance, u_int16_t **grays, int rows, int cols, int* tone_LUT, int tone_count);
 
 //INICIALIZAR FUNCIONES
+/*
+double f1_asm(double** P, int Ng): Calcula el coeficiente de correlación F1ASM.
+*/
 double f1_asm (double **P, int Ng);
 
 //RECURSOS DE LOS METODOS
+/*double* allocate_vector(int nl, int nh): Asigna memoria para un vector.
+double** allocate_matrix(int nrl, int nrh, int ncl, int nch): Asigna memoria para una matriz.
+void free_matrix(double** matrix, int nrh): Libera la memoria asignada a una matriz.
+*/
 double *allocate_vector (int nl, int nh);
 double **allocate_matrix (int nrl, int nrh, int ncl, int nch);
 void free_matrix(double **matrix,int nrh);
 
 //MAX CORREALCION HEIS
+/*
+int hessenberg_p(double** a, int n, double wr[], double wi[]): Calcula la descomposición de Hessenberg de una matriz cuadrada mediante el método QR y devuelve las partes real e imaginaria de los valores propios de la matriz.
+*/
+
 int hessenberg_p (double **a, int n, double wr[], double wi[])
 {
   int nn, m, l, k, j, its, i, mmin;
