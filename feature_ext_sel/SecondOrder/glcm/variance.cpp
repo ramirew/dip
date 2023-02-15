@@ -37,8 +37,26 @@ double **allocate_matrix (int nrl, int nrh, int ncl, int nch);
 void free_matrix(double **matrix,int nrh);
 
 
+/**
+Metodo para calcular la varianza
 
+
+
+
+*/
 //SUM VARIANCE
+
+/**Se declara una variable var para acumular el resultado del cálculo de la varianza de segundo orden.
+Se crea un arreglo llamado Pxpy que tendrá una longitud de 2 * Ng + 1 elementos, 
+donde Ng es el número de niveles de gris. Cada elemento del arreglo Pxpy será inicializado en cero.
+Se recorre la matriz de co-ocurrencia P y se acumulan los valores de probabilidad para cada valor de sumatoria i+j en el arreglo Pxpy.
+Se calcula la varianza de segundo orden sumando el cuadrado de la diferencia entre el índice de
+sumatoria y el valor medio de la sumatoria, ponderado por la probabilidad de que esa sumatoria se produzca,
+para cada posible valor de sumatoria. La suma se realiza desde 0 hasta 2 * Ng - 2.
+Finalmente, se libera la memoria del arreglo Pxpy y se devuelve el resultado de la varianza de segundo orden.
+
+*/
+
 double variance::f7_svar (double **P, int Ng, double S) const {
     int i, j;
     double var = 0;
