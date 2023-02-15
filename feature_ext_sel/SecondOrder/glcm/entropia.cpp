@@ -12,6 +12,14 @@ using namespace cv;
 using namespace std;
 
 //DEFINICIONES DE PARAMETRICAS
+/*
+PGM_MAXMAXVAL: Define el valor máximo que se puede tener en un archivo de imagen en formato PGM.
+EPSILON: Define una constante muy pequeña para evitar divisiones por cero.
+RADIX: Define la base del logaritmo que se utiliza para calcular la entropía.
+SIGN(x,y): Macro que devuelve el valor absoluto de x con el signo de y.
+SWAP(a,b): Macro que intercambia los valores de a y b.
+
+*/
 #define PGM_MAXMAXVAL 255
 #define EPSILON 0.000000001
 #define RADIX 2.0
@@ -23,20 +31,37 @@ entropia::entropia(){
 }
 
 //Initialize functions that have been used for measuring co-occurence matrixes for 0,45,90,135 degree angle
+/*
+CoOcMat_Angle_0: función que calcula la matriz de co-ocurrencia para ángulos de 0 grados.
+CoOcMat_Angle_45: función que calcula la matriz de co-ocurrencia para ángulos de 45 grados.
+CoOcMat_Angle_90: función que calcula la matriz de co-ocurrencia para ángulos de 90 grados.
+CoOcMat_Angle_135: función que calcula la matriz de co-ocurrencia para ángulos de 135 grados.
+*/
 double** CoOcMat_Angle_0   (int distance, u_int16_t **grays, int rows, int cols, int* tone_LUT, int tone_count);
 double** CoOcMat_Angle_45  (int distance, u_int16_t **grays, int rows, int cols, int* tone_LUT, int tone_count);
 double** CoOcMat_Angle_90  (int distance, u_int16_t **grays, int rows, int cols, int* tone_LUT, int tone_count);
 double** CoOcMat_Angle_135 (int distance, u_int16_t **grays, int rows, int cols, int* tone_LUT, int tone_count);
 
 //INICIALIZAR FUNCIONES
+/*
+f1_asm: función que calcula el "angular second moment", una medida de uniformidad en la matriz de co-ocurrencia.
+*/
 double f1_asm (double **P, int Ng);
 
 //RECURSOS DE LOS METODOS
+/*
+allocate_vector: Reserva memoria dinámica para un vector de tamaño
+llocate_matrix: Reserva memoria dinámica para una matriz
+ree_matrix: Libera la memoria asignada a una matriz previamente creada con allocate_matrix.
+*/
 double *allocate_vector (int nl, int nh);
 double **allocate_matrix (int nrl, int nrh, int ncl, int nch);
 void free_matrix(double **matrix,int nrh);
 
 //SUMA ENTROPIA
+/*
+f8_sentropy: función que calcula la suma de entropía a partir de la matriz de co-ocurrencia.
+*/
 double entropia::f8_sentropy (double **P, int Ng) const {
     int i, j;
     double sentropy = 0;
@@ -53,6 +78,9 @@ double entropia::f8_sentropy (double **P, int Ng) const {
 }
 
 //9 ENTROPIA
+/*
+f9_entropy: función que calcula la entropía a partir de la matriz de co-ocurrencia.
+*/
 double entropia::f9_entropy (double **P, int Ng) const {
     int i, j;
     double entropy = 0;
@@ -64,6 +92,9 @@ double entropia::f9_entropy (double **P, int Ng) const {
 
 
 //11 DIFERENCIA ENTROPIA
+/*
+f11_dentropy: función que calcula la diferencia de entropía a partir de la matriz de co-ocurrencia.
+*/
 double entropia::f11_dentropy (double **P, int Ng) const {
     int i, j;
     double sum = 0;
