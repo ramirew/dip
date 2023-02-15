@@ -4,6 +4,10 @@
 #include <iostream>
 #include <vector>
 
+/*
+//se define una clase mesure con tres miembros: un constructor predeterminado y dos funciones miembro, 
+f12_icorr y f13_icorr, que toman como argumentos un puntero a una matriz 2D de tipo double y un entero Ng.
+*/
 using namespace std;
 
 class mesure_p;
