@@ -23,10 +23,10 @@ imagenes_p::imagenes_p(){
 }
 
 //Initialize functions that have been used for measuring co-occurence matrixes for 0,45,90,135 degree angle
-double** CoOcMat_Angle_0_p   (int distance, u_int8_t **grays, int rows, int cols, int* tone_LUT, int tone_count);
-double** CoOcMat_Angle_45  (int distance, u_int8_t **grays, int rows, int cols, int* tone_LUT, int tone_count);
-double** CoOcMat_Angle_90  (int distance, u_int8_t **grays, int rows, int cols, int* tone_LUT, int tone_count);
-double** CoOcMat_Angle_135 (int distance, u_int8_t **grays, int rows, int cols, int* tone_LUT, int tone_count);
+double** CoOcMat_Angle_0_p   (int distance, u_int16_t **grays, int rows, int cols, int* tone_LUT, int tone_count);
+double** CoOcMat_Angle_45  (int distance, u_int16_t **grays, int rows, int cols, int* tone_LUT, int tone_count);
+double** CoOcMat_Angle_90  (int distance, u_int16_t **grays, int rows, int cols, int* tone_LUT, int tone_count);
+double** CoOcMat_Angle_135 (int distance, u_int16_t **grays, int rows, int cols, int* tone_LUT, int tone_count);
 
 //-----------------------------CALCULOS-----------------------------
 // LOCACIONES DE MATRIZ CON RANGO
@@ -113,10 +113,10 @@ unsigned char** generarEscala_p(vector<vector<int>>  imagen, int rows, int cols)
            for (int x = 0; x < cols; x++)
            {
               if(imagen.data()[x][y] > 125){
-                     pGray[y][x] = (u_int8_t)255;
+                     pGray[y][x] = (u_int16_t)255;
               }
               else{
-                    pGray[y][x] = (u_int8_t)0;
+                    pGray[y][x] = (u_int16_t)0;
               }
            }
        }
@@ -143,7 +143,7 @@ double ** imagenes_p::ESCALAGRISES(vector<vector<int>>  imagen, int min, int max
         for(row = rows - 1; row >= 0; --row){
               for(col = 0; col < cols; ++col){
                   std::vector<int, std::allocator<int>> const *aux = imagen.data();
-                  toneLUT[(u_int8_t)aux[row][imagen.size() * row + col * 1]] = (u_int8_t)aux[row][imagen.size() * row + col * 1];
+                  toneLUT[(u_int16_t)aux[row][imagen.size() * row + col * 1]] = (u_int16_t)aux[row][imagen.size() * row + col * 1];
               }
         }
         for (row = PGM_MAXMAXVAL, toneCount = 0; row >= 0; --row){
@@ -178,7 +178,7 @@ int imagenes_p::ObtenertoneCount(vector<vector<int>>  imagen, int min, int max, 
         for(row = rows - 1; row >= 0; --row){
               for(col = 0; col < cols; ++col){
                   std::vector<int, std::allocator<int>> const *aux = imagen.data();
-                  toneLUT[(u_int8_t)aux[row][imagen.size() * row + col * 1]] = (u_int8_t)aux[row][imagen.size() * row + col * 1];
+                  toneLUT[(u_int16_t)aux[row][imagen.size() * row + col * 1]] = (u_int16_t)aux[row][imagen.size() * row + col * 1];
               }
         }
         for (row = PGM_MAXMAXVAL, toneCount = 0; row >= 0; --row){
