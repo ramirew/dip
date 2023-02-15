@@ -30,13 +30,7 @@ file(GLOB_RECURSE FEATURE_EXTRACTION_SOURCES_FILES
     "feature_ext_sel/*.cxx"
 )
 
-file(GLOB_RECURSE GLCM_SOURCES_FILES
-    "feature_ext_sel/SecondOrder/glcm/*.cpp"
-    "feature_ext_sel/SecondOrder/glcm/*.cxx"
-    "feature_ext_sel/SecondOrder/glcm_p/*.cpp"
-    "feature_ext_sel/SecondOrder/glcm_p/*.cxx"
 
-)
 
 # Define headers
 file(GLOB_RECURSE HEADERS_FILES
@@ -48,7 +42,7 @@ file(GLOB_RECURSE HEADERS_FILES
 add_library(classification STATIC "${SOURCES_FILES}")
 add_library(classificationMetrics STATIC "${METRICS_SOURCES_FILES}")
 add_library(featureExtraction STATIC "${FEATURE_EXTRACTION_SOURCES_FILES}")
-add_library(glcm STATIC "${GLCM_SOURCES_FILES}")
+
 
 
 
@@ -56,7 +50,7 @@ add_library(glcm STATIC "${GLCM_SOURCES_FILES}")
 include_directories(classification)
 include_directories(metrics)
 include_directories(feature_ext_sel)
-include_directories(glcm)
+
 include_directories(${OpenMP_CXX_LIBRARIES})
 
 # C++ flags
