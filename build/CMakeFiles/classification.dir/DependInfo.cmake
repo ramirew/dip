@@ -37,7 +37,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../classification"
   "../metrics"
   "../feature_ext_sel"
-  "../glcm"
   "/usr/lib/gcc/x86_64-linux-gnu/10/libgomp.so"
   "/usr/lib/x86_64-linux-gnu/libpthread.so"
   )

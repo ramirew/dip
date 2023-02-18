@@ -87,7 +87,8 @@ void usarLibreria(vector<vector<int>> imageData,int rows,int cols){
                      m_dentropy,
                      m_icorr1,
                      m_icorr2,
-                     m_maxcorr);
+                     m_maxcorr,
+                     "/home/user/RESULTADOS/RESULTADOS0.csv");
 
     metrica.calculate();
     metrica.printMetrics();
@@ -95,10 +96,8 @@ void usarLibreria(vector<vector<int>> imageData,int rows,int cols){
     double b = metrica.getDifMemoryKb();//MEMORIA
     double c = metrica.getDurationInMiliseconds();//TIEMPO EN MILISEGUNDOS
     double d = metrica.getDurationInSeconds();// TIEMPO EN SEGUNDOS
-    double e = metrica.getPeakDifMemoryKb(); // RAM
-    cout << "\nRam = " << getRamUsage() << " kb" << endl;
-
-    img.generarExcelMetricas(a,b,c,d,getRamUsage());
+    cout << "Ram = " << getRamUsage() << " kb" << endl;
+    img.generarExcelMetricas(a,b,c,d,getRamUsage(), "/home/user/RESULTADOS/metricas0.csv");
 
 }
 
@@ -162,7 +161,8 @@ void usarLibreriaParalela(vector<vector<int>> imageData,int rows,int cols, int h
                          m_dentropy,
                          m_icorr1,
                          m_icorr2,
-                         m_maxcorr, hilos);
+                         m_maxcorr, hilos,
+                         "/home/user/RESULTADOS/RESULTADOS1.csv");
         if(hilo == hilos-1){
             cout << "\nDATOS ALMACENADIOS hilos = " << hilo+1 << "\n";
 
@@ -172,8 +172,8 @@ void usarLibreriaParalela(vector<vector<int>> imageData,int rows,int cols, int h
             double b = metrica.getDifMemoryKb();//MEMORIA
             double c = metrica.getDurationInMiliseconds();//TIEMPO EN MILISEGUNDOS
             double d = metrica.getDurationInSeconds();// TIEMPO EN SEGUNDOS
-            cout << "\nRam = " << getRamUsage() << " kb" << endl;
-            img2.generarExcelMetricas(a,b,c,d,getRamUsage());
+            cout << "Ram = " << getRamUsage() << " kb" << endl;
+            img2.generarExcelMetricas(a,b,c,d,getRamUsage(), "/home/user/RESULTADOS/metrica1.csv");
         }
     }
 
