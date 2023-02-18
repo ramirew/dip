@@ -292,8 +292,6 @@ double correlationcoeficient_p::f3_corr (double **P, int Ng, int hilos) const {
     double sum_sqrx = 0, sum_sqry = 0, tmp, *px;
     double meanx =0 , meany = 0 , stddevx, stddevy;
     px = allocate_vector (0, Ng);
-    #pragma omp parallel num_threads(hilos)
-    {
         for (i = 0; i < Ng; ++i)
             px[i] = 0;
         for (i = 0; i < Ng; ++i)
@@ -303,7 +301,6 @@ double correlationcoeficient_p::f3_corr (double **P, int Ng, int hilos) const {
             meanx += px[i]*i;
             sum_sqrx += px[i]*i*i;
         }
-    }
     meany = meanx;
     sum_sqry = sum_sqrx;
     stddevx = sqrt (sum_sqry - (meanx * meanx));
