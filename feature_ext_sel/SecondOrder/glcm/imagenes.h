@@ -10,12 +10,14 @@ class imagenes;
 
 class imagenes
 {
+private:
+    void setToneCount(int tono) const;
 public:
     imagenes();
     void IMPRIMIR_METRICAS() const;
     void mensaje(string data) const;
     double ** ESCALAGRISES(vector<vector<int>>  imagen, int min, int max) const;
-    int ObtenertoneCount(vector<vector<int>>  imagen, int min, int max) const;
+    int ObtenertoneCount() const;
     void generarExcel(double m_asm,
                       double m_contrast,
                       double m_corr,

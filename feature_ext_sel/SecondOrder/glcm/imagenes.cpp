@@ -11,6 +11,7 @@ using namespace std;
 #define RADIX 2.0
 #define SIGN(x,y) ((y)<0 ? -fabs(x) : fabs(x))
 #define SWAP(a,b) {y=(a);(a)=(b);(b)=y;}
+int tonoColor = 0;
 
 imagenes::imagenes(){}
 //-----------------------------CALCULOS-----------------------------
@@ -29,8 +30,6 @@ double **allocate_matrix (int nrl, int nrh, int ncl, int nch)
     }
     return m;
 }
-
-
 //VECTOR DE LOACION
 double *allocate_vector (int nl, int nh) {
     double *v;
@@ -120,14 +119,13 @@ double ** imagenes::ESCALAGRISES(vector<vector<int>>  imagen, int min, int max) 
     int toneLUT[PGM_MAXMAXVAL + 1];		// toneLUT is an array that can hold 256 values
     int toneCount = 0;
     int iTone;
-
     //RELLENAR CON -1
     for(row = PGM_MAXMAXVAL; row >= 0; --row)
           toneLUT[row] = -1;
     for(row = rows - 1; row >= 0; --row){
           for(col = 0; col < cols; ++col){
               std::vector<int, std::allocator<int>> const *aux = imagen.data();
-              toneLUT[(u_int16_t)aux[row][imagen.size() * row + col * 1]] = (u_int16_t)aux[row][imagen.size() * row + col * 1];
+              toneLUT[(u_int8_t)aux[row][imagen.size() * row + col * 1]] = (u_int8_t)aux[row][imagen.size() * row + col * 1];
           }
     }
     for (row = PGM_MAXMAXVAL, toneCount = 0; row >= 0; --row){
@@ -142,36 +140,13 @@ double ** imagenes::ESCALAGRISES(vector<vector<int>>  imagen, int min, int max) 
     double **pMatriz;
     int distancia = 1;
     pMatriz = CoOcMat_Angle_0(distancia, pGray, rows, col, toneLUT, toneCount);
+    tonoColor = toneCount;
     return pMatriz;
 }
 
 //0 CONTADOR MATRIZ
-int imagenes::ObtenertoneCount(vector<vector<int>>  imagen, int min, int max) const{
-    int row, col, rows, cols;
-    cols = max; //weigth - col - max
-    rows = min; //heigth - fil - min
-    int toneLUT[PGM_MAXMAXVAL + 1];		// toneLUT is an array that can hold 256 values
-    int toneCount = 0;
-    int iTone;
-    //RELLENAR CON -1
-    for(row = PGM_MAXMAXVAL; row >= 0; --row)
-          toneLUT[row] = -1;
-    for(row = rows - 1; row >= 0; --row){
-          for(col = 0; col < cols; ++col){
-              std::vector<int, std::allocator<int>> const *aux = imagen.data();
-              toneLUT[(u_int16_t)aux[row][imagen.size() * row + col * 1]] = (u_int16_t)aux[row][imagen.size() * row + col * 1];
-          }
-    }
-    for (row = PGM_MAXMAXVAL, toneCount = 0; row >= 0; --row){
-          if (toneLUT[row] != -1){
-              toneCount++;
-          }
-      }
-    for (row = 0, iTone = 0; row <= PGM_MAXMAXVAL; row++){
-          if (toneLUT[row] != -1)
-            toneLUT[row] = iTone++;
-      }
-    return toneCount;
+int imagenes::ObtenertoneCount() const{
+    return tonoColor;
 }
 
 
@@ -212,7 +187,6 @@ void imagenes::generarExcel(double m_asm,
     fout << "SUMA ENTROPIA" << ", " << m_icorr1  << "\n";
     fout << "SUM OF SQUARE VARIANCE" << ", " << m_icorr2  << "\n";
     fout << "SUM VARIANCE" << ", " << m_maxcorr  << "\n";
-    cout << "\nDATOS ALMACENADIOS\n";
 }
 
 
@@ -237,7 +211,6 @@ void imagenes::generarExcelMetricas(
     fout << "TIEMPO EN MILISIEGUNDOS" << ", " << c  << "\n";
     fout << "TIEMPO EN SEGUNDOS" << ", " << d  << "\n";
     fout << "RAM" << ", " << e  << "\n";
-    cout << "\nDATOS ALMACENADIOS\n";
 }
 
 

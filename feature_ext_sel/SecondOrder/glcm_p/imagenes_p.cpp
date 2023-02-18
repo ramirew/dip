@@ -11,9 +11,9 @@ using namespace std;
 #define RADIX 2.0
 #define SIGN(x,y) ((y)<0 ? -fabs(x) : fabs(x))
 #define SWAP(a,b) {y=(a);(a)=(b);(b)=y;}
+int tonoColor_p = 0;
 
 imagenes_p::imagenes_p(){}
-
 //-----------------------------CALCULOS-----------------------------
 // LOCACIONES DE MATRIZ CON RANGO
 double **allocate_matrix_p (int nrl, int nrh, int ncl, int nch)
@@ -30,8 +30,6 @@ double **allocate_matrix_p (int nrl, int nrh, int ncl, int nch)
     }
     return m;
 }
-
-
 //VECTOR DE LOACION
 double *allocate_vector_p (int nl, int nh) {
     double *v;
@@ -41,8 +39,6 @@ double *allocate_vector_p (int nl, int nh) {
 
     return v - nl;
 }
-
-
 //MATRIZ DE CONCURRENCIA CON ANGULO 0
 double** CoOcMat_Angle_0_p (int distance, u_int8_t **grays, int rows, int cols, int* tone_LUT, int tone_count)
 {
@@ -77,7 +73,6 @@ double** CoOcMat_Angle_0_p (int distance, u_int8_t **grays, int rows, int cols, 
 
     return matrix;
 }
-
 //INICIALIZAR FUNCIONES
 double f1_asm (double **P, int Ng);
 
@@ -121,63 +116,34 @@ double ** imagenes_p::ESCALAGRISES(vector<vector<int>>  imagen, int min, int max
     int toneLUT[PGM_MAXMAXVAL + 1];		// toneLUT is an array that can hold 256 values
     int toneCount = 0;
     int iTone;
-    //#pragma omp parallel num_threads(hilos)
-    {
-        //RELLENAR CON -1
-        for(row = PGM_MAXMAXVAL; row >= 0; --row)
-              toneLUT[row] = -1;
-        for(row = rows - 1; row >= 0; --row){
-              for(col = 0; col < cols; ++col){
-                  std::vector<int, std::allocator<int>> const *aux = imagen.data();
-                  toneLUT[(u_int16_t)aux[row][imagen.size() * row + col * 1]] = (u_int16_t)aux[row][imagen.size() * row + col * 1];
-              }
-        }
-        for (row = PGM_MAXMAXVAL, toneCount = 0; row >= 0; --row){
-              if (toneLUT[row] != -1){
-                  toneCount++;
-              }
-          }
-        for (row = 0, iTone = 0; row <= PGM_MAXMAXVAL; row++){
-              if (toneLUT[row] != -1)
-                toneLUT[row] = iTone++;
+    //RELLENAR CON -1
+    for(row = PGM_MAXMAXVAL; row >= 0; --row)
+          toneLUT[row] = -1;
+    for(row = rows - 1; row >= 0; --row){
+          for(col = 0; col < cols; ++col){
+              std::vector<int, std::allocator<int>> const *aux = imagen.data();
+              toneLUT[(u_int8_t)aux[row][imagen.size() * row + col * 1]] = (u_int8_t)aux[row][imagen.size() * row + col * 1];
           }
     }
-    double **pMatriz;
+    for (row = PGM_MAXMAXVAL, toneCount = 0; row >= 0; --row){
+          if (toneLUT[row] != -1){
+              toneCount++;
+          }
+      }
+    for (row = 0, iTone = 0; row <= PGM_MAXMAXVAL; row++){
+          if (toneLUT[row] != -1)
+            toneLUT[row] = iTone++;
+      }
+    double **pMatriz_p;
     int distancia = 1;
-    pMatriz = CoOcMat_Angle_0_p(distancia, pGray, rows, col, toneLUT, toneCount);
-    return pMatriz;
+    pMatriz_p = CoOcMat_Angle_0_p(distancia, pGray, rows, col, toneLUT, toneCount);
+    tonoColor_p = toneCount;
+    return pMatriz_p;
 }
 
 //0 CONTADOR MATRIZ
-int imagenes_p::ObtenertoneCount(vector<vector<int>>  imagen, int min, int max, int hilos) const{
-    int row, col, rows, cols;
-    cols = max; //weigth - col - max
-    rows = min; //heigth - fil - min
-    int toneLUT[PGM_MAXMAXVAL + 1];		// toneLUT is an array that can hold 256 values
-    int toneCount = 0;
-    int iTone;
-    //RELLENAR CON -1
-    //#pragma omp parallel num_threads(hilos)
-    {
-        for(row = PGM_MAXMAXVAL; row >= 0; --row)
-              toneLUT[row] = -1;
-        for(row = rows - 1; row >= 0; --row){
-              for(col = 0; col < cols; ++col){
-                  std::vector<int, std::allocator<int>> const *aux = imagen.data();
-                  toneLUT[(u_int16_t)aux[row][imagen.size() * row + col * 1]] = (u_int16_t)aux[row][imagen.size() * row + col * 1];
-              }
-        }
-        for (row = PGM_MAXMAXVAL, toneCount = 0; row >= 0; --row){
-              if (toneLUT[row] != -1){
-                  toneCount++;
-              }
-          }
-        for (row = 0, iTone = 0; row <= PGM_MAXMAXVAL; row++){
-              if (toneLUT[row] != -1)
-                toneLUT[row] = iTone++;
-          }
-     }
-    return toneCount;
+int imagenes_p::ObtenertoneCount() const{
+    return tonoColor_p;
 }
 
 
@@ -194,8 +160,9 @@ void imagenes_p::generarExcel(double m_asm,
                             double m_dentropy,
                             double m_icorr1,
                             double m_icorr2,
-                            double m_maxcorr, int hilos,
-                              string path) const
+                            double m_maxcorr,
+                            int hilos,
+                            string path) const
 {
 
     // file pointer
@@ -218,8 +185,9 @@ void imagenes_p::generarExcel(double m_asm,
     fout << "SUMA ENTROPIA" << ", " << m_icorr1  << "\n";
     fout << "SUM OF SQUARE VARIANCE" << ", " << m_icorr2  << "\n";
     fout << "SUM VARIANCE" << ", " << m_maxcorr  << "\n";
-    cout << "\nDATOS ALMACENADIOS\n";
 }
+
+
 
 void imagenes_p::mensaje(string data) const
 {

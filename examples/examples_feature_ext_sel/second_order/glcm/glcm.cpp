@@ -45,7 +45,7 @@ void usarLibreria(vector<vector<int>> imageData,int rows,int cols){
     moment moment;
     secondangular sang;
     double **pMatriz = img.ESCALAGRISES(imageData,rows,cols);
-    int toneCount = img.ObtenertoneCount(imageData,rows,cols);
+    int toneCount = img.ObtenertoneCount();
     double m_asm, m_contrast, m_corr, m_var, m_idm, m_savg, m_svar, m_sentropy, m_entropy, m_dvar, m_dentropy, m_icorr1, m_icorr2, m_maxcorr;
     //SECOND ANGULAR MOMENT
     m_asm = sang.f1_asm(pMatriz , toneCount);
@@ -91,48 +91,51 @@ void usarLibreria(vector<vector<int>> imageData,int rows,int cols){
                      "/home/user/RESULTADOS/RESULTADOS0.csv");
 
     metrica.calculate();
+    cout << "Ram = " << getRamUsage() << " kb" << endl;
     metrica.printMetrics();
     double a = metrica.getCpuPercent();//CPU
     double b = metrica.getDifMemoryKb();//MEMORIA
     double c = metrica.getDurationInMiliseconds();//TIEMPO EN MILISEGUNDOS
     double d = metrica.getDurationInSeconds();// TIEMPO EN SEGUNDOS
-    cout << "Ram = " << getRamUsage() << " kb" << endl;
     img.generarExcelMetricas(a,b,c,d,getRamUsage(), "/home/user/RESULTADOS/metricas0.csv");
 
 }
 
 void usarLibreriaParalela(vector<vector<int>> imageData,int rows,int cols, int hilos){
+    systemMetrics metrica("GLCM");
+    imagenes_p img;
+    imagenes img2;
+    variance_p variance;
+    squarevariance_p sqvariance;
+    entropia_p entropia;
+    averege_p  averege;
+    correlationcoeficient_p coefi;
+    mesure_p mesure;
+    contraste_p contraste;
+    moment_p moment;
+    secondangular_p sang;
+    double **pMatriz = img.ESCALAGRISES(imageData,rows,cols, hilos);
+    int toneCount = img.ObtenertoneCount();
+    double m_asm, m_contrast, m_corr, m_var, m_idm, m_savg, m_svar, m_sentropy, m_entropy, m_dvar, m_dentropy, m_icorr1, m_icorr2, m_maxcorr;
+
     #pragma omp parallel num_threads(hilos)
     {
-        systemMetrics metrica("GLCM");
         metrica.resetCounters();
-        int hilo = omp_get_thread_num();
-        imagenes_p img;
-        imagenes img2;
-        variance_p variance;
-        squarevariance_p sqvariance;
-        entropia_p entropia;
-        averege_p  averege;
-        correlationcoeficient_p coefi;
-        mesure_p mesure;
-        contraste_p contraste;
-        moment_p moment;
-        secondangular_p sang;
-        double **pMatriz = img.ESCALAGRISES(imageData,rows,cols, hilos);
-        int toneCount = img.ObtenertoneCount(imageData,rows,cols, hilos);
-        double m_asm, m_contrast, m_corr, m_var, m_idm, m_savg, m_svar, m_sentropy, m_entropy, m_dvar, m_dentropy, m_icorr1, m_icorr2, m_maxcorr;
         //SECOND ANGULAR MOMENT
         m_asm = sang.f1_asm(pMatriz , toneCount, hilos);
         //CORRELACION
         m_corr = coefi.f3_corr(pMatriz, toneCount, hilos);
+
         //DIFERENCIA ENTROPIA
         m_dentropy = entropia.f11_dentropy(pMatriz, toneCount, hilos);
         // DIFERENCIA VARIANZA
         m_dvar = variance.f10_dvar(pMatriz, toneCount, hilos);
+
         //ENTROPIA
         m_entropy = entropia.f9_entropy(pMatriz, toneCount, hilos);
         //INVERSE DIFERENCE MOEMNT
         m_idm = moment.f5_idm(pMatriz, toneCount, hilos);
+
         //CONTRASTE
         m_contrast = contraste.f2_contrast(pMatriz , toneCount, hilos);
         //INFORMATION MESURE CORRELATION 1 Y 2
@@ -163,43 +166,37 @@ void usarLibreriaParalela(vector<vector<int>> imageData,int rows,int cols, int h
                          m_icorr2,
                          m_maxcorr, hilos,
                          "/home/user/RESULTADOS/RESULTADOS1.csv");
-        if(hilo == hilos-1){
-            cout << "\nDATOS ALMACENADIOS hilos = " << hilo+1 << "\n";
-
-            metrica.calculate();
-            metrica.printMetrics();
-            double a = metrica.getCpuPercent();//CPU
-            double b = metrica.getDifMemoryKb();//MEMORIA
-            double c = metrica.getDurationInMiliseconds();//TIEMPO EN MILISEGUNDOS
-            double d = metrica.getDurationInSeconds();// TIEMPO EN SEGUNDOS
-            cout << "Ram = " << getRamUsage() << " kb" << endl;
-            img2.generarExcelMetricas(a,b,c,d,getRamUsage(), "/home/user/RESULTADOS/metrica1.csv");
-        }
     }
+
+    metrica.calculate();
+    metrica.printMetrics();
+    cout << "Ram = " << getRamUsage() << " kb" << endl;
+
+    double a = metrica.getCpuPercent();//CPU
+    double b = metrica.getDifMemoryKb();//MEMORIA
+    double c = metrica.getDurationInMiliseconds();//TIEMPO EN MILISEGUNDOS
+    double d = metrica.getDurationInSeconds();// TIEMPO EN SEGUNDOS
+    img2.generarExcelMetricas(a,b,c,d,getRamUsage(), "/home/user/RESULTADOS/metrica1.csv");
 
 }
 
 int main()
 {
-
+    int hilos = 32; // 2 // 4 // 8 // 16 // 32
     DicomReader dicomObj("/home/user/PARALELA/dataset/MasaMicro1.dcm");
-
-    int rows = 20;//dicomObj.getHeight();
-    int cols = 20;//dicomObj.getWidth();
+    int rows = dicomObj.getHeight();
+    int cols = dicomObj.getWidth();
     vector<vector<int>> imageData = dicomObj.getIntImageMatrix(12);
     //LIBRERIA NORMAL
+    cout <<"\n====================================================";
+    cout << "SIN PARALELIZAR";
+    cout <<"====================================================\n";
     usarLibreria(imageData,rows,cols);
-    //LIBRERIA PARALELIZADA - 2 hilos
-    usarLibreriaParalela(imageData,rows,cols,2);
-    //LIBRERIA PARALELIZADA - 4 hilos
-    usarLibreriaParalela(imageData,rows,cols,4);
-    //LIBRERIA PARALELIZADA - 8 hilos
-    usarLibreriaParalela(imageData,rows,cols,8);
-    //LIBRERIA PARALELIZADA - 16 hilos
-    usarLibreriaParalela(imageData,rows,cols,16);
-    //LIBRERIA PARALELIZADA - 32 hilos
-    usarLibreriaParalela(imageData,rows,cols,32);
 
+    cout <<"\n====================================================";
+    cout << "PARALELIZADO " << hilos << " HILOS";
+    cout <<"====================================================\n";
+    usarLibreriaParalela(imageData,rows,cols,hilos);
     return 0;
 }
 

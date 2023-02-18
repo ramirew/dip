@@ -14,7 +14,7 @@ public:
     imagenes_p();
     void mensaje(string data) const;
     double ** ESCALAGRISES(vector<vector<int>>  imagen, int min, int max, int hilos) const;
-    int ObtenertoneCount(vector<vector<int>>  imagen, int min, int max, int hilos) const;
+    int ObtenertoneCount() const;
     void generarExcel(double m_asm,
                       double m_contrast,
                       double m_corr,
