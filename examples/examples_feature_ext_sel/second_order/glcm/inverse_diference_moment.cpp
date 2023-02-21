@@ -47,48 +47,9 @@ void usarLibreria(vector<vector<int>> imageData,int rows,int cols){
     double **pMatriz = img.ESCALAGRISES(imageData,rows,cols);
     int toneCount = img.ObtenertoneCount();
     double m_asm, m_contrast, m_corr, m_var, m_idm, m_savg, m_svar, m_sentropy, m_entropy, m_dvar, m_dentropy, m_icorr1, m_icorr2, m_maxcorr;
-    //SECOND ANGULAR MOMENT
-    m_asm = sang.f1_asm(pMatriz , toneCount);
-    //CORRELACION
-    m_corr = coefi.f3_corr(pMatriz, toneCount);
-    //DIFERENCIA ENTROPIA
-    m_dentropy = entropia.f11_dentropy(pMatriz, toneCount);
-    // DIFERENCIA VARIANZA
-    m_dvar = variance.f10_dvar(pMatriz, toneCount);
-    //ENTROPIA
-    m_entropy = entropia.f9_entropy(pMatriz, toneCount);
     //INVERSE DIFERENCE MOEMNT
     m_idm = moment.f5_idm(pMatriz, toneCount);
-    //CONTRASTE
-    m_contrast = contraste.f2_contrast(pMatriz , toneCount);
-    //INFORMATION MESURE CORRELATION 1 Y 2
-    m_icorr1 = mesure.f12_icorr(pMatriz, toneCount);
-    m_icorr2 = mesure.f13_icorr(pMatriz, toneCount);
-    //MAXIMO CORRELATION COEFICIENT
-    m_maxcorr = coefi.f14_maxcorr(pMatriz, toneCount);
-    //SUM AVEREGE
-    m_savg = averege.f6_savg(pMatriz, toneCount);
-    //SUMA ENTROPIA
-    m_sentropy = entropia.f8_sentropy(pMatriz, toneCount);
-    //SUM OF SQUARE VARIANCE
-    m_var = sqvariance.f4_var(pMatriz, toneCount);
-    //SUM VARIANCE
-    m_svar = variance.f7_svar(pMatriz, toneCount, m_sentropy);
-    img.generarExcel(m_asm,
-                     m_contrast,
-                     m_corr,
-                     m_var,
-                     m_idm,
-                     m_savg,
-                     m_svar,
-                     m_sentropy,
-                     m_entropy,
-                     m_dvar,
-                     m_dentropy,
-                     m_icorr1,
-                     m_icorr2,
-                     m_maxcorr,
-                     "/home/user/RESULTADOS/RESULTADOS0.csv");
+    img.guardarValorCSV("INVERSE DIFERENCE MOEMNT",m_idm,"/home/user/RESULTADOS/resultadosSecuenciales.csv");
 
     metrica.calculate();
     cout << "Ram = " << getRamUsage() << " kb" << endl;
@@ -97,12 +58,14 @@ void usarLibreria(vector<vector<int>> imageData,int rows,int cols){
     double b = metrica.getDifMemoryKb();//MEMORIA
     double c = metrica.getDurationInMiliseconds();//TIEMPO EN MILISEGUNDOS
     double d = metrica.getDurationInSeconds();// TIEMPO EN SEGUNDOS
-    img.generarExcelMetricas(a,b,c,d,getRamUsage(), "/home/user/RESULTADOS/metricas0.csv");
+    img.generarExcelMetricas(a,b,c,d,getRamUsage(), "/home/user/RESULTADOS/datosSecuenciales.csv");
 
 }
 
 void usarLibreriaParalela(vector<vector<int>> imageData,int rows,int cols, int hilos){
     systemMetrics metrica("GLCM");
+    metrica.resetCounters();
+
     imagenes_p img;
     imagenes img2;
     variance_p variance;
@@ -120,76 +83,31 @@ void usarLibreriaParalela(vector<vector<int>> imageData,int rows,int cols, int h
 
     #pragma omp parallel num_threads(hilos)
     {
-        metrica.resetCounters();
-        //SECOND ANGULAR MOMENT
-        m_asm = sang.f1_asm(pMatriz , toneCount, hilos);
-        //CORRELACION
-        m_corr = coefi.f3_corr(pMatriz, toneCount, hilos);
-
-        //DIFERENCIA ENTROPIA
-        m_dentropy = entropia.f11_dentropy(pMatriz, toneCount, hilos);
-        // DIFERENCIA VARIANZA
-        m_dvar = variance.f10_dvar(pMatriz, toneCount, hilos);
-
-        //ENTROPIA
-        m_entropy = entropia.f9_entropy(pMatriz, toneCount, hilos);
-        //INVERSE DIFERENCE MOEMNT
+        //6 INVERSE DIFERENCE MOEMNT
         m_idm = moment.f5_idm(pMatriz, toneCount, hilos);
-
-        //CONTRASTE
-        m_contrast = contraste.f2_contrast(pMatriz , toneCount, hilos);
-        //INFORMATION MESURE CORRELATION 1 Y 2
-        m_icorr1 = mesure.f12_icorr(pMatriz, toneCount, hilos);
-        m_icorr2 = mesure.f13_icorr(pMatriz, toneCount, hilos);
-        //MAXIMO CORRELATION COEFICIENT
-        m_maxcorr = coefi.f14_maxcorr(pMatriz, toneCount, hilos);
-        //SUM AVEREGE
-        m_savg = averege.f6_savg(pMatriz, toneCount, hilos);
-        //SUMA ENTROPIA
-        m_sentropy = entropia.f8_sentropy(pMatriz, toneCount, hilos);
-        //SUM OF SQUARE VARIANCE
-        m_var = sqvariance.f4_var(pMatriz, toneCount, hilos);
-        //SUM VARIANCE
-        m_svar = variance.f7_svar(pMatriz, toneCount, m_sentropy, hilos);
-        img.generarExcel(m_asm,
-                         m_contrast,
-                         m_corr,
-                         m_var,
-                         m_idm,
-                         m_savg,
-                         m_svar,
-                         m_sentropy,
-                         m_entropy,
-                         m_dvar,
-                         m_dentropy,
-                         m_icorr1,
-                         m_icorr2,
-                         m_maxcorr, hilos,
-                         "/home/user/RESULTADOS/RESULTADOS1.csv");
+        img2.guardarValorCSV("INVERSE DIFERENCE MOEMNT",m_idm,"/home/user/RESULTADOS/resultadosParalelo.csv");
     }
 
     metrica.calculate();
     metrica.printMetrics();
     cout << "Ram = " << getRamUsage() << " kb" << endl;
-
     double a = metrica.getCpuPercent();//CPU
     double b = metrica.getDifMemoryKb();//MEMORIA
     double c = metrica.getDurationInMiliseconds();//TIEMPO EN MILISEGUNDOS
     double d = metrica.getDurationInSeconds();// TIEMPO EN SEGUNDOS
-    img2.generarExcelMetricas(a,b,c,d,getRamUsage(), "/home/user/RESULTADOS/metrica1.csv");
-
+    img2.generarExcelMetricas(a,b,c,d,getRamUsage(), "/home/user/RESULTADOS/datosParalelo.csv");
 }
 
 int main()
 {
-    int hilos = 32; // 2 // 4 // 8 // 16 // 32
+    int hilos = 1; // 2 // 4 // 8 // 16 // 32
     DicomReader dicomObj("/home/user/PARALELA/dataset/MasaMicro1.dcm");
     int rows = dicomObj.getHeight();
     int cols = dicomObj.getWidth();
     vector<vector<int>> imageData = dicomObj.getIntImageMatrix(12);
     //LIBRERIA NORMAL
     cout <<"\n====================================================";
-    cout << "SIN PARALELIZAR";
+    cout << "SECUANCIAL";
     cout <<"====================================================\n";
     usarLibreria(imageData,rows,cols);
 
@@ -199,5 +117,4 @@ int main()
     usarLibreriaParalela(imageData,rows,cols,hilos);
     return 0;
 }
-
 

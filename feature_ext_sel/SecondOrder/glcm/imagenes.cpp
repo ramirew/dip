@@ -149,6 +149,19 @@ int imagenes::ObtenertoneCount() const{
     return tonoColor;
 }
 
+void imagenes::guardarValorCSV(string valor, double total, string path) const
+{
+    // file pointer
+    fstream fout;
+    // opens an existing csv file or creates a new file.
+    fout.open(path, ios::out | ios::app);
+    string name;
+    // Insert the data to file
+    fout << valor << ", " << total  << "\n";
+}
+
+
+
 
 void imagenes::generarExcel(double m_asm,
                             double m_contrast,

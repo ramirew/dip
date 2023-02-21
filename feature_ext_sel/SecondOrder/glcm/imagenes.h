@@ -18,6 +18,7 @@ public:
     void mensaje(string data) const;
     double ** ESCALAGRISES(vector<vector<int>>  imagen, int min, int max) const;
     int ObtenertoneCount() const;
+    void guardarValorCSV(string valor, double total, string path) const;
     void generarExcel(double m_asm,
                       double m_contrast,
                       double m_corr,
