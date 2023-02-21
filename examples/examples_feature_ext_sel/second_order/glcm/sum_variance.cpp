@@ -47,6 +47,7 @@ void usarLibreria(vector<vector<int>> imageData,int rows,int cols){
     double **pMatriz = img.ESCALAGRISES(imageData,rows,cols);
     int toneCount = img.ObtenertoneCount();
     double m_asm, m_contrast, m_corr, m_var, m_idm, m_savg, m_svar, m_sentropy, m_entropy, m_dvar, m_dentropy, m_icorr1, m_icorr2, m_maxcorr;
+     m_sentropy = entropia.f8_sentropy(pMatriz, toneCount);
     //SUM VARIANCE
     m_svar = variance.f7_svar(pMatriz, toneCount, m_sentropy);
     img.guardarValorCSV("SUM VARIANCE",m_svar,"/home/user/RESULTADOS/resultadosSecuenciales.csv");
@@ -83,6 +84,7 @@ void usarLibreriaParalela(vector<vector<int>> imageData,int rows,int cols, int h
 
     #pragma omp parallel num_threads(hilos)
     {
+        m_sentropy = entropia.f8_sentropy(pMatriz, toneCount, hilos);
         //13 SUM VARIANCE
         m_svar = variance.f7_svar(pMatriz, toneCount, m_sentropy, hilos);
         img2.guardarValorCSV("SUM VARIANCE",m_svar,"/home/user/RESULTADOS/resultadosParalelo.csv");

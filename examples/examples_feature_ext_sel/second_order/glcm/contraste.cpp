@@ -85,7 +85,7 @@ void usarLibreriaParalela(vector<vector<int>> imageData,int rows,int cols, int h
     {
         //7 CONTRASTE
         m_contrast = contraste.f2_contrast(pMatriz , toneCount, hilos);
-       img2.guardarValorCSV("CONTRASTE",m_contrast,"/home/user/RESULTADOS/resultados.csv");
+       img2.guardarValorCSV("CONTRASTE",m_contrast,"/home/user/RESULTADOS/resultadosParalelo.csv");
     }
 
     metrica.calculate();
