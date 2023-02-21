@@ -14,7 +14,7 @@ public:
     imagenes_p();
     void mensaje(string data) const;
     double ** ESCALAGRISES(vector<vector<int>>  imagen, int min, int max, int hilos) const;
-    int ObtenertoneCount(vector<vector<int>>  imagen, int min, int max, int hilos) const;
+    int ObtenertoneCount() const;
     void generarExcel(double m_asm,
                       double m_contrast,
                       double m_corr,
@@ -28,7 +28,8 @@ public:
                       double m_dentropy,
                       double m_icorr1,
                       double m_icorr2,
-                      double m_maxcorr, int hilos) const;
+                      double m_maxcorr, int hilos,
+                      string path) const;
 };
 
 #endif // IMAGENES_H

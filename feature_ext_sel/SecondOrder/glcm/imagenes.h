@@ -10,12 +10,15 @@ class imagenes;
 
 class imagenes
 {
+private:
+    void setToneCount(int tono) const;
 public:
     imagenes();
     void IMPRIMIR_METRICAS() const;
     void mensaje(string data) const;
     double ** ESCALAGRISES(vector<vector<int>>  imagen, int min, int max) const;
-    int ObtenertoneCount(vector<vector<int>>  imagen, int min, int max) const;
+    int ObtenertoneCount() const;
+    void guardarValorCSV(string valor, double total, string path) const;
     void generarExcel(double m_asm,
                       double m_contrast,
                       double m_corr,
@@ -29,13 +32,15 @@ public:
                       double m_dentropy,
                       double m_icorr1,
                       double m_icorr2,
-                      double m_maxcorr) const;
+                      double m_maxcorr,
+                      string path) const;
     void generarExcelMetricas(
             double a,
             double b,
             double c,
             double d,
-            double e
+            double e,
+            string path
             ) const;
 };
 

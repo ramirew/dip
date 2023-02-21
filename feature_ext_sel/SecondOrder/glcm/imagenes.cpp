@@ -1,13 +1,8 @@
 #include "imagenes.h"
 #include <iostream>
 #include <fstream>
-#include <opencv2/opencv.hpp>
-#include <opencv2/core/mat.hpp>
-#include <opencv2/highgui.hpp>
 #include <iostream>
-#include "xlsxwriter.h"
 
-using namespace cv;
 using namespace std;
 
 //DEFINICIONES DE PARAMETRICAS
@@ -16,17 +11,9 @@ using namespace std;
 #define RADIX 2.0
 #define SIGN(x,y) ((y)<0 ? -fabs(x) : fabs(x))
 #define SWAP(a,b) {y=(a);(a)=(b);(b)=y;}
+int tonoColor = 0;
 
-imagenes::imagenes(){
-
-}
-
-//Initialize functions that have been used for measuring co-occurence matrixes for 0,45,90,135 degree angle
-double** CoOcMat_Angle_0   (int distance, u_int16_t **grays, int rows, int cols, int* tone_LUT, int tone_count);
-double** CoOcMat_Angle_45  (int distance, u_int16_t **grays, int rows, int cols, int* tone_LUT, int tone_count);
-double** CoOcMat_Angle_90  (int distance, u_int16_t **grays, int rows, int cols, int* tone_LUT, int tone_count);
-double** CoOcMat_Angle_135 (int distance, u_int16_t **grays, int rows, int cols, int* tone_LUT, int tone_count);
-
+imagenes::imagenes(){}
 //-----------------------------CALCULOS-----------------------------
 // LOCACIONES DE MATRIZ CON RANGO
 double **allocate_matrix (int nrl, int nrh, int ncl, int nch)
@@ -43,8 +30,6 @@ double **allocate_matrix (int nrl, int nrh, int ncl, int nch)
     }
     return m;
 }
-
-
 //VECTOR DE LOACION
 double *allocate_vector (int nl, int nh) {
     double *v;
@@ -134,14 +119,13 @@ double ** imagenes::ESCALAGRISES(vector<vector<int>>  imagen, int min, int max) 
     int toneLUT[PGM_MAXMAXVAL + 1];		// toneLUT is an array that can hold 256 values
     int toneCount = 0;
     int iTone;
-
     //RELLENAR CON -1
     for(row = PGM_MAXMAXVAL; row >= 0; --row)
           toneLUT[row] = -1;
     for(row = rows - 1; row >= 0; --row){
           for(col = 0; col < cols; ++col){
               std::vector<int, std::allocator<int>> const *aux = imagen.data();
-              toneLUT[(u_int16_t)aux[row][imagen.size() * row + col * 1]] = (u_int16_t)aux[row][imagen.size() * row + col * 1];
+              toneLUT[(u_int8_t)aux[row][imagen.size() * row + col * 1]] = (u_int8_t)aux[row][imagen.size() * row + col * 1];
           }
     }
     for (row = PGM_MAXMAXVAL, toneCount = 0; row >= 0; --row){
@@ -156,37 +140,27 @@ double ** imagenes::ESCALAGRISES(vector<vector<int>>  imagen, int min, int max) 
     double **pMatriz;
     int distancia = 1;
     pMatriz = CoOcMat_Angle_0(distancia, pGray, rows, col, toneLUT, toneCount);
+    tonoColor = toneCount;
     return pMatriz;
 }
 
 //0 CONTADOR MATRIZ
-int imagenes::ObtenertoneCount(vector<vector<int>>  imagen, int min, int max) const{
-    int row, col, rows, cols;
-    cols = max; //weigth - col - max
-    rows = min; //heigth - fil - min
-    int toneLUT[PGM_MAXMAXVAL + 1];		// toneLUT is an array that can hold 256 values
-    int toneCount = 0;
-    int iTone;
-    //RELLENAR CON -1
-    for(row = PGM_MAXMAXVAL; row >= 0; --row)
-          toneLUT[row] = -1;
-    for(row = rows - 1; row >= 0; --row){
-          for(col = 0; col < cols; ++col){
-              std::vector<int, std::allocator<int>> const *aux = imagen.data();
-              toneLUT[(u_int16_t)aux[row][imagen.size() * row + col * 1]] = (u_int16_t)aux[row][imagen.size() * row + col * 1];
-          }
-    }
-    for (row = PGM_MAXMAXVAL, toneCount = 0; row >= 0; --row){
-          if (toneLUT[row] != -1){
-              toneCount++;
-          }
-      }
-    for (row = 0, iTone = 0; row <= PGM_MAXMAXVAL; row++){
-          if (toneLUT[row] != -1)
-            toneLUT[row] = iTone++;
-      }
-    return toneCount;
+int imagenes::ObtenertoneCount() const{
+    return tonoColor;
 }
+
+void imagenes::guardarValorCSV(string valor, double total, string path) const
+{
+    // file pointer
+    fstream fout;
+    // opens an existing csv file or creates a new file.
+    fout.open(path, ios::out | ios::app);
+    string name;
+    // Insert the data to file
+    fout << valor << ", " << total  << "\n";
+}
+
+
 
 
 void imagenes::generarExcel(double m_asm,
@@ -202,40 +176,30 @@ void imagenes::generarExcel(double m_asm,
                             double m_dentropy,
                             double m_icorr1,
                             double m_icorr2,
-                            double m_maxcorr) const
+                            double m_maxcorr,
+                            string path) const
 {
-    lxw_workbook  *workbook  = workbook_new("/home/user/PARALELA/RESULTADOS/resultados.xlsx");
-    lxw_worksheet *worksheet = workbook_add_worksheet(workbook, NULL);
-    worksheet_write_string(worksheet, 0, 0, "SECOND ANGULAR MOMENT", NULL);
-    worksheet_write_number(worksheet, 0, 1, m_asm, NULL);
-    worksheet_write_string(worksheet, 1, 0, "CORRELACION", NULL);
-    worksheet_write_number(worksheet, 1, 1, m_corr, NULL);
-    worksheet_write_string(worksheet, 2, 0, "DIFERENCIA ENTROPIA", NULL);
-    worksheet_write_number(worksheet, 2, 1, m_dentropy, NULL);
-    worksheet_write_string(worksheet, 3, 0, "DIFERENCIA VARIANZA", NULL);
-    worksheet_write_number(worksheet, 3, 1, m_dvar, NULL);
-    worksheet_write_string(worksheet, 4, 0, "ENTROPIA", NULL);
-    worksheet_write_number(worksheet, 4, 1, m_entropy, NULL);
-    worksheet_write_string(worksheet, 5, 0, "INVERSE DIFERENCE MOEMNT", NULL);
-    worksheet_write_number(worksheet, 5, 1, m_idm, NULL);
-    worksheet_write_string(worksheet, 6, 0, "CONTRASTE", NULL);
-    worksheet_write_number(worksheet, 6, 1, m_contrast, NULL);
-    worksheet_write_string(worksheet, 7, 0, "INFORMATION MESURE CORRELATION 1", NULL);
-    worksheet_write_number(worksheet, 7, 1, m_icorr1, NULL);
-    worksheet_write_string(worksheet, 8, 0, "INFORMATION MESURE CORRELATION 2", NULL);
-    worksheet_write_number(worksheet, 8, 1, m_icorr2, NULL);
-    worksheet_write_string(worksheet, 9, 0, "MAXIMO CORRELATION COEFICIENT", NULL);
-    worksheet_write_number(worksheet, 9, 1, m_maxcorr, NULL);
-    worksheet_write_string(worksheet, 10, 0, "SUM AVEREGE", NULL);
-    worksheet_write_number(worksheet, 10, 1, m_savg, NULL);
-    worksheet_write_string(worksheet, 11, 0, "SUMA ENTROPIA", NULL);
-    worksheet_write_number(worksheet, 11, 1, m_sentropy, NULL);
-    worksheet_write_string(worksheet, 12, 0, "SUM OF SQUARE VARIANCE", NULL);
-    worksheet_write_number(worksheet, 12, 1, m_var, NULL);
-    worksheet_write_string(worksheet, 13, 0, "SUM VARIANCE", NULL);
-    worksheet_write_number(worksheet, 13, 1, m_svar, NULL);
-    workbook_close(workbook);
-    cout << "\nDATOS ALMACENADIOS\n";
+
+    // file pointer
+    fstream fout;
+    // opens an existing csv file or creates a new file.
+    fout.open(path, ios::out | ios::app);
+    string name;
+    // Insert the data to file
+    fout << "SECOND ANGULAR MOMENT" << ", " << m_asm  << "\n";
+    fout << "CORRELACION" << ", " << m_contrast  << "\n";
+    fout << "DIFERENCIA ENTROPIA" << ", " << m_corr  << "\n";
+    fout << "DIFERENCIA VARIANZA" << ", " << m_var  << "\n";
+    fout << "ENTROPIA" << ", " << m_idm  << "\n";
+    fout << "INVERSE DIFERENCE MOEMNT" << ", " << m_savg  << "\n";
+    fout << "CONTRASTE" << ", " << m_svar  << "\n";
+    fout << "INFORMATION MESURE CORRELATION 1" << ", " << m_sentropy << "\n";
+    fout << "INFORMATION MESURE CORRELATION 2" << ", " << m_entropy  << "\n";
+    fout << "MAXIMO CORRELATION COEFICIENT" << ", " << m_dvar  << "\n";
+    fout << "SUM AVEREGE" << ", " << m_dentropy  << "\n";
+    fout << "SUMA ENTROPIA" << ", " << m_icorr1  << "\n";
+    fout << "SUM OF SQUARE VARIANCE" << ", " << m_icorr2  << "\n";
+    fout << "SUM VARIANCE" << ", " << m_maxcorr  << "\n";
 }
 
 
@@ -244,25 +208,23 @@ void imagenes::generarExcelMetricas(
         double b,
         double c,
         double d,
-        double e
+        double e,
+        string path
         ) const
 {
-    lxw_workbook  *workbook  = workbook_new("/home/user/PARALELA/RESULTADOS/resultadosMetricas.xlsx");
-    lxw_worksheet *worksheet = workbook_add_worksheet(workbook, NULL);
-    worksheet_write_string(worksheet, 0, 0, "CPU", NULL);
-    worksheet_write_number(worksheet, 0, 1, a, NULL);
-    worksheet_write_string(worksheet, 1, 0, "MEMORIA", NULL);
-    worksheet_write_number(worksheet, 1, 1, b, NULL);
-    worksheet_write_string(worksheet, 2, 0, "TIEMPO EN MILISIEGUNDOS", NULL);
-    worksheet_write_number(worksheet, 2, 1, c, NULL);
-    worksheet_write_string(worksheet, 3, 0, "TIEMPO EN SEGUNDOS", NULL);
-    worksheet_write_number(worksheet, 3, 1, d, NULL);
-    worksheet_write_string(worksheet, 4, 0, "RAM", NULL);
-    worksheet_write_number(worksheet, 4, 1, e, NULL);
-    workbook_close(workbook);
-    cout << "\nDATOS ALMACENADIOS\n";
-}
 
+    // file pointer
+    fstream fout;
+    // opens an existing csv file or creates a new file.
+    fout.open(path, ios::out | ios::app);
+    string name;
+    // Insert the data to file
+    fout << "CPU" << ", " << a  << "\n";
+    fout << "MEMORIA" << ", " << b  << "\n";
+    fout << "TIEMPO EN MILISIEGUNDOS" << ", " << c  << "\n";
+    fout << "TIEMPO EN SEGUNDOS" << ", " << d  << "\n";
+    fout << "RAM" << ", " << e  << "\n";
+}
 
 
 void imagenes::mensaje(string data) const
@@ -270,20 +232,5 @@ void imagenes::mensaje(string data) const
     cout << "\n" << data <<"\n";
 }
 
-
-
-void imagenes::IMPRIMIR_METRICAS() const
-{
-    //CPU
-
-    //RAM
-    //TIEMPO
-    //TEMP
-    //EFICIENCIA
-}
-
-double tiempoEjecucion(){
-
-}
 
 

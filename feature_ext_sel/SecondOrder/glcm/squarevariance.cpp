@@ -1,14 +1,7 @@
 #include "squarevariance.h"
 #include <iostream>
 #include <fstream>
-#include <opencv2/opencv.hpp>
-#include <opencv2/core/mat.hpp>
-#include <opencv2/highgui.hpp>
 #include <iostream>
-#include "xlsxwriter.h"
-
-
-using namespace cv;
 using namespace std;
 
 //DEFINICIONES DE PARAMETRICAS

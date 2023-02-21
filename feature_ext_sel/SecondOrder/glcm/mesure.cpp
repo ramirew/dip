@@ -1,14 +1,9 @@
 #include "mesure.h"
 #include <iostream>
 #include <fstream>
-#include <opencv2/opencv.hpp>
-#include <opencv2/core/mat.hpp>
-#include <opencv2/highgui.hpp>
 #include <iostream>
-#include "xlsxwriter.h"
+#include <cmath>
 
-
-using namespace cv;
 using namespace std;
 
 //DEFINICIONES DE PARAMETRICAS
@@ -18,18 +13,7 @@ using namespace std;
 #define SIGN(x,y) ((y)<0 ? -fabs(x) : fabs(x))
 #define SWAP(a,b) {y=(a);(a)=(b);(b)=y;}
 
-mesure::mesure(){
-
-}
-
-//Initialize functions that have been used for measuring co-occurence matrixes for 0,45,90,135 degree angle
-double** CoOcMat_Angle_0   (int distance, u_int16_t **grays, int rows, int cols, int* tone_LUT, int tone_count);
-double** CoOcMat_Angle_45  (int distance, u_int16_t **grays, int rows, int cols, int* tone_LUT, int tone_count);
-double** CoOcMat_Angle_90  (int distance, u_int16_t **grays, int rows, int cols, int* tone_LUT, int tone_count);
-double** CoOcMat_Angle_135 (int distance, u_int16_t **grays, int rows, int cols, int* tone_LUT, int tone_count);
-
-//INICIALIZAR FUNCIONES
-double f1_asm (double **P, int Ng);
+mesure::mesure(){}
 
 //RECURSOS DE LOS METODOS
 double *allocate_vector (int nl, int nh);
