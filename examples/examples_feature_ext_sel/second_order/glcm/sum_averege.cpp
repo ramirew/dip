@@ -64,8 +64,6 @@ void usarLibreria(vector<vector<int>> imageData,int rows,int cols){
 
 void usarLibreriaParalela(vector<vector<int>> imageData,int rows,int cols, int hilos){
     systemMetrics metrica("GLCM");
-    metrica.resetCounters();
-
     imagenes_p img;
     imagenes img2;
     variance_p variance;
@@ -83,12 +81,19 @@ void usarLibreriaParalela(vector<vector<int>> imageData,int rows,int cols, int h
 
     #pragma omp parallel num_threads(hilos)
     {
+        int h = omp_get_num_threads();
+        if(h == 0){
+            metrica.resetCounters();
+            //10 SUM AVEREGE
+            m_savg = averege.f6_savg(pMatriz, toneCount, hilos);
+            img2.guardarValorCSV("SUM AVEREGE",m_savg,"/home/user/RESULTADOS/resultadosParalelo.csv");
+                  metrica.calculate();
+        }
         //10 SUM AVEREGE
         m_savg = averege.f6_savg(pMatriz, toneCount, hilos);
         img2.guardarValorCSV("SUM AVEREGE",m_savg,"/home/user/RESULTADOS/resultadosParalelo.csv");
     }
 
-    metrica.calculate();
     metrica.printMetrics();
     cout << "Ram = " << getRamUsage() << " kb" << endl;
     double a = metrica.getCpuPercent();//CPU

@@ -3,6 +3,7 @@
 #include <fstream>
 #include <iostream>
 #include <cmath>
+#include <omp.h>
 
 using namespace std;
 
@@ -28,23 +29,25 @@ double mesure_p::f12_icorr (double **P, int Ng, int hilos) const {
     double hx = 0, hy = 0, hxy = 0, hxy1 = 0, hxy2 = 0;
     px = allocate_vector (0, Ng);
     py = allocate_vector (0, Ng);
-    for (i = 0; i < Ng; ++i) {
-        for (j = 0; j < Ng; ++j) {
-            px[i] += P[i][j];
-            py[j] += P[i][j];
+    #pragma omp parallel num_threads(hilos)
+    {
+        for (i = 0; i < Ng; ++i) {
+            for (j = 0; j < Ng; ++j) {
+                px[i] += P[i][j];
+                py[j] += P[i][j];
+            }
+        }
+        for (i = 0; i < Ng; ++i)
+            for (j = 0; j < Ng; ++j) {
+                hxy1 -= P[i][j] * log10 (px[i] * py[j] + EPSILON)/log10(2.0);
+                hxy2 -= px[i] * py[j] * log10 (px[i] * py[j] + EPSILON)/log10(2.0);
+                hxy -= P[i][j] * log10 (P[i][j] + EPSILON)/log10(2.0);
+            }
+        for (i = 0; i < Ng; ++i) {
+            hx -= px[i] * log10 (px[i] + EPSILON)/log10(2.0);
+            hy -= py[i] * log10 (py[i] + EPSILON)/log10(2.0);
         }
     }
-    for (i = 0; i < Ng; ++i)
-        for (j = 0; j < Ng; ++j) {
-            hxy1 -= P[i][j] * log10 (px[i] * py[j] + EPSILON)/log10(2.0);
-            hxy2 -= px[i] * py[j] * log10 (px[i] * py[j] + EPSILON)/log10(2.0);
-            hxy -= P[i][j] * log10 (P[i][j] + EPSILON)/log10(2.0);
-        }
-    for (i = 0; i < Ng; ++i) {
-        hx -= px[i] * log10 (px[i] + EPSILON)/log10(2.0);
-        hy -= py[i] * log10 (py[i] + EPSILON)/log10(2.0);
-    }
-
     free(px);
     free(py);
         if ((hx > hy ? hx : hy)==0) return(1);
@@ -57,22 +60,26 @@ double mesure_p::f13_icorr (double **P, int Ng, int hilos) const {
     double hx = 0, hy = 0, hxy = 0, hxy1 = 0, hxy2 = 0;
     px = allocate_vector (0, Ng);
     py = allocate_vector (0, Ng);
-    for (i = 0; i < Ng; ++i) {
-        for (j = 0; j < Ng; ++j) {
-          px[i] += P[i][j];
-          py[j] += P[i][j];
-        }
+    #pragma omp parallel num_threads(hilos)
+    {
+            for (i = 0; i < Ng; ++i) {
+                for (j = 0; j < Ng; ++j) {
+                  px[i] += P[i][j];
+                  py[j] += P[i][j];
+                }
+            }
+            for (i = 0; i < Ng; ++i)
+                for (j = 0; j < Ng; ++j) {
+                    hxy1 -= P[i][j] * log10 (px[i] * py[j] + EPSILON)/log10(2.0);
+                    hxy2 -= px[i] * py[j] * log10 (px[i] * py[j] + EPSILON)/log10(2.0);
+                    hxy -= P[i][j] * log10 (P[i][j] + EPSILON)/log10(2.0);
+                }
+            for (i = 0; i < Ng; ++i) {
+                hx -= px[i] * log10 (px[i] + EPSILON)/log10(2.0);
+                hy -= py[i] * log10 (py[i] + EPSILON)/log10(2.0);
+            }
     }
-    for (i = 0; i < Ng; ++i)
-        for (j = 0; j < Ng; ++j) {
-            hxy1 -= P[i][j] * log10 (px[i] * py[j] + EPSILON)/log10(2.0);
-            hxy2 -= px[i] * py[j] * log10 (px[i] * py[j] + EPSILON)/log10(2.0);
-            hxy -= P[i][j] * log10 (P[i][j] + EPSILON)/log10(2.0);
-        }
-    for (i = 0; i < Ng; ++i) {
-        hx -= px[i] * log10 (px[i] + EPSILON)/log10(2.0);
-        hy -= py[i] * log10 (py[i] + EPSILON)/log10(2.0);
-    }
+
     free(px);
     free(py);
     return (sqrt (fabs (1 - exp (-2.0 * (hxy2 - hxy)))));

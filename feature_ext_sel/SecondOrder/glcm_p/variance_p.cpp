@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <iostream>
+#include <omp.h>
 using namespace std;
 variance_p::variance_p(){}
 double *allocate_vector (int nl, int nh);
@@ -10,7 +11,8 @@ double variance_p::f7_svar (double **P, int Ng, double S, int hilos) const {
     int i, j;
     double var = 0;
     double *Pxpy = allocate_vector(0, 2*Ng);
-
+#pragma omp parallel num_threads(hilos)
+{
     for (i = 0; i <= 2 * Ng; ++i)
         Pxpy[i] = 0;
 
@@ -20,7 +22,7 @@ double variance_p::f7_svar (double **P, int Ng, double S, int hilos) const {
 
     for (i = 0; i <= (2 * Ng - 2); ++i)
         var += (i - S) * (i - S) * Pxpy[i];
-
+}
     free (Pxpy);
     return var;
 }
@@ -30,7 +32,8 @@ double variance_p::f10_dvar (double **P, int Ng, int hilos) const {
     int i, j;
     double sum = 0, sum_sqr = 0, var = 0;
     double *Pxpy = allocate_vector (0, 2*Ng);
-
+#pragma omp parallel num_threads(hilos)
+{
     for (i = 0; i <= 2 * Ng; ++i)
         Pxpy[i] = 0;
 
@@ -43,6 +46,7 @@ double variance_p::f10_dvar (double **P, int Ng, int hilos) const {
         sum_sqr += i * i * Pxpy[i] ;
     }
     var = sum_sqr - sum*sum ;
+ }
     free (Pxpy);
     return var;
 }
