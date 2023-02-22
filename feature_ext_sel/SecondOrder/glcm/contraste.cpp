@@ -5,6 +5,11 @@
 using namespace std;
 contraste::contraste(){}
 //7 CONTRASTE
+
+/*
+define una función llamada "f2_contrast" dentro de la clase "contraste".
+La función "f2_contrast" calcula el contraste de una matriz de tamaño NgxNg representada por la matriz P.
+*/
 double contraste::f2_contrast (double **P, int Ng) const {
     int i, j, n;
     double sum = 0, bigsum = 0;
