@@ -16,9 +16,21 @@ using namespace std;
 correlationcoeficient::correlationcoeficient(){}
 
 //RECURSOS DE LOS METODOS
+/*
+allocate_vector(int nl, int nh): Crea un vector unidimensional 
+de longitud nh - nl + 1, con el primer elemento en la posición nl. Se devuelve un puntero al vector creado.
+*/
 double *allocate_vector (int nl, int nh);
+/*
+allocate_matrix(int nrl, int nrh, int ncl, int nch): Crea una matriz bidimensional de nrh - nrl + 1 filas y nch - ncl + 1 columnas, 
+con el primer elemento en la posición (nrl, ncl). Se devuelve un puntero a la matriz creada.
+*/
 double **allocate_matrix (int nrl, int nrh, int ncl, int nch);
+
 void free_matrix(double **matrix,int nrh);
+/*
+free_matrix(double **matrix,int nrh): Libera la memoria asociada con una matriz bidimensional previamente asignada mediante la función allocate_matrix().
+*/
 
 //MAX CORREALCION HEIS
 int hessenberg (double **a, int n, double wr[], double wi[])
