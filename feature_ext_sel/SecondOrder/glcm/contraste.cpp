@@ -10,6 +10,14 @@ contraste::contraste(){}
 define una función llamada "f2_contrast" dentro de la clase "contraste".
 La función "f2_contrast" calcula el contraste de una matriz de tamaño NgxNg representada por la matriz P.
 */
+
+
+/*
+
+Se utiliza 3 for anidados para recorrer los elementos de la matriz  P y calcular el valor del contraste, n es la suma de todas las dierencias entre elementos matriz p 
+que estan separados por una distancia n y el resultado lo almacena en la variable bigsum
+
+*/
 double contraste::f2_contrast (double **P, int Ng) const {
     int i, j, n;
     double sum = 0, bigsum = 0;
