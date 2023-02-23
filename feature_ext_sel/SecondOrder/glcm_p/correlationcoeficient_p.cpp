@@ -3,6 +3,7 @@
 #include <fstream>
 #include <iostream>
 #include <cmath>
+#include <omp.h>
 
 using namespace std;
 
@@ -291,24 +292,29 @@ double correlationcoeficient_p::f3_corr (double **P, int Ng, int hilos) const {
     int i, j;
     double sum_sqrx = 0, sum_sqry = 0, tmp, *px;
     double meanx =0 , meany = 0 , stddevx, stddevy;
-    px = allocate_vector (0, Ng);
-        for (i = 0; i < Ng; ++i)
-            px[i] = 0;
-        for (i = 0; i < Ng; ++i)
-            for (j = 0; j < Ng; ++j)
-                px[i] += P[i][j];
-        for (i = 0; i < Ng; ++i) {
-            meanx += px[i]*i;
-            sum_sqrx += px[i]*i*i;
-        }
-    meany = meanx;
-    sum_sqry = sum_sqrx;
-    stddevx = sqrt (sum_sqry - (meanx * meanx));
-    stddevy = stddevx;
-    for (tmp = 0, i = 0; i < Ng; ++i)
-        for (j = 0; j < Ng; ++j)
-              tmp += i*j*P[i][j];
 
+
+#pragma omp parallel num_threads(hilos)
+    {
+        px = allocate_vector (0, Ng);
+            for (i = 0; i < Ng; ++i)
+                px[i] = 0;
+            for (i = 0; i < Ng; ++i)
+                for (j = 0; j < Ng; ++j)
+                    px[i] += P[i][j];
+            for (i = 0; i < Ng; ++i) {
+                meanx += px[i]*i;
+                sum_sqrx += px[i]*i*i;
+            }
+        meany = meanx;
+        sum_sqry = sum_sqrx;
+        stddevx = sqrt (sum_sqry - (meanx * meanx));
+        stddevy = stddevx;
+        for (tmp = 0, i = 0; i < Ng; ++i)
+            for (j = 0; j < Ng; ++j)
+                  tmp += i*j*P[i][j];
+
+    }
     free(px);
         if (stddevx * stddevy==0) return(1);
         else return (tmp - meanx * meany) / (stddevx * stddevy);
@@ -326,7 +332,7 @@ double correlationcoeficient_p::f14_maxcorr (double **P, int Ng, int hilos) cons
     Q = allocate_matrix (1, Ng + 1, 1, Ng + 1);
     x = allocate_vector (1, Ng);
     iy = allocate_vector (1, Ng);
-    //#pragma omp parallel num_threads(hilos)
+    #pragma omp parallel num_threads(hilos)
     {
         for (i = 0; i < Ng; ++i) {
             for (j = 0; j < Ng; ++j) {

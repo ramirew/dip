@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <iostream>
+#include <omp.h>
 using namespace std;
 averege_p::averege_p(){}
 
@@ -13,7 +14,7 @@ double averege_p::f6_savg (double **P, int Ng, int hilos) const {
     double savg = 0;
     double *Pxpy = allocate_vector (0, 2*Ng);
 
-    //#pragma omp parallel num_threads(hilos)
+    #pragma omp parallel num_threads(hilos)
         {
         //int hilo = omp_get_thread_num();
         for (i = 0; i <= 2 * Ng; ++i)

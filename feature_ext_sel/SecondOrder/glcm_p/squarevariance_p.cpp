@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <iostream>
+#include <omp.h>
 using namespace std;
 
 //DEFINICIONES DE PARAMETRICAS
@@ -35,6 +36,8 @@ void free_matrix(double **matrix,int nrh);
 double squarevariance_p::f4_var (double **P, int Ng, int hilos) const {
     int i, j;
     double mean = 0, var = 0;
+#pragma omp parallel num_threads(hilos)
+{
     for (i = 0; i < Ng; ++i)
         for (j = 0; j < Ng; ++j)
             mean += i * P[i][j];
@@ -42,7 +45,7 @@ double squarevariance_p::f4_var (double **P, int Ng, int hilos) const {
     for (i = 0; i < Ng; ++i)
         for (j = 0; j < Ng; ++j)
           var += (i - mean) * (i - mean) * P[i][j];
-
+}
     return var;
 }
 

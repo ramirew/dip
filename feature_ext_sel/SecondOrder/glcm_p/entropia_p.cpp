@@ -3,6 +3,7 @@
 #include <fstream>
 #include <iostream>
 #include <cmath>
+#include <omp.h>
 
 using namespace std;
 
@@ -26,13 +27,16 @@ double entropia_p::f8_sentropy (double **P, int Ng, int hilos) const {
     int i, j;
     double sentropy = 0;
     double *Pxpy = allocate_vector (0, 2*Ng);
-    for (i = 0; i <= 2 * Ng; ++i)
-        Pxpy[i] = 0;
-    for (i = 0; i < Ng; ++i)
-        for (j = 0; j < Ng; ++j)
-          Pxpy[i + j + 2] += P[i][j];
-    for (i = 2; i <= 2 * Ng; ++i)
-        sentropy -= Pxpy[i] * log10 (Pxpy[i] + EPSILON)/log10(2.0) ;
+    #pragma omp parallel num_threads(hilos)
+    {
+        for (i = 0; i <= 2 * Ng; ++i)
+            Pxpy[i] = 0;
+        for (i = 0; i < Ng; ++i)
+            for (j = 0; j < Ng; ++j)
+              Pxpy[i + j + 2] += P[i][j];
+        for (i = 2; i <= 2 * Ng; ++i)
+            sentropy -= Pxpy[i] * log10 (Pxpy[i] + EPSILON)/log10(2.0) ;
+    }
     free (Pxpy);
     return sentropy;
 }
@@ -41,9 +45,12 @@ double entropia_p::f8_sentropy (double **P, int Ng, int hilos) const {
 double entropia_p::f9_entropy (double **P, int Ng, int hilos) const {
     int i, j;
     double entropy = 0;
+    #pragma omp parallel num_threads(hilos)
+    {
     for (i = 0; i < Ng; ++i)
         for (j = 0; j < Ng; ++j)
             entropy += P[i][j] * log10 (P[i][j] + EPSILON)/log10(2.0) ;
+    }
     return -entropy;
 }
 
@@ -53,18 +60,20 @@ double entropia_p::f11_dentropy (double **P, int Ng, int hilos) const {
     int i, j;
     double sum = 0;
     double *Pxpy = allocate_vector (0, 2*Ng);
+    #pragma omp parallel num_threads(hilos)
+    {
 
-    for (i = 0; i <= 2 * Ng; ++i)
-        Pxpy[i] = 0;
+        for (i = 0; i <= 2 * Ng; ++i)
+            Pxpy[i] = 0;
 
-    for (i = 0; i < Ng; ++i)
-        for (j = 0; j < Ng; ++j)
-            Pxpy[abs (i - j)] += P[i][j];
+        for (i = 0; i < Ng; ++i)
+            for (j = 0; j < Ng; ++j)
+                Pxpy[abs (i - j)] += P[i][j];
 
-    for (i = 0; i < Ng; ++i)
-        /*    sum += Pxpy[i] * log10 (Pxpy[i] + EPSILON); */
-        sum += Pxpy[i] * log10 (Pxpy[i] + EPSILON)/log10(2.0) ;
-
+        for (i = 0; i < Ng; ++i)
+            /*    sum += Pxpy[i] * log10 (Pxpy[i] + EPSILON); */
+            sum += Pxpy[i] * log10 (Pxpy[i] + EPSILON)/log10(2.0) ;
+    }
     free (Pxpy);
     return -sum;
 }
